@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #333;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+#second-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15rem;
+}
+#second-header h1 {
+  font-size: 55px;
+  font-weight: 400;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+}
+#sub-text {
+  display: flex;
+  justify-content: space-around;
+  gap: 120px;
+  margin-right: 8rem;
+  font-size: 10px;
+}
+#drop-down-container {
+  align-items: center;
+  padding: 0.5rem;
+  padding-left: 1.3rem;
+}
+select {
+  border: none;
+  background: none;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  word-spacing: 5px;
+  color: rgb(22, 18, 18);
+}
+#main-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 50px 0px 10px 40px;
+  /* padding: 10px; */
+  /* margin: 50px; */
+  /* gap: 35px; */
+  text-align: justify;
+}
+img {
+  height: 350px;
+  width: 400px;
+}
+.image-container {
+  /* grid-column: 1/2; */
+  margin-bottom: 50px;
+  text-align: justify;
+  border: 1px solid #333;
+  padding: 20px;
+}
+
+.product-type {
+  display: flex;
+  text-align: start;
+  gap: 16rem;
+  margin-top: 8rem;
+}
+.product-type p {
+  font-size: 10px;
+  text-transform: capitalize;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: start;
+}
+.image-container .product-info {
+  width: 80%;
+  text-align: justify;
+  font-size: 15px;
+  margin-top: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+#footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+#load-more {
+  align-items: center;
+  text-align: center;
+  grid-column: 1/4;
+  border-radius: 50px;
+  margin: 40px;
+  border: 0.2px solid black;
+  padding: 20px;
+}
+#decor {
+ display: grid; 
+ grid-template-columns: repeat(3,1fr);
+ margin: 30px;
+ width: 500px;
+}
+
+#form-container input {
+  border: none;
+  outline: none;
+  padding: 10px 10px 10px 0;
+  border-bottom: 1px solid #333;
+}
+#form-container p {
+  justify-content: start;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+#decor-para {
+  margin-top: 100%;
+  font-size: 10px;
+  word-spacing: 5px;
+  font-weight: 450;
+}
