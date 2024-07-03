@@ -92,6 +92,16 @@ nav {
     text-decoration: none;
     transition: 0.3s;
 }
+.sample-block{
+    display: flex;
+    gap: 5px;
+}
+
+.sample-block span{
+    padding: 0px 3px;
+    border: 0.6px solid #A7B6C4;
+    border-radius: 50%;
+}
 
 #mobileMenuButton {
     border: none;
