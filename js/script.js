@@ -1,3 +1,4 @@
+// this is 
 function eventFn(e) {
     if ($(e.target).text() === 'SAMPLES0') {
         $('#header').children().eq(1).css('right', '0');
@@ -10,4 +11,4 @@ function eventFn(e) {
 
 $(document).ready(function() {
     $('#header').on('click', eventFn);
-});
+});   
