@@ -1,7 +1,6 @@
-const callBtn = document.getElementById('call-btn');
-const callBtnAfter = window.getComputedStyle(callBtn, "::after")
 const header = document.getElementById("header")
-const mobileMenuButton = document.getElementById("mobileMenuButton")
+const menu = document.getElementById("menu")
+const close = document.getElementById("close")
 
 
 menu.addEventListener('click', () => {
