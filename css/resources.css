@@ -71,6 +71,7 @@ select {
   word-spacing: 5px;
   color: rgb(22, 18, 18);
 }
+
 #main-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -91,7 +92,7 @@ img {
   /* grid-column: 1/2; */
   margin-bottom: 50px;
   text-align: justify;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
   padding: 20px;
 }
 
