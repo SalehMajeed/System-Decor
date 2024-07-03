@@ -8,6 +8,7 @@ body{
     color: rgb(196,196,165);
     font-family: monospace;
     overflow-x: hidden;
+    opacity:0.9;
 }
 a{
     text-decoration: none;
@@ -110,6 +111,7 @@ a:hover::after {
     font-weight: lighter;
     font-size: 10px;
     color: rgb(152,177,146);
+    line-height: 1.5    ;
 }
 
 .sample__button{
