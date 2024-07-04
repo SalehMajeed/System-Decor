@@ -17,7 +17,7 @@ ul{
     list-style-type: none;
 }
 .header{
-    /* display: flex; */
+    display: flex;
 }
 .navbar{
     /* position: fixed; */
