@@ -1,12 +1,14 @@
-const header = document.getElementById("header")
+$(document).ready(function() {
+    $('#header').on('click', eventFn);
+});
 
 function eventFn(e) {
-    if (e.target.textContent == "SAMPLES0") {
-        header.children[1].style.right = "0"
-    } else if (e.target.tagName == "I") {
-        header.children[1].style.right = "-100%"
-    }else{
-        return
+    if ($(e.target).text() === 'SAMPLES0') {
+        $('#header').children().eq(1).css('right', '0');
+    } else if ($(e.target).is('i')) {
+        $('#header').children().eq(1).css('right', '-100%');
+    } else {
+        return;
     }
 }
-header.addEventListener("click", eventFn)
+
