@@ -30,7 +30,7 @@ ul{
     list-style-type: none;
 }
 .header{
-    /* display: flex; */
+    display: flex;
 }
 .navbar{
     opacity: .8;
