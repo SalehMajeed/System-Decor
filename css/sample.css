@@ -1,17 +1,30 @@
+:root{
+    --first-color : rgb(196,196,165);
+    --second-color : #3a3a1f;
+    --light-color : rgb(152,177,146);
+
+    --primary-sizing : 0.5rem;
+    --secondry-sizing : 1rem;
+    --upper-sizing : 1.5rem;
+    --large-sizing : 2rem;
+
+
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: #3a3a1f;
-    color: rgb(196,196,165);
+    background-color: var(--second-color);
+    color: var(--first-color);
     font-family: monospace;
     overflow-x: hidden;
 }
 a{
     text-decoration: none;
-    color: rgb(196,196,165);
+    color: var(--first-color);
 }
 ul{
     list-style-type: none;
@@ -20,24 +33,29 @@ ul{
     /* display: flex; */
 }
 .navbar{
-    /* position: fixed; */
+    opacity: .8;
     display: flex;  
     width: 100%;
-    border-bottom: solid 2px rgb(196, 196, 165);
+    border-bottom: solid 2px var(--first-color);
+    align-items: center;
     
 }
 .nav-logo{
     display: flex;
-    margin-left: 2rem;
-    margin: 1.5rem;
+    margin-left: var(--large-sizing);
+    margin: var(--upper-sizing);
     width: 15%;
+    align-items: center;
 }
 .nav-logo img{
-    margin-top: -3px;
+    /* margin-top: -14px; */
+    width: 40px;
 }
+
+
 .nav-links{
     width: 85%;
-    margin: 2rem;
+    margin: var(--large-sizing);
     margin-right: 8rem;
     
 }
@@ -49,11 +67,11 @@ a::after {
     content: '';
     position: relative;
     width: 0;
-    height: 1px;
+    height: 2px;
     display: block;
-    margin-top: 5px;
+    margin-top: 3px;
     left: 0; 
-    background-color: rgb(196,196,165);
+    background-color: var(--first-color);
     transition: width 0.2s ease, left 0.2s ease;
 }
 a:hover::after {
@@ -61,7 +79,7 @@ a:hover::after {
     right: 0; 
 }
 .nav__samples{
-    padding: 2rem;
+    padding: var(--large-sizing);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,8 +90,8 @@ a:hover::after {
     top: 0;
     width: 500px;
     height: 100%;
-    background-color: #3a3a1f;
-    color: rgb(196, 196, 165);
+    background-color: var(--second-color);
+    color: var(--first-color);
     z-index: 1100;
     transition: right 1s ease-in-out;
     padding: 20px;
@@ -87,7 +105,7 @@ a:hover::after {
     width: 450px;
 }
 .sample__heading{
-    padding: 1.5rem;
+    padding: var(--upper-sizing);
     display: flex;
     position: relative;
     justify-content: space-evenly;
@@ -98,36 +116,37 @@ a:hover::after {
     content: "";
     position: absolute;
     height: 0.5px;
-    background-color: rgb(196, 196, 165);
+    background-color: var(--first-color);
     width: 37%;
     bottom: -.5rem;
 }
 .sample__title{
     font-weight: lighter;
-    font-size: 17px;
+    font-size: 1.2rem;
 }
 .sample__description{
     font-weight: lighter;
+   
     font-size: 10px;
-    color: rgb(152,177,146);
+    color: var(--light-color);
 }
 
 .sample__button{
-    background-color: #3a3a1f;
-    color: rgb(196, 196, 165);
-    padding: 8px 20px 8px 20px;
-    border-radius: 20px;
-    border: solid 1px rgb(196, 196, 165);
+    background-color: var(--second-color);
+    color: var(--first-color);
+    padding: var(--primary-sizing) var(--large-sizing);
+    border-radius: var(--upper-sizing);
+    border: solid 1px var(--first-color);
     cursor: pointer;
 }
 .sample__button span{
-    color: rgb(152,177,146);
+    color: var(--light-color);
 }
 .sample__button span:hover{
-    color: #3a3a1f;
+    color: var(--second-color);
 }
 .sample__button:hover{
-    background-color: rgb(196, 196, 165);
-    color: #3a3a1f;
+    background-color: var(--first-color);
+    color: var(--second-color);
 
 }
