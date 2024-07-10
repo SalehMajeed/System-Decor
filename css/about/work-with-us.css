@@ -743,7 +743,7 @@ body {
     /* height: 0px; */
     display: none;
     position: absolute;
-    bottom: 100%;
+    bottom: -100%;
     width: 250px;
     left: -4.9%;
     background-color: var(--second-color);
@@ -752,7 +752,8 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    transition: ease-in-out 0.5s;
+    transition:0.5s ease-in-out ;
+
     margin-bottom: 1.4rem;
 }
 

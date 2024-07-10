@@ -28,7 +28,7 @@ document.querySelector('.custom-dropdown').addEventListener('click', function() 
 // function eventFn(e) {
 //   console.dir(e.target)
 //   if(e.target.innerText == "Our Culture"){
-//     footer.children[1].children[1].children[1].style.height = "300px"
+//     footer.children[1].children[1].children[1].style.height = "400px"
 //   }else{
 //     console.log("this is not target")
 //   }
