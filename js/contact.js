@@ -1,3 +1,4 @@
+
 const header = document.getElementById("header")
 const menu = document.getElementById("menu")
 const close = document.getElementById("close")
@@ -16,4 +17,3 @@ close.addEventListener('click', () => {
     header.style.height = "73px"
     header.style.padding = "5px 0"
 })
-
