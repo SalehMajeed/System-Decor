@@ -31,7 +31,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  place-content: center;
   padding: 30px;
 }
 #main-logo {
@@ -47,9 +51,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  width: 100%;
-  /* margin-left: -1px; */
-  /* margin-right: 0px; */
 }
 #header > a {
   text-decoration: none;
@@ -292,7 +293,6 @@ footer {
   grid-column: 1 / span 2;
   padding-top: 25px;
   padding: 10px;
-  
 }
 
 .logo {
@@ -649,8 +649,8 @@ footer {
   }
 
   #menu {
-    display: block;
-    top: 0;
+    color: #1c1c1d;
+    font-size: 15px;
     transition: all ease 0.4s;
   }
 
@@ -729,21 +729,17 @@ footer {
   .acknowledgeContainer {
     margin-top: 20px;
     border-bottom: #181616 solid 1px;
-
   }
 
   .socialLinksContainer {
     border-bottom: #181616 solid 1px;
-
   }
   .productsContainer {
     border-top: #181616 solid 1px;
     border-bottom: #181616 solid 1px;
-
   }
   .projectsContainer {
     border-bottom: #181616 solid 1px;
-
   }
   .contactsContainer {
     width: 100%;
