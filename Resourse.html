@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor System - Supply Nation Certified</title>
+    <link rel="stylesheet" href="./CSS/Resourse.css">
+    <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><svg width="105" height="26" viewBox="0 0 105 26" fill="none"
+                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                    <path
+                        d="M44.3672 6.12227C44.3672 2.63764 42.7203 0.260498 39.249 0.260498H35.051V11.9032H39.136C42.6073 11.9032 44.3672 9.60729 44.3672 6.12227ZM36.5043 10.6168V1.53054H39.2006C41.9131 1.53054 42.8818 3.38698 42.8818 6.12227C42.8818 8.85834 41.8001 10.6168 39.0876 10.6168H36.5043Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M54.3599 10.5515H47.4657V6.46447H53.5525V5.22671H47.4657V1.54687H54.1662V0.260498H46.0125V11.9032H54.3599V10.5515Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M60.7035 12.1311C62.1729 12.1311 63.3514 11.708 64.1588 10.91C64.9822 10.0958 65.5313 8.79305 65.5473 7.63695H64.1104C63.9651 9.34679 62.9317 10.8447 60.7521 10.8447C58.3463 10.8447 56.7801 8.92332 56.7801 6.0737C56.7801 3.33803 58.2009 1.27004 60.7359 1.27004C62.5604 1.27004 63.7067 2.2632 63.9813 3.71251H65.4021C65.0952 1.56324 63.4646 0 60.7681 0C57.329 0 55.2947 2.65401 55.2947 6.0737C55.2947 9.60733 57.4259 12.1311 60.7035 12.1311Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M77.9615 6.07371C77.9615 2.58907 75.7979 0 72.3104 0C68.8229 0 66.6594 2.58907 66.6594 6.07371C66.6594 9.55834 68.8229 12.1474 72.3104 12.1474C75.7979 12.1474 77.9615 9.55834 77.9615 6.07371ZM72.3104 10.861C69.5979 10.861 68.1448 8.80938 68.1448 6.07371C68.1448 3.33803 69.5979 1.27004 72.3104 1.27004C75.0229 1.27004 76.4761 3.33803 76.4761 6.07371C76.4761 8.80938 75.0229 10.861 72.3104 10.861Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M81.0592 6.98555H84.2722C85.8222 6.98555 86.5002 7.58791 86.6134 9.29775C86.7425 11.2518 86.7909 11.6916 87.0331 11.9032H88.5993V11.8378C88.3893 11.6916 88.1956 11.2191 88.0664 9.34675C87.9534 7.62057 87.5821 6.80629 86.4034 6.38281V6.3342C87.7919 5.87806 88.4055 4.86857 88.4055 3.45193C88.4055 1.54687 87.0331 0.260498 84.9988 0.260498H79.606V11.9032H81.0592V6.98555ZM81.0592 1.53054H84.5627C86.2581 1.53054 86.9039 2.24683 86.9039 3.66347C86.9039 4.9825 86.0967 5.79679 84.4821 5.79679H81.0592V1.53054Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M39.2009 18.9653C37.4733 18.6235 36.1816 18.2327 36.1816 16.9137C36.1816 15.7086 37.215 15.0409 38.7812 15.0409C40.4763 15.0409 41.5421 15.8715 41.752 17.5324H43.1243C42.8337 15.3831 41.6388 13.9011 38.7488 13.9011C36.4076 13.9011 34.8254 15.0572 34.8254 16.979C34.8254 19.1773 36.5691 19.7633 38.6034 20.2194C40.6701 20.6752 42.0587 21.0497 42.0587 22.6456C42.0587 24.0949 40.9122 24.8275 39.3138 24.8275C37.1342 24.8275 35.9395 23.8017 35.7455 21.8313H34.3247C34.4539 24.1761 36.0039 25.9999 39.2492 25.9999C41.7358 25.9999 43.4956 24.7789 43.4956 22.5966C43.4956 19.9748 41.4451 19.4215 39.2009 18.9653Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M51.8253 14.1292L48.467 19.6658H48.4346L45.1246 14.1292H43.5103L47.692 20.8383V25.7722H49.145V20.8709L53.3753 14.1292H51.8253Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M58.2009 18.9653C56.4733 18.6235 55.1816 18.2327 55.1816 16.9137C55.1816 15.7086 56.215 15.0409 57.7812 15.0409C59.4763 15.0409 60.5421 15.8715 60.752 17.5324H62.1243C61.8337 15.3831 60.6388 13.9011 57.7488 13.9011C55.4076 13.9011 53.8254 15.0572 53.8254 16.979C53.8254 19.1773 55.5691 19.7633 57.6034 20.2194C59.6701 20.6752 61.0587 21.0497 61.0587 22.6456C61.0587 24.0949 59.9122 24.8275 58.3138 24.8275C56.1342 24.8275 54.9395 23.8017 54.7455 21.8313H53.3247C53.4539 24.1761 55.0039 25.9999 58.2493 25.9999C60.7358 25.9999 62.4956 24.7789 62.4956 22.5966C62.4956 19.9748 60.4451 19.4215 58.2009 18.9653Z"
+                        fill="currentColor"></path>
+                    <path d="M62.7849 15.4159H66.6277V25.7722H68.0808V15.4159H71.9236V14.1292H62.7849V15.4159Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M74.7311 20.3335H80.8179V19.0958H74.7311V15.4159H81.4315V14.1292H73.2778V25.7722H81.6253V24.4205H74.7311V20.3335Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M88.8732 23.8018H88.8411L85.0952 14.1292H83.2383V25.7722H84.5461V16.1975H84.5785C84.5785 16.1975 84.8691 17.0768 85.0952 17.6628L88.2596 25.7722H89.3737L92.5383 17.6628C92.7483 17.109 93.055 16.1975 93.055 16.1975H93.0874V25.7722H94.4758V14.1292H92.5869L88.8732 23.8018Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M100.706 18.9653C98.978 18.6235 97.6863 18.2327 97.6863 16.9137C97.6863 15.7086 98.7197 15.0409 100.286 15.0409C101.981 15.0409 103.047 15.8715 103.256 17.5324H104.629C104.338 15.3831 103.144 13.9011 100.253 13.9011C97.9123 13.9011 96.3301 15.0572 96.3301 16.979C96.3301 19.1773 98.0738 19.7633 100.108 20.2194C102.175 20.6752 103.563 21.0497 103.563 22.6456C103.563 24.0949 102.417 24.8275 100.819 24.8275C98.6389 24.8275 97.444 23.8017 97.2504 21.8313H95.8296C95.9588 24.1761 97.5088 25.9999 100.754 25.9999C103.24 25.9999 105 24.7789 105 22.5966C105 19.9748 102.95 19.4215 100.706 18.9653Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M25.7073 12.2605H25.7348V0H12.8674V0.0280609C19.7247 0.0280609 25.327 5.44059 25.7073 12.2605Z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M25.7078 13.7395C25.3275 20.5594 19.7252 25.9719 12.8679 25.9719V26H25.7353V13.7395H25.7078Z"
+                        fill="currentColor"></path>
+                    <path d="M12.8399 12.2605H12.8674V0H0V0.0280609C6.85726 0.0280609 12.4596 5.44059 12.8399 12.2605Z"
+                        fill="currentColor"></path>
+                    <path d="M12.8399 13.7395C12.4596 20.5594 6.85726 25.9719 0 25.9719V26H12.8674V13.7395H12.8399Z"
+                        fill="currentColor"></path>
+                </svg></li>
+
+            <li><a href="">PROJECTS</a></li>
+            <li><a href="">PRODUCTS</a></li>
+            <li><a href="">RESOURCCES</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">SAMPLES</a></li>
+            <li><a href="">MENU</a></li>
+        </ul>
+    </div>
+    <section class="section1">
+        <div class="sec1l1">PRODUCT RESOURCES</div>
+        <div class="sec1l2"></div>
+    </section>
+    <section class="section2">
+        <select name="" id="">
+            <option value="">ALL &nbsp &nbsp DOCUMENTS</option>
+            <option value=""><a href="">ACCESS PANEL</a></option>
+            <option value=""><a href="">ALI</a></option>
+            <option value=""><a href="">ali sorb</a></option>
+            <option value=""><a href="">arktura vapor</a></option>
+            <option value=""><a href="">arti</a></option>
+            <option value=""><a href="">backing strips</a></option>
+            <option value=""><a href="">biopanel zapx</a></option>
+            <option value=""><a href="">cewood</a></option>
+            <option value=""><a href="">cewood create</a></option>
+            <option value=""><a href="">contours of country</a></option>
+            <option value=""><a href="">create</a></option>
+            <option value=""><a href="">Decor Mount</a></option>
+            <option value=""><a href="">eagle</a></option>
+            <option value=""><a href="">lini</a></option>
+            <option value=""><a href="">lux</a></option>
+            <option value=""><a href="">max</a></option>
+            <option value=""><a href="">mesh</a></option>
+            <option value=""><a href="">metl</a></option>
+            <option value=""><a href="">micro</a></option>
+            <option value=""><a href="">milano</a></option>
+            <option value=""><a href="">olympia</a></option>
+            <option value=""><a href="">open grid</a></option>
+            <option value=""><a href="">screen</a></option>
+            <option value=""><a href="">slat</a></option>
+            <option value=""><a href="">slot</a></option>
+            <option value=""><a href="">snap</a></option>
+            <option value=""><a href="">style</a></option>
+            <option value=""><a href="">tile</a></option>
+            <option value=""><a href="">tone</a></option>
+            <option value=""><a href="">trend</a></option>
+            <option value=""><a href="">vogl</a></option>
+            <option value=""><a href="">vogl colour</a></vogl>
+            </option>
+            <option value=""><a href="">zen</a></option>
+        </select>
+    </section>
+    <section class="section3">
+        <div class="sec3l1">DOCUMENTS</div>
+    </section>
+    <section class="section4">
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 2 Fire Certificate</div>
+                    <div class="sec4d2">27 JUL 2022 | 748.76 KIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k3"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guide</div>
+                    <div class="sec4d2">14 May 2023 | 2.79 MIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k4"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Non-Combustible Statement</div>
+                    <div class="sec4d2">14 MAY 2023 | 33.09 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k5"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">14 May 2023 | 2.79 MIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k6"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">14 May 2023 | 2.79 MIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k7"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">01 JUN 2021 | 76.78 KIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k8"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 SEP 2021 | 74.38 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k9"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 3 Fire Certificate</div>
+                    <div class="sec4d2">1 OCT 2022 | 784.67 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k10"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Acoustic Data</div>
+                    <div class="sec4d2">1 JUN 2022 | 111.3 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k11"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">01 JUN 2022 | 76.78 KIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k12"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">31 AUG 2022 | 2.39 MIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k13"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">01 Mar 2022 | 2.39 MIB </div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k14"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 SEP 2022 | 75.38 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k15"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">1 SEP 2022 | 102.51 KIB</div>
+                    <div class="sec4d3">IMAGE/JPEG</div>
+                </div>
+                <div class="sec4k17"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">1 AUG 2022 | 102.51 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k18"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 MAY 2022 | 43.17 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k19"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 MAY 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k20"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k21"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 JUL 2022 | 74.39 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k15"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 APR 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k21"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.15 KIB</div>
+                    <div class="sec4d3">APPLICATION/VND</div>
+                </div>
+                <div class="sec4k22"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Revit File</div>
+                    <div class="sec4d2">1 JAN 2022 | 55.48 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k23"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Natural Variation Advice</div>
+                    <div class="sec4d2">22 MAR 2023 | 1.48 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k24"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">22 MAR 2023 | 102.37 KIB</div>
+                    <div class="sec4d3">IMAGE/JPEG</div>
+                </div>
+                <div class="sec4k25"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Shift X</div>
+                    <div class="sec4d2">27 FEB 2023 | 26.01 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k26"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Element</div>
+                    <div class="sec4d2">27 FEB 2023 | 29.98 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k26"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Pixel</div>
+                    <div class="sec4d2">27 FEB 2023 | 28.64 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k28"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Cumula</div>
+                    <div class="sec4d2">27 FEB 2023 | 27.03 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k29"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Product Brochure</div>
+                    <div class="sec4d2">05 JUL 2022 | 878.81 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k30"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Breeze</div>
+                    <div class="sec4d2">27 FEB 2023 | 35.98 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k31"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Verve</div>
+                    <div class="sec4d2">27 FEB 2023 | 39.36 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k32"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Transit</div>
+                    <div class="sec4d2">27 FEB 2023 | 138.91 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k33"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Syntax</div>
+                    <div class="sec4d2">27 FEB 2023 | 32.23 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Cluster</div>
+                    <div class="sec4d2">27 FEB 2023 | 53.19 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Gradients</div>
+                    <div class="sec4d2">27 FEB 2023 | 36.52 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Sky</div>
+                    <div class="sec4d2">27 FEB 2023 | 38.59 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Trail</div>
+                    <div class="sec4d2">27 FEB 2023 | 24.95 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Liana</div>
+                    <div class="sec4d2">27 FEB 2023 | 47.66 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Frequency</div>
+                    <div class="sec4d2">27 FEB 2023 | 26.97 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Solid</div>
+                    <div class="sec4d2">27 FEB 2023 | 06.03 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Bond</div>
+                    <div class="sec4d2">27 FEB 2023 | 27.77 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Bloom</div>
+                    <div class="sec4d2">27 FEB 2023 | 33.69 MIB</div>
+                    <div class="sec4d3">APPLICATION/ZIP</div>
+                </div>
+                <div class="sec4k34"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Product Brochure</div>
+                    <div class="sec4d2">01 MAY 2022 | 955.73 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k35"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.73 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k36"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Material Safety Data Sheet</div>
+                    <div class="sec4d2">21 APR 2022 | 83.44 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k37"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Crack Resistance</div>
+                    <div class="sec4d2">06 APR 2023 | 307.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k38"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Crack Resistance</div>
+                    <div class="sec4d2">06 APR 2023 | 307.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k38"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidlines</div>
+                    <div class="sec4d2">01 MAY 2022 | 4.57 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k39"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.81 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k40"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUL 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k41"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUL 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k41"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUL 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k41"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAY 2022 | 01.45 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k42"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAY 2022 | 6.3 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k42"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 APR 2022 | 3.8 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k42"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">27 OCT 2021 | 161.15 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k42"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Material Safety Data</div>
+                    <div class="sec4d2">1 JUN 2023 | 168.25 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k43"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k44"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Non-Combustible Statement</div>
+                    <div class="sec4d2">1 AUG 2022 | 45.79 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k45"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 MAY 2022 | 79.96 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k46"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k47"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 APR 2022 | 80.01 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k47"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Product Brochure</div>
+                    <div class="sec4d2">1 JUN 2022 | 854.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k48"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 102.37 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k47"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">1 JUN 2022 | 102.7 KIB</div>
+                    <div class="sec4d3">IMAGE/JPEG</div>
+                </div>
+                <div class="sec4k49"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 APR 2022 | 59.51 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k47"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Vogl Access Panel Installation Guidelines</div>
+                    <div class="sec4d2">1 MAY 2022 | 2.3 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k50"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 AUG 2022 | 52.33 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k51"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">LEED Certification</div>
+                    <div class="sec4d2">1 OCT 2022 | 355.81 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k52"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 JAN 2022 | 34.46 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k53"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certification</div>
+                    <div class="sec4d2">1 AUG 2022 | 253.92 KIB</div>
+                    <div class="sec4d3">IMAGES/JPEG</div>
+                </div>
+                <div class="sec4k54"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">LEED Certification</div>
+                    <div class="sec4d2">1 SEP 2022 | 355.55 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k52"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 JAN 2022 | 94.92 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k53"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k55"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.23 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k53"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 1 Fire Certificate</div>
+                    <div class="sec4d2">1 OCT 2022 | 1.46 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k56"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Non-Combustible Statement</div>
+                    <div class="sec4d2">1 NOV 2022 | 47.52 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k57"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 75.15 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k58"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 75.15 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k58"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAR 2022 | 1.73 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k59"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 APR 2022 | 4.33 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k59"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 APR 2022 | 955.13 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k59"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 SEP 2022 | 75.58 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Revit File</div>
+                    <div class="sec4d2">1 MAR 2022 | 13.53 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k61"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 JUL 2022 | 93.14 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 94.97 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k62"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 JUL 2022 | 52.33 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Non-Combustble Statement</div>
+                    <div class="sec4d2">1 AUG 2022 | 47.52 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k63"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUL 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 MAY 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">1 SEP 2022 | 784.07 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k65"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 AUG 2022 | 74.54 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 JUL 2022 | 74.54 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 78.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k58"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUN 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Form</div>
+                    <div class="sec4d2">1 MAR 2022 | 40.17 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k66"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUN 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 AUG 2022 | 99.64 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 APR 2022 | 95.16 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k67"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Form</div>
+                    <div class="sec4d2">1 APR 2022 | 39.99 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUN 2022 | 32.43 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 JAN 2022 | 94.46 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k67"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 APR 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k68"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 MAY 2022 | 69.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUN 2022 | 32.43 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>        
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording Contours of Country</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.61 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k69"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 2 Fire Certificate</div>
+                    <div class="sec4d2">1 OCT 2022 | 748.76 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k70"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 SEP 2022 | 54.72 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">2 MAR 2021 | 94.94 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k67"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Acoustic Data</div>
+                    <div class="sec4d2">1 AUG 2021 | 114.37 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k71"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 SEP 2021 | 74.38 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.82 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k67"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2021 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k68"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">1 JUN 2022 | 76.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k68"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 2 Fire Certificate (Timber Veneer)</div>
+                    <div class="sec4d2">1 SEP 2022 | 1.47 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k72"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">1 JUN 2022 | 93.07 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k64"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Safety Data Sheet</div>
+                    <div class="sec4d2">1 AUG 2022 | 93.07 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k60"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.05 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k67"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAY 2021 | 2.29 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k73"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAY 2022 | 845.2 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k73"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 JUN 2022 | 3.13 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k73"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAR 2021 | 823.09 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k73"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAR 2022 | 999.4 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k73"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 2 Fire Certificate</div>
+                    <div class="sec4d2">1 JUN 2022 | 290.11 KIB</div>
+                    <div class="sec4d3">IMAGE/JPEG</div>
+                </div>
+                <div class="sec4k74"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Catalouge</div>
+                    <div class="sec4d2">1 AUG 2022 | 17.82 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k75"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">1 MAY 2022 | 6.3 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k73"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Acoustic Data</div>
+                    <div class="sec4d2">1 JUL 2022 | 608.60 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k76"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Form</div>
+                    <div class="sec4d2">13 FEB 2022 | 37.86 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k77"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care and Maintenance</div>
+                    <div class="sec4d2">4 JUL 2023 | 84.8 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k78"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">CAD Files</div>
+                    <div class="sec4d2">8 JUL 2022 | 9.14 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k79"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">1 JUL 2022 | 645.99 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k80"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 1 Fire Certificate</div>
+                    <div class="sec4d2">1 SEP 2022 | 622.37 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k81"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 1 Fire Certificate</div>
+                    <div class="sec4d2">1 SEP 2022 | 317.97 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k81"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guide</div>
+                    <div class="sec4d2">15 NOV 2023 | 1.1 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k82"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installer's Pack</div>
+                    <div class="sec4d2">6 OCT 2022 | 9.05 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k83"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installer's Pack</div>
+                    <div class="sec4d2">6 OCT 2022 | 9.05 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k83"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Group 1 Fire Certificate</div>
+                    <div class="sec4d2">1 NOV 2022 | 281.66 KIB</div>
+                    <div class="sec4d3">IMAGE/JPEG</div>
+                </div>
+                <div class="sec4k84"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 JAN 2022 | 95.98 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k85"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Warranty</div>
+                    <div class="sec4d2">4 FEB 2024 | 78.78 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k86"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Cewood Warranty</div>
+                    <div class="sec4d2">24 FEB 2021 | 52.26 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k87"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care and Maintenance</div>
+                    <div class="sec4d2">1 FEB 2024 | 47.61 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k78"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guide</div>
+                    <div class="sec4d2">13 FEB 2022 | 37.86 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k82"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 JAN 2022 | 95.33 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k88"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 FEB 2022 | 95.38 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k88"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 MAR 2022 | 95.75 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k88"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">11 DEC 2023 | 1.23 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k89"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Product Brochure</div>
+                    <div class="sec4d2">25 FEB 2024 | 666.27 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k90"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">1 JAN 2022 | 95.39 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k88"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Wording</div>
+                    <div class="sec4d2">22 MAR 2023 | 95.39 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k88"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guidelines</div>
+                    <div class="sec4d2">13 FEB 2022 | 37.86 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k89"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Care & Maintenance</div>
+                    <div class="sec4d2">12 FEB 2024 | 67.7 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k91"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Material Safety Data Sheet</div>
+                    <div class="sec4d2">25 FEB 2024 | 82.57 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k92"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guide</div>
+                    <div class="sec4d2">18 FEB 2024 | 138.18 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k82"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Product Brochure</div>
+                    <div class="sec4d2">28 FEB 2024 | 1.76 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k90"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Artwork Lables</div>
+                    <div class="sec4d2">20 FEB 2024 | 1.47 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k93"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Fire Certificate</div>
+                    <div class="sec4d2">1 JUL 2022 | 2.92 MIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k94"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Form</div>
+                    <div class="sec4d2">1 APR 2022 | 59.89 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k95"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Product Brochure</div>
+                    <div class="sec4d2">13 FEB 2022 | 37.86 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k90"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Installation Guide</div>
+                    <div class="sec4d2">13 FEB 2022 | 37.86 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k82"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+        <div class="sec4l1">
+            <div class="sec4p1">
+                <div class="sec4k1"> <i class="fa fa-file-o"></i></div>
+                <div class="sec4k2">
+                    <div class="sec4d1">Specification Form</div>
+                    <div class="sec4d2">27 APR 2024 | 610.69 KIB</div>
+                    <div class="sec4d3">APPLICATION/PDF</div>
+                </div>
+                <div class="sec4k95"><i class="fa fa-arrow-circle-o-down"></i></div>
+            </div>
+        </div>
+    </section>
+    <div class="content12">
+        <div class="c12u1">
+            <div class="c12l0"><svg class="logo-0-3-461" viewBox="0 0 64 64" fill="none"><path d="M63.93 30.1793H63.9983V0H31.999V0.0690724C49.052 0.0690724 62.9842 13.3921 63.93 30.1793Z" fill="currentColor"></path><path d="M63.9315 33.8208C62.9858 50.608 49.0536 63.931 32.0006 63.931V64.0001H63.9999V33.8208H63.9315Z" fill="currentColor"></path><path d="M31.9309 30.1793H31.9993V0H0V0.0690724C17.053 0.0690724 30.9852 13.3921 31.9309 30.1793Z" fill="currentColor"></path><path d="M31.9309 33.8208C30.9852 50.608 17.053 63.931 0 63.931V64.0001H31.9993V33.8208H31.9309Z" fill="currentColor"></path></svg></div>
+            <div class="c12l1">
+                <grey>Subscribe to our new sletter</grey>
+                <input type="text" class="c12l2" placeholder="First Name">
+                <input type="text" class="c12l3" placeholder="Last Name">
+                <input type="email" class="c12l4" placeholder="Email address">
+                <div class="c12l5">Decor Systems acknowledges and pays <br>respect to the past, present and future
+                    <br>Traditional Custodians and Elders of Australia <br>and the continuation of cultural, spiritual
+                    and <br> educational practices of Aboriginal and Torres <br> Strait Islander peoples.
+                </div>
+            </div>
+        </div>
+        <div class="c12u2">
+            <div class="c12l6">
+                <grey>SOCIAL</grey>
+            </div>
+            <div class="c12l7"><a href="">Instagram</a></div>
+            <div class="c12l7"><a href="">Facebook</a></div>
+            <div class="c12l7"><a href="">Linkedin</a></div>
+            <div class="c12l7"><a href="">Printerest</a></div>
+            <div class="c12l8"><img src="./Images/e07af0db6e8788ce3f9328c6bcb45d72bde20e0a-30x17.svg" alt=""
+                    width="50px" height="50px">
+                <img src="./Images/59fd80910520a412a6219c3cc3f4c956a3a665d3-57x33.svg" alt="" width="50px"
+                    height="50px">
+                <img src="./Images/cbf4cf58404e5cb568698cc47fba24124f360987-40x34.svg" alt="" width="50px"
+                    height="50px">
+                <img src="./Images/996f3ea7be9ec8cb18fafd8415616835692e48b2-40x40.svg" alt="" width="50px"
+                    height="50px">
+            </div>
+            <div class="c12l9">
+                <img src="./Images/d945edfd6e32060bde924926cd3ab9e353d83b78-30x42.svg" alt="" width="50px"
+                    height="50px">
+                <img src="./Images/87032256d900b09b4553562467e740aea89d5159-372x540.svg" alt="" width="50px"
+                    height="50px">
+            </div>
+            <div class="c12l10">
+                © Decor Systems 2022 Developer - YASIR ARAFAT
+            </div>
+        </div>
+        <div class="c12u3">
+            <div class="c12l11">
+                <div>
+                    <div class="c12p1">
+                        <grey>PRODUCTS</grey>
+                    </div>
+                    <div class="c12p2"><a href="">Panels</a></div>
+                    <div class="c12p2"><a href="">Slats</a></div>
+                    <div class="c12p2"><a href="">Designer</a></div>
+                    <div class="c12p2"><a href="">Accesories</a></div>
+                    <div class="c12k1">
+                        <grey>CONTACT</grey>
+                    </div>
+                    <div class="c12k2"><a href="">1800 835 085</a></div>
+                    <div class="c12k2"><a href="">letstalk@decorsystems.com.au</a></div>
+                </div>
+                <div>
+                    <div class="c12p3">
+                        <grey>PROJECTS</grey>
+                    </div>
+                    <div class="c12p4"><a href="">Health and Aged Care</a></div>
+                    <div class="c12p5"><a href="">Arts and Community</a></div>
+                    <div class="c12p6"><a href="">Commercial</a></div>
+                    <div class="c12p7"><a href="">Education</a></div>
+                    <div class="c12k3">
+                        <grey>RESOURCES</grey>
+                    </div>
+                    <div class="c12k4"><a href="">Privacy Policy</a></div>
+                    <div class="c12k5"><a href="">Terms of Sale</a></div>
+                    <div class="c12k6"><a href="">Work With Us</a></div>
+                    <div class="c12k7"><a href="">DSA End-of-Life Policy</a></div>
+                    <div class="c12k8"><a href="">Modern Slavery</a></div>
+                    <div class="c12k9"><a href="">Statement</a></div>
+                    <div class="c12k10"><a href="">Supplier Code of</a></div>
+                    <div class="c12k11"><a href="">Conduct</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
