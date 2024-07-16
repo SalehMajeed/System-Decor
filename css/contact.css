@@ -451,6 +451,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: right;
 }
 
 .resourcesContainer {
@@ -622,6 +623,7 @@ input {
     .projectsContainer {
         grid-row: 2;
         grid-column: 1/span 2;
+        text-align: left;
     }
 
     .productsContainer {
