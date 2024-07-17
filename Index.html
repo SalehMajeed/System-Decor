@@ -5,43 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decor Systems: Architectural Acoustic Solution</title>
-    <link rel="stylesheet" href="./CSS/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <div class="nav">
-        <div class="navl"><svg width="105" height="26" viewBox="0 0 105 26" fill="none" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><path d="M44.3672 6.12227C44.3672 2.63764 42.7203 0.260498 39.249 0.260498H35.051V11.9032H39.136C42.6073 11.9032 44.3672 9.60729 44.3672 6.12227ZM36.5043 10.6168V1.53054H39.2006C41.9131 1.53054 42.8818 3.38698 42.8818 6.12227C42.8818 8.85834 41.8001 10.6168 39.0876 10.6168H36.5043Z" fill="currentColor"></path><path d="M54.3599 10.5515H47.4657V6.46447H53.5525V5.22671H47.4657V1.54687H54.1662V0.260498H46.0125V11.9032H54.3599V10.5515Z" fill="currentColor"></path><path d="M60.7035 12.1311C62.1729 12.1311 63.3514 11.708 64.1588 10.91C64.9822 10.0958 65.5313 8.79305 65.5473 7.63695H64.1104C63.9651 9.34679 62.9317 10.8447 60.7521 10.8447C58.3463 10.8447 56.7801 8.92332 56.7801 6.0737C56.7801 3.33803 58.2009 1.27004 60.7359 1.27004C62.5604 1.27004 63.7067 2.2632 63.9813 3.71251H65.4021C65.0952 1.56324 63.4646 0 60.7681 0C57.329 0 55.2947 2.65401 55.2947 6.0737C55.2947 9.60733 57.4259 12.1311 60.7035 12.1311Z" fill="currentColor"></path><path d="M77.9615 6.07371C77.9615 2.58907 75.7979 0 72.3104 0C68.8229 0 66.6594 2.58907 66.6594 6.07371C66.6594 9.55834 68.8229 12.1474 72.3104 12.1474C75.7979 12.1474 77.9615 9.55834 77.9615 6.07371ZM72.3104 10.861C69.5979 10.861 68.1448 8.80938 68.1448 6.07371C68.1448 3.33803 69.5979 1.27004 72.3104 1.27004C75.0229 1.27004 76.4761 3.33803 76.4761 6.07371C76.4761 8.80938 75.0229 10.861 72.3104 10.861Z" fill="currentColor"></path><path d="M81.0592 6.98555H84.2722C85.8222 6.98555 86.5002 7.58791 86.6134 9.29775C86.7425 11.2518 86.7909 11.6916 87.0331 11.9032H88.5993V11.8378C88.3893 11.6916 88.1956 11.2191 88.0664 9.34675C87.9534 7.62057 87.5821 6.80629 86.4034 6.38281V6.3342C87.7919 5.87806 88.4055 4.86857 88.4055 3.45193C88.4055 1.54687 87.0331 0.260498 84.9988 0.260498H79.606V11.9032H81.0592V6.98555ZM81.0592 1.53054H84.5627C86.2581 1.53054 86.9039 2.24683 86.9039 3.66347C86.9039 4.9825 86.0967 5.79679 84.4821 5.79679H81.0592V1.53054Z" fill="currentColor"></path><path d="M39.2009 18.9653C37.4733 18.6235 36.1816 18.2327 36.1816 16.9137C36.1816 15.7086 37.215 15.0409 38.7812 15.0409C40.4763 15.0409 41.5421 15.8715 41.752 17.5324H43.1243C42.8337 15.3831 41.6388 13.9011 38.7488 13.9011C36.4076 13.9011 34.8254 15.0572 34.8254 16.979C34.8254 19.1773 36.5691 19.7633 38.6034 20.2194C40.6701 20.6752 42.0587 21.0497 42.0587 22.6456C42.0587 24.0949 40.9122 24.8275 39.3138 24.8275C37.1342 24.8275 35.9395 23.8017 35.7455 21.8313H34.3247C34.4539 24.1761 36.0039 25.9999 39.2492 25.9999C41.7358 25.9999 43.4956 24.7789 43.4956 22.5966C43.4956 19.9748 41.4451 19.4215 39.2009 18.9653Z" fill="currentColor"></path><path d="M51.8253 14.1292L48.467 19.6658H48.4346L45.1246 14.1292H43.5103L47.692 20.8383V25.7722H49.145V20.8709L53.3753 14.1292H51.8253Z" fill="currentColor"></path><path d="M58.2009 18.9653C56.4733 18.6235 55.1816 18.2327 55.1816 16.9137C55.1816 15.7086 56.215 15.0409 57.7812 15.0409C59.4763 15.0409 60.5421 15.8715 60.752 17.5324H62.1243C61.8337 15.3831 60.6388 13.9011 57.7488 13.9011C55.4076 13.9011 53.8254 15.0572 53.8254 16.979C53.8254 19.1773 55.5691 19.7633 57.6034 20.2194C59.6701 20.6752 61.0587 21.0497 61.0587 22.6456C61.0587 24.0949 59.9122 24.8275 58.3138 24.8275C56.1342 24.8275 54.9395 23.8017 54.7455 21.8313H53.3247C53.4539 24.1761 55.0039 25.9999 58.2493 25.9999C60.7358 25.9999 62.4956 24.7789 62.4956 22.5966C62.4956 19.9748 60.4451 19.4215 58.2009 18.9653Z" fill="currentColor"></path><path d="M62.7849 15.4159H66.6277V25.7722H68.0808V15.4159H71.9236V14.1292H62.7849V15.4159Z" fill="currentColor"></path><path d="M74.7311 20.3335H80.8179V19.0958H74.7311V15.4159H81.4315V14.1292H73.2778V25.7722H81.6253V24.4205H74.7311V20.3335Z" fill="currentColor"></path><path d="M88.8732 23.8018H88.8411L85.0952 14.1292H83.2383V25.7722H84.5461V16.1975H84.5785C84.5785 16.1975 84.8691 17.0768 85.0952 17.6628L88.2596 25.7722H89.3737L92.5383 17.6628C92.7483 17.109 93.055 16.1975 93.055 16.1975H93.0874V25.7722H94.4758V14.1292H92.5869L88.8732 23.8018Z" fill="currentColor"></path><path d="M100.706 18.9653C98.978 18.6235 97.6863 18.2327 97.6863 16.9137C97.6863 15.7086 98.7197 15.0409 100.286 15.0409C101.981 15.0409 103.047 15.8715 103.256 17.5324H104.629C104.338 15.3831 103.144 13.9011 100.253 13.9011C97.9123 13.9011 96.3301 15.0572 96.3301 16.979C96.3301 19.1773 98.0738 19.7633 100.108 20.2194C102.175 20.6752 103.563 21.0497 103.563 22.6456C103.563 24.0949 102.417 24.8275 100.819 24.8275C98.6389 24.8275 97.444 23.8017 97.2504 21.8313H95.8296C95.9588 24.1761 97.5088 25.9999 100.754 25.9999C103.24 25.9999 105 24.7789 105 22.5966C105 19.9748 102.95 19.4215 100.706 18.9653Z" fill="currentColor"></path><path d="M25.7073 12.2605H25.7348V0H12.8674V0.0280609C19.7247 0.0280609 25.327 5.44059 25.7073 12.2605Z" fill="currentColor"></path><path d="M25.7078 13.7395C25.3275 20.5594 19.7252 25.9719 12.8679 25.9719V26H25.7353V13.7395H25.7078Z" fill="currentColor"></path><path d="M12.8399 12.2605H12.8674V0H0V0.0280609C6.85726 0.0280609 12.4596 5.44059 12.8399 12.2605Z" fill="currentColor"></path><path d="M12.8399 13.7395C12.4596 20.5594 6.85726 25.9719 0 25.9719V26H12.8674V13.7395H12.8399Z" fill="currentColor"></path></svg></div>
-        <div class="element">
-            <ul>
-                <li><a href="">PROJECTS</a></li>
-                <li><a href="">PRODUCTS</a></li>
-                <li><a href="">RESOURCCES</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">CONTACT</a></li>
-                <li><a href="">SAMPLES</a></li>
-                <li><a href="">Menu</a></li>
-            </ul>
-        </div>
-    </div>
+    <header id="header">
+
+    </header>
     <div class="content1">
         <div class="arc">
-            Architectural <br> Acoustic Solutions
+            Architectural <br>Acoustic Solutions
         </div>
         <div class="para1">
-            <div class="smg"> &nbsp &nbsp &nbsp We help architects sculpt sound out of <br>space, with bespoke, acoustic
+            <div class="smg"> &nbsp &nbsp &nbsp We help architects sculpt sound out of space, with bespoke, acoustic
                 solutions.
             </div>
             <div class="l1">BUILT TO SPEC</div>
             <div class="l2">INDIGENOUS OWNED SINCE. <br>1972 <br>
                 SUPPLY NATION CERTIFIED</div>
-            <div class="l3"><img src="/Images/e77d98efe1bef5e97cba27b929b822e23bcbc384-6670x7822.png" alt=""
-                    width="80px" height="100px"></div>
+            <div class="l3"><img src="./img/e77d98efe1bef5e97cba27b929b822e23bcbc384-6670x7822.png" alt="" width="80px"
+                    height="100px"></div>
         </div>
         <a href="">
             <div class="inp">PRODUCTS</div>
         </a>
     </div>
-    <img src="/Images/ef8aca612e6cd6137beae2ba45d247a2a726e639-5520x3680.webp" alt="" width="100%">
+    <div class="image"><img src="./img/ef8aca612e6cd6137beae2ba45d247a2a726e639-5520x3680.webp" alt=""></div>
     <div class="content2">
         <div class="c2l1">SELECTED WORKS</div>
         <div class="c2l2">Our inspired solutions have helped shape <br> modern acoustic design. Alluring spaces,<br>
@@ -79,7 +69,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="c3img"><img src="/Images/acf684d5ca55867027097834fa9bb82dc86c79dd-5520x3680.webp" alt=""
+                <div class="c3img"><img src="./img/acf684d5ca55867027097834fa9bb82dc86c79dd-5520x3680.webp" alt=""
                         width="700px" height="500px"></div>
             </div>
         </div>
@@ -109,9 +99,9 @@
                     </div>
 
                 </div>
-                <div class="c3img2"><img src="./Images/132b28d863cf5e07ab869a77dcac84e360f6ff5a-5792x8688.webp" alt=""
+                <div class="c3img2"><img src="./img/132b28d863cf5e07ab869a77dcac84e360f6ff5a-5792x8688.webp" alt=""
                         width="300px" height="500px"></div>
-                <div class="c3img3"><img src="./Images/a45987b6683f5b99ad5341bbce4e3122ebe49aad-8688x5792.webp" alt=""
+                <div class="c3img3"><img src="./img/a45987b6683f5b99ad5341bbce4e3122ebe49aad-8688x5792.webp" alt=""
                         width="500px" height="500px"></div>
             </div>
         </div>
@@ -140,9 +130,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="c3img4"><img src="./Images/3a1d4ce7bfc8405294ede1ae91f6441f4e4f51f6-5998x7996.webp" alt=""
+                <div class="c3img4"><img src="./img/3a1d4ce7bfc8405294ede1ae91f6441f4e4f51f6-5998x7996.webp" alt=""
                         width="300px" height="500px"></div>
-                <div class="c3img5"><img src="./Images/8735df6a5f0523a2884e21949e0b076a951564af-8148x6111.webp" alt=""
+                <div class="c3img5"><img src="./img/8735df6a5f0523a2884e21949e0b076a951564af-8148x6111.webp" alt=""
                         width="500px" height="500px"></div>
             </div>
         </div>
@@ -162,7 +152,7 @@
             </a>
         </div>
     </div>
-    <img src="./Images/ada7bcfb-0e33-42fb-a9ee-bd2dadf69efb.jpeg" alt="" width="100%">
+    <img src="./img/ada7bcfb-0e33-42fb-a9ee-bd2dadf69efb.jpeg" alt="" width="100%">
     <div class="content5">
         <div class="c5l1">ACOUSTIC <br>PRODUCTS</div>
         <div class="c5l2">
@@ -176,15 +166,15 @@
         </div>
     </div>
     <div class="content6">
-        <div><img src="./Images/2351ba7bc1a7e3287b5580caa8f769da650fafa6-1255x1255.webp" alt="" width="500px"
+        <div><img src="./img/2351ba7bc1a7e3287b5580caa8f769da650fafa6-1255x1255.webp" alt="" width="500px"
                 height="400px">
             <div class="c6l1">Style</div>
         </div>
-        <div><img src="./Images/54294163026b1c635edbb19a611ff7617b16af5a-762x1000.webp" alt="" width="300px"
+        <div><img src="./img/54294163026b1c635edbb19a611ff7617b16af5a-762x1000.webp" alt="" width="300px"
                 height="400px">
             <div class="c6l1">Slat</div>
         </div>
-        <div><img src="./Images/1c0ed788be805b3af7a3c404d4d7c5c23cdf72e6-2444x3280.webp" alt="" width="300px"
+        <div><img src="./img/1c0ed788be805b3af7a3c404d4d7c5c23cdf72e6-2444x3280.webp" alt="" width="300px"
                 height="400px">
             <div class="c6l1">Ali</div>
         </div>
@@ -212,15 +202,14 @@
         <div class="c6p18">NRC --0.75</div>
     </div>
     <div class="content7">
-        <div><img src="./Images/cc973dde058c24492002f3ed90cc31e1d6e13151-1169x947.webp" alt="" width="500px"
-                height="400px">
+        <div><img src="/img/cc973dde058c24492002f3ed90cc31e1d6e13151-1169x947.webp" alt="" width="500px" height="400px">
             <div class="c7l1">Tone</div>
         </div>
-        <div><img src="./Images/d8e79afcb61e2a52c2807f7df5ed01723f62bfa0-8677x6597.webp" alt="" width="300px"
+        <div><img src="./img/d8e79afcb61e2a52c2807f7df5ed01723f62bfa0-8677x6597.webp" alt="" width="300px"
                 height="400px">
             <div class="c7l1">Vogl</div>
         </div>
-        <div><img src="./Images/ba39f7ad64ee048da69933c55bb7e84c42818130-1600x1067.webp" alt="" width="300px"
+        <div><img src="./img/ba39f7ad64ee048da69933c55bb7e84c42818130-1600x1067.webp" alt="" width="300px"
                 height="400px">
             <div class="c7l1">Milano</div>
         </div>
@@ -259,7 +248,7 @@
     </div>
     <div class="content9">
         <div class="c9u1">
-            <div class="c9l1"><img src="./Images/226fa72dd66a27bf3d21baedd7048ebc7ed436e2-1536x1024.webp" alt=""></div>
+            <div class="c9l1"><img src="./img/226fa72dd66a27bf3d21baedd7048ebc7ed436e2-1536x1024.webp" alt=""></div>
             <div class="c9l2">Sound Solutions: Enhancing <br>Acoustics for Aged Care Comfort</div>
             <div class="c9l3">Many building commissioners, designers, <br>and care providers often underestimate the
                 <br>significant impact of noise, particularly on <br>older individuals. By raising awareness about
@@ -277,7 +266,7 @@
     </div>
     <div class="content10">
         <div class="c10u1">
-            <div class="c10l1"><img src="./Images/af3129512d41fd7fae59b2a9597c9a69089238ee-3596x2400.webp" alt=""></div>
+            <div class="c10l1"><img src="./img/af3129512d41fd7fae59b2a9597c9a69089238ee-3596x2400.webp" alt=""></div>
             <div class="c10l2">Revolutionising Acoustic <br>Excellence with Diffuser Panels</div>
             <div class="c10l3">Explore the world of diffuser panels and <br>discover DecorTone by Decor Systems, a
                 <br>premium acoustic solution designed to <br>scatter sound waves with precision. Learn <br>about the
@@ -292,7 +281,7 @@
     </div>
     <div class="content11">
         <div class="c11u1">
-            <div class="c11l1"><img src="./Images/17ea32caee156902463f9c17c5598d422f527cb9-1169x944.webp" alt=""></div>
+            <div class="c11l1"><img src="./img/17ea32caee156902463f9c17c5598d422f527cb9-1169x944.webp" alt=""></div>
             <div class="c11l2">Flexible and High-Performing <br>Acoustic Panels</div>
             <div class="c11l3">Unlock design possibilities with DecorLini, <br>the ultimate solution for flexible and
                 high- <br> performing acoustic panels. Seamlessly <br>transitioning between flat and curved
@@ -305,86 +294,7 @@
             <div class="c11l5">27 FEB 2024</div>
         </div>
     </div>
-    <div class="content12">
-        <div class="c12u1">
-            <div class="c12l0"><svg class="logo-0-3-461" viewBox="0 0 64 64" fill="none"><path d="M63.93 30.1793H63.9983V0H31.999V0.0690724C49.052 0.0690724 62.9842 13.3921 63.93 30.1793Z" fill="currentColor"></path><path d="M63.9315 33.8208C62.9858 50.608 49.0536 63.931 32.0006 63.931V64.0001H63.9999V33.8208H63.9315Z" fill="currentColor"></path><path d="M31.9309 30.1793H31.9993V0H0V0.0690724C17.053 0.0690724 30.9852 13.3921 31.9309 30.1793Z" fill="currentColor"></path><path d="M31.9309 33.8208C30.9852 50.608 17.053 63.931 0 63.931V64.0001H31.9993V33.8208H31.9309Z" fill="currentColor"></path></svg></div>
-            <div class="c12l1">
-                <grey>Subscribe to our new sletter</grey>
-                <input type="text" class="c12l2" placeholder="First Name">
-                <input type="text" class="c12l3" placeholder="Last Name">
-                <input type="email" class="c12l4" placeholder="Email address">
-                <div class="c12l5">Decor Systems acknowledges and pays <br>respect to the past, present and future
-                    <br>Traditional Custodians and Elders of Australia <br>and the continuation of cultural, spiritual
-                    and <br> educational practices of Aboriginal and Torres <br> Strait Islander peoples.
-                </div>
-            </div>
-        </div>
-        <div class="c12u2">
-            <div class="c12l6">
-                <grey>SOCIAL</grey>
-            </div>
-            <div class="c12l7"><a href="">Instagram</a></div>
-            <div class="c12l7"><a href="">Facebook</a></div>
-            <div class="c12l7"><a href="">Linkedin</a></div>
-            <div class="c12l7"><a href="">Printerest</a></div>
-            <div class="c12l8"><img src="./Images/e07af0db6e8788ce3f9328c6bcb45d72bde20e0a-30x17.svg" alt=""
-                    width="50px" height="50px">
-                <img src="./Images/59fd80910520a412a6219c3cc3f4c956a3a665d3-57x33.svg" alt="" width="50px"
-                    height="50px">
-                <img src="./Images/cbf4cf58404e5cb568698cc47fba24124f360987-40x34.svg" alt="" width="50px"
-                    height="50px">
-                <img src="./Images/996f3ea7be9ec8cb18fafd8415616835692e48b2-40x40.svg" alt="" width="50px"
-                    height="50px">
-            </div>
-            <div class="c12l9">
-                <img src="./Images/d945edfd6e32060bde924926cd3ab9e353d83b78-30x42.svg" alt="" width="50px"
-                    height="50px">
-                <img src="./Images/87032256d900b09b4553562467e740aea89d5159-372x540.svg" alt="" width="50px"
-                    height="50px">
-            </div>
-            <div class="c12l10">
-                © Decor Systems 2022 Developer - YASIR ARAFAT
-            </div>
-        </div>
-        <div class="c12u3">
-            <div class="c12l11">
-                <div>
-                    <div class="c12p1">
-                        <grey>PRODUCTS</grey>
-                    </div>
-                    <div class="c12p2"><a href="">Panels</a></div>
-                    <div class="c12p2"><a href="">Slats</a></div>
-                    <div class="c12p2"><a href="">Designer</a></div>
-                    <div class="c12p2"><a href="">Accesories</a></div>
-                    <div class="c12k1">
-                        <grey>CONTACT</grey>
-                    </div>
-                    <div class="c12k2"><a href="">1800 835 085</a></div>
-                    <div class="c12k2"><a href="">letstalk@decorsystems.com.au</a></div>
-                </div>
-                <div>
-                    <div class="c12p3">
-                        <grey>PROJECTS</grey>
-                    </div>
-                    <div class="c12p4"><a href="">Health and Aged Care</a></div>
-                    <div class="c12p5"><a href="">Arts and Community</a></div>
-                    <div class="c12p6"><a href="">Commercial</a></div>
-                    <div class="c12p7"><a href="">Education</a></div>
-                    <div class="c12k3">
-                        <grey>RESOURCES</grey>
-                    </div>
-                    <div class="c12k4"><a href="">Privacy Policy</a></div>
-                    <div class="c12k5"><a href="">Terms of Sale</a></div>
-                    <div class="c12k6"><a href="">Work With Us</a></div>
-                    <div class="c12k7"><a href="">DSA End-of-Life Policy</a></div>
-                    <div class="c12k8"><a href="">Modern Slavery</a></div>
-                    <div class="c12k9"><a href="">Statement</a></div>
-                    <div class="c12k10"><a href="">Supplier Code of</a></div>
-                    <div class="c12k11"><a href="">Conduct</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer id="footer"></footer>
     <div class="content13">
         <div class="c13l1">
             <div class="c13j1">PAGE</div>
@@ -393,6 +303,8 @@
         <a href="" class="c13l2">Chat Online</a>
         <a href="" class="c13l3">Request a qoute</a>
     </div>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
 
 </html>
