@@ -54,6 +54,7 @@ const headerHTML = `<div class="nav-bar">
                     fill="currentColor"></path>
             </svg>
         </a>
+
         <h3 class="nav-item nav-item-hidden"><a class="sidebar__links" id="Projects" href="#">PROJECTS</a></h3>
         <h3 class="nav-item nav-item-hidden"><a class="sidebar__links" id="Products" href="#">PRODUCTS</a></h3>
         <h3 class="nav-item nav-item-hidden"><a class="sidebar__links" id="Resources" href="#">RESOURCES</a></h3>
@@ -70,6 +71,7 @@ const headerHTML = `<div class="nav-bar">
     </div>
 </nav>
 </div>`;
+
 
 $('#header').html(headerHTML)
 

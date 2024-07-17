@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     overflow-x: hidden;
     font-family: "NHaasGroteskTXPro", "Lucida-Sans", Tahoma, sans-serif;
     font-weight: 300;
@@ -250,6 +251,7 @@ nav ul {
 .sustainability {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 15px;
     padding-top: 90px;
     font-size: 20px;

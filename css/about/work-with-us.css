@@ -19,6 +19,7 @@ ul {
     --first-color: rgb(204, 169, 159);
     --second-color: rgb(41, 26, 22);
     --light-color: rgb(97, 75, 69);
+  
     --primary-sizing: 0.5rem;
     --secondry-sizing: 1rem;
     --upper-sizing: 1.5rem;
@@ -38,6 +39,7 @@ body {
     overflow-x: hidden;
 
 }
+
 
 
 header {
@@ -189,6 +191,7 @@ nav {
 }
 
 /* =====================end hidden menu============ */
+
 /* .nav-links ul {
     display: flex;
     width: 100%;
@@ -316,7 +319,6 @@ nav {
     height: 650px;
     gap: 25px;
     margin: 25px;
-   
 }
 
 .heading__graph {
@@ -328,10 +330,12 @@ nav {
     font-weight: normal;
 }
 
-/* .graph__description:hover {
+
+.graph__description:hover {
     opacity: 1;
     color: var(--first-color);
-} */
+}
+
 
 .title__graph::-webkit-scrollbar {
     display: none;
