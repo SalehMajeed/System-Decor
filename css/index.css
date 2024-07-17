@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -148,6 +149,7 @@ nav {
 .inp {
     grid-column: 2/ span 2;
     grid-row: 3;
+
     border-radius: 30px;
     width: 120px;
     height: 25px;
@@ -193,6 +195,7 @@ a .inp:hover {
     width: 600px;
 }
 
+
 .c2l2 {
     width: 300px;
     margin: 50px 0 0 20px;
@@ -206,6 +209,7 @@ a .inp:hover {
     border-radius: 30px;
     background: transparent;
     text-align: center;
+
     padding: 5px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -238,6 +242,7 @@ grey {
 }
 
 .c3h1 {
+
     margin: 30px 0 0 20px;
     font-size: 10px;
     color: grey;
@@ -249,12 +254,14 @@ grey {
 }
 
 .c3h2 a {
+
     text-decoration: none;
     color: black;
     width: 100%;
 }
 
 .c3h3 {
+
     display: flex;
     /* position: absolute; */
     margin: 300px 0 0 20px;
@@ -1356,3 +1363,4 @@ input {
         margin-top: 20px;
     }
 }
+

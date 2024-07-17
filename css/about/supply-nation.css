@@ -43,9 +43,14 @@ html {
 
 
 header {
+    width: 100%;
     height: auto;
     padding: 5px 5px;
     border-bottom: 1px solid #CFCFB0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#3A3A1F ;
 }
 
 .nav-bar {
@@ -140,6 +145,7 @@ nav {
     grid-template-columns: repeat(7, 1fr);
     gap: 25px;
     padding: 0;
+    margin-top:80px;
 }
 
 
