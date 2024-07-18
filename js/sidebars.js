@@ -1,76 +1,3 @@
-// async function navData() {
-//     return (await fetch("../../json/nav-data.json")).json()
-// }
-
-
-// console.log(navData())
-
-
-// const navHeader = document.getElementById("header");
-// const sidebar = document.getElementById("sidebar");
-
-// const firstSidebar = document.createElement("div");
-// firstSidebar.classList.add("first__sidebar");
-// const secondSidebar = document.createElement("div");
-// secondSidebar.classList.add("second__sidebar");
-// const thirdSidebar = document.createElement("div");
-// thirdSidebar.classList.add("third__sidebar");
-
-
-
-// navHeader.addEventListener("click", eventFn)
-// function eventFn(e) {
-//     if (e.target.classList.contains("sidebar__links")) {
-//         navData().then((data) => {
-//             createElements(data);
-//             console.log(data)
-//         })
-//     }else{
-//         return 
-//     }
-// }
-
-
-
-
-// function createElements(data) {
-//     secondSidebar.innerHTML = "";
-//     thirdSidebar.innerHTML = "";
-
-//     const firstList = document.createElement("ul")
-//     for (const category in data) {
-//         firstList.innerHTML += `<li class="first__sidebarLi">${category}</li>`;
-
-
-//         firstSidebar.append(firstList)
-
-//         const secondList = document.createElement("ul");
-//         for (const key in data[category]) {
-//             secondList.innerHTML += `<li class="second__sidebarLi">${key}</li>`;
-
-
-//             secondSidebar.append(secondList);
-
-//             const thirdList = document.createElement("ul");
-//             for(const innerKey in data[category][key]){
-//                 thirdList.innerHTML += `<li class="third__sidebarLi">${innerKey}</li>`;
-
-//                 thirdSidebar.append(thirdList)
-//             }
-
-
-
-//         }
-
-//     }
-//     sidebar.append(firstSidebar);
-//     sidebar.append(secondSidebar);
-//     sidebar.append(thirdSidebar)
-// }
-
-
-
-
 async function navData() {
     return (await fetch("../../json/nav-data.json")).json()
 }
@@ -108,6 +35,9 @@ function eventFn(e) {
     }
     secondSidebar.addEventListener("mouseover", hoverEvent);
     function hoverEvent(e) {
+        if(e.target.tagName !== "LI"){
+            return 
+        }
         pre1Value = e.target;
         navData().then((data) => {
             thirdFn(data[preValue.id][e.target.textContent])
@@ -115,12 +45,18 @@ function eventFn(e) {
     }
     thirdSidebar.addEventListener("mouseover", hover1Event);
     function hover1Event(e) {
+        if(e.target.tagName !== "LI"){
+            return 
+        }
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
         })
     }
     firstSidebar.addEventListener("click", sidebarEvent)
     function sidebarEvent(e) {
+        if(e.target.tagName !== "LI"){
+            return 
+        }
         preValue = e.target
 
         navData().then((data) => {
@@ -128,6 +64,10 @@ function eventFn(e) {
         })
         secondSidebar.addEventListener("mouseover", hoverEvent);
         function hoverEvent(e) {
+            if(e.target.tagName !== "LI"){
+                return 
+            }
+
             pre1Value = e.target;
             navData().then((data) => {
                 thirdFn(data[preValue.textContent][e.target.textContent])
@@ -136,6 +76,9 @@ function eventFn(e) {
         }
         thirdSidebar.addEventListener("mouseover", hover1Event);
         function hover1Event(e) {
+            if(e.target.tagName !== "LI"){
+                return 
+            }
             navData().then((data) => {
                 fourthFn(data[preValue.textContent][pre1Value.textContent][e.target.textContent])
             })
@@ -192,9 +135,3 @@ function createElements(data) {
     }
     sidebar.append(firstSidebar);
 }
-
-
-
-
-
-
