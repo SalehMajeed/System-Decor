@@ -6,11 +6,11 @@
     overflow-x: hidden;
     font-family: "NHaasGroteskTXPro", "Lucida-Sans", Tahoma, sans-serif;
     font-weight: 300;
+    color: rgb(196, 196, 165);
 }
 
 body {
     background-color: #3a3a1f;
-    color: rgb(196, 196, 165);
     /* font-family: sans-serif; */
 }
 
@@ -18,34 +18,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #3a3a1f;
-    border-bottom: 1px solid white;
-}
-
-nav ul {
-    display: flex;
-    padding: 20px;
-    color: white;
-    gap: 10px;
-}
-
-.linkBar {
-    display: flex;
-    gap: 16px;
-}
-
-.linkBar a {
-    color: white;
-    text-decoration: none;
-    padding-right: 200px;
+:root{
+    --first-color: #CFCFB0;
+   --second-color:#3a3a1f;
+   --light-color: #cfcfb0c0;
 }
 
 .container {
@@ -54,6 +30,7 @@ nav ul {
     padding-left: 25px;
     padding-right: 25px;
     position: relative;
+    margin-top: 80px;
 }
 
 .container-hrLine {
