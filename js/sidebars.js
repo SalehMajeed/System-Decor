@@ -35,6 +35,9 @@ function eventFn(e) {
     }
     secondSidebar.addEventListener("mouseover", hoverEvent);
     function hoverEvent(e) {
+        if(e.target.tagName !== "LI"){
+            return
+        }
         pre1Value = e.target;
         navData().then((data) => {
             thirdFn(data[preValue.id][e.target.textContent])
@@ -42,12 +45,18 @@ function eventFn(e) {
     }
     thirdSidebar.addEventListener("mouseover", hover1Event);
     function hover1Event(e) {
+        if(e.target.tagName !== "LI"){
+            return
+        }
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
         })
     }
     firstSidebar.addEventListener("click", sidebarEvent)
     function sidebarEvent(e) {
+        if(e.target.tagName !== "LI"){
+            return
+        }
         preValue = e.target
 
         navData().then((data) => {
@@ -55,6 +64,9 @@ function eventFn(e) {
         })
         secondSidebar.addEventListener("mouseover", hoverEvent);
         function hoverEvent(e) {
+            if(e.target.tagName !== "LI"){
+                return
+            }
             pre1Value = e.target;
             navData().then((data) => {
                 thirdFn(data[preValue.textContent][e.target.textContent])
@@ -63,6 +75,9 @@ function eventFn(e) {
         }
         thirdSidebar.addEventListener("mouseover", hover1Event);
         function hover1Event(e) {
+            if(e.target.tagName !== "LI"){
+                return
+            }
             navData().then((data) => {
                 fourthFn(data[preValue.textContent][pre1Value.textContent][e.target.textContent])
             })
