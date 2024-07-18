@@ -1210,10 +1210,15 @@ nav {
 
 
 .sidebar{
-    /* width: 100%; */
+    /* width: 100%;
+    height: 100%; */
     display: grid;
     grid-template-columns: repeat(4,1fr);
     position: absolute;
     z-index: 9999;
     background-color: var(--second-color);
+}
+.sidebar div{
+    margin: 1.5rem 3rem;
+    
 }
