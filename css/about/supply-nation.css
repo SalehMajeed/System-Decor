@@ -33,6 +33,12 @@
     font-weight: 400;
 }
 
+:root {
+    --first-color: #CFCFB0;
+    --second-color:#3A3A1F;
+    --light-color:#cfcfb0b6;
+}
+
 body,
 html {
     min-height: 100%;
@@ -51,6 +57,7 @@ header {
     top: 0;
     left: 0;
     background-color:#3A3A1F ;
+    z-index: 9;
 }
 
 .nav-bar {
@@ -166,8 +173,10 @@ nav {
     grid-column: 3;
     grid-row: 1/span 2;
     margin: 0px 0;
+    transform: translate(0%,-100%);
     border-right: 1px solid #CFCFB0;
     transition: 0.6s all ease-in-out 0.4s;
+    /* z-index: -1; */
 }
 
 
@@ -183,6 +192,7 @@ nav {
     width: 100%;
     object-fit: cover;
     transition: 0.6s all ease-in-out 0.4s;
+    transform: translate(0,-100%);
 }
 
 
@@ -217,7 +227,8 @@ nav {
 
 .bottom-line{
     border-bottom: 1px solid #CFCFB0;
-    transition: 0.6s all ease-in-out;
+    grid-column: span 7;
+    transition: 1s all ease-in-out;
 }
 
 
@@ -353,6 +364,8 @@ p {
 .graph-img img {
     width: 100%;
     object-fit: cover;
+    transform: translate(0,-100%);
+    transition: 0.6s all ease-in-out;
 }
 
 footer {

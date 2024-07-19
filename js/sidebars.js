@@ -28,9 +28,11 @@ function eventFn(e) {
 
     if (e.target.classList.contains("sidebar__links")) {
         preValue = e.target
+        // e.target.id.classList.add("selected")
         navData().then((data) => {
             createElements(data);
             secondFn(data[e.target.id]);
+            sidebar.classList.add("sidebar")
         })
     }
     secondSidebar.addEventListener("mouseover", hoverEvent);
