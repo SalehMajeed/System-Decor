@@ -15,7 +15,9 @@
 }
 
 :root {
-    --color: #32411a;
+    --first-color: #32411a;
+    --second-color:white;
+    --light-color:#32411aad;
 }
 
 html,

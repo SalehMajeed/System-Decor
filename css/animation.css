@@ -1,0 +1,32 @@
+.showAnime .titleLine{
+    transform: translate(0% ,0);
+
+}
+
+section{
+    overflow: hidden;
+
+}
+.showAnime img{
+    transform: translate(0,0);
+}
+
+.showAnime .bottom-line{
+  animation-name: scaleAnm;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  /* animation-delay: 0.5s; */
+}
+
+@keyframes scaleAnm {
+    to{
+        scale: 1 ;
+    }
+    from{
+        scale: 0 0;
+    }
+}
+
+.showAnime .titledVideoPlayer img{
+    transform: translate(0,0);
+}
