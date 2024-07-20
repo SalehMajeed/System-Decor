@@ -1,32 +1,58 @@
-.showAnime .titleLine{
-    transform: translate(0% ,0);
+.showAnime .titleLine {
+    transform: translate(0%, 0);
 
 }
 
-section{
+section {
     overflow: hidden;
 
 }
-.showAnime img{
-    transform: translate(0,0);
+
+.showAnime img {
+    /* transform: translate(0, 0); */
+    animation-name: scaleAnm;
+    animation-duration: 2.2s;
+    animation-timing-function: linear;
+  
 }
 
-.showAnime .bottom-line{
-  animation-name: scaleAnm;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  /* animation-delay: 0.5s; */
+.showAnime .right-line,
+.showAnime .firstLine,
+.showAnime .secondLine {
+    animation-name: transformAnm;
+    animation-duration: 2.2s;
+    animation-timing-function: linear;
+}
+
+@keyframes transformAnm {
+    to {
+        transform: translate(0, 0%);
+    }
+
+    from {
+        transform: translate(0, -100%);
+    }
+}
+
+.showAnime .bottom-line,
+.showAnime .bottom-lineOp,
+.showAnime .top-line {
+    animation-name: scaleAnm;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    /* animation-delay: 0.5s; */
 }
 
 @keyframes scaleAnm {
-    to{
-        scale: 1 ;
+    to {
+        scale: 1;
     }
-    from{
+
+    from {
         scale: 0 0;
     }
 }
 
-.showAnime .titledVideoPlayer img{
-    transform: translate(0,0);
+.showAnime .titledVideoPlayer img {
+    transform: translate(0, 0);
 }
