@@ -329,31 +329,68 @@ nav {
     font-size: 4rem;
     font-weight: normal;
 }
-
-
-.graph__description:hover {
-    opacity: 1;
-    color: var(--first-color);
-}
-
-
-.title__graph::-webkit-scrollbar {
+.desktopSteps-0-3-1602 {
+    order: 1;
+    overflow-y:scroll;
+    height: 80%;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    grid-column: 4/span 3;
+  }
+  .desktopSteps-0-3-1602::-webkit-scrollbar {
     display: none;
-}
-
-.graph__description {
+  }
+  
+  .step-0-3-1603 {
+    flex: 0 0 33%;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.5;
+    transform: scale(0.9);
+    scroll-snap-align: center;
+    margin: 5rem 20px;
+    padding: 3rem 0;
+    border-bottom: solid 1px var(--first-color);
+  }
+  
+  .step-0-3-1603.selected {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .container
+  .svgContainer {
+    margin-top: 20px;
+    grid-column: span 2;
+  }
+  
+  .graph-0-3-1599 {
+    width: 300px;
+    height: 300px;
+    stroke-width: 200;
+    
+  }
+  
+  .point-0-3-1610 {
+    stroke-width: 2;
+    fill: var(--second-color);
+  
+    transition: .5s;
+  
+  }
+  .step-0-3-1603 h4{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+  }
+  .step-0-3-1603 p{
     line-height: 1.5;
-    padding: var(--large-sizing) 0;
-    border-bottom: 1px solid var(--first-color);
-    opacity: 0.6;
-    color: var(--first-color);
-    transition: opacity 0.4s ease, color 0.4s ease;
-    scrollbar-width: 0px;
-    animation-name: scrollAnimation;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-timeline: scroll();
-}
+  }
+
+  .point-0-3-1610.selected {
+    fill: var(--first-color);
+    stroke-width: 3;
+  }
+
+
 
 @keyframes scrollAnimation {
     0%{

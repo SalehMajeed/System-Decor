@@ -23,15 +23,32 @@ document.querySelector('.custom-dropdown').addEventListener('click', function() 
       document.querySelector('.dropdown-menu').style.display = 'none';
     }
   });
-// let footer = document.getElementById("footer")
 
-// function eventFn(e) {
-//   console.dir(e.target)
-//   if(e.target.innerText == "Our Culture"){
-//     footer.children[1].children[1].children[1].style.height = "300px"
-//   }else{
-//     console.log("this is not target")
-//   }
-// }
-
-// footer.addEventListener("click", eventFn)
+  $(document).ready(function() {
+    const $steps = $('.step-0-3-1603');
+    const $points = $('.point-0-3-1610');
+    const $container = $('.desktopSteps-0-3-1602');
+    
+    function updateSteps() {
+      const containerScrollTop = $container.scrollTop();
+      const containerHeight = $container[0].scrollHeight;
+      console.log(containerScrollTop);
+      
+      const currentIndex = Math.round(containerScrollTop / (containerHeight / 9));
+      
+      $steps.each(function(index) {
+        $(this).toggleClass('selected', index === currentIndex);
+      });
+      
+      $points.each(function(index) {
+        $(this).toggleClass('selected', index === currentIndex);
+      });
+    }
+    
+    updateSteps();
+    
+    $container.on('scroll', function() {
+      updateSteps();
+    });
+  });
+  
