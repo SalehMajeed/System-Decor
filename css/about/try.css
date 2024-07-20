@@ -1,0 +1,131 @@
+.container {
+  margin-top: 5rem;
+  /* display: flex;
+    align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding-top: 90px;
+  border-bottom: 1px solid white;
+  padding-bottom: 50px;
+}
+
+.desktopSteps-0-3-1602 {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 400px;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  justify-content: center;
+}
+
+.step-0-3-1603 {
+  flex: 0 0 33%;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.5;
+  transform: scale(0.9);
+  scroll-snap-align: center;
+  padding: 20px;
+}
+
+.step-0-3-1603.selected {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.svgContainer {
+  display: grid;
+  grid-column: 1 / span 4;
+  margin-top: 2px;
+}
+.svgContainer h1 {
+  position: absolute;
+  top: 0.1%;
+  left: 10%;
+  font-size: 3rem;
+}
+.graph-0-3-1599 {
+  width: 500px;
+  height: 500px;
+}
+
+.point-0-3-1610 {
+  stroke-width: 2;
+  fill: #ffffff;
+  border: solid 5px greenyellow;
+  transition: 1s;
+}
+
+.point-0-3-1610.selected {
+  color: #cc0;
+  content: counter("1");
+  stroke-width: 45;
+}
+
+/*  */
+.text-0-3-586 {
+  font: bold 28px "NHaasGroteskTXPro", "Lucida Sans", Tahoma, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+user agent stylesheet :not(svg) {
+  transform-origin: 0px 0px;
+}
+user agent stylesheet text {
+  display: block;
+  white-space: nowrap;
+}
+/*  */
+element.style {
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform-origin: 0px 0px;
+    fill: rgb(207, 207, 176);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+user agent stylesheet
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+
+style attribute {
+    --foreground: #CFCFB0;
+    --background: #3A3A1F;
+    --border: #CFCFB0;
+}
+
+:root {
+    --border: #808080;
+    --background: #FFFFFF;
+    --foreground: #3A3A1F;
+    --scrollbar-width: 0px;
+}
+
+html {
+    line-height: 1.5;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
