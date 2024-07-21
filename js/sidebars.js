@@ -117,7 +117,8 @@ function secondFn(data) {
 
     const secondList = document.createElement("ul");
     for (key in data) {
-        secondList.innerHTML += `<li class="second__sidebarLi">${key}</li>`
+        const pathUrl = originDirectory+data[key].link;
+        secondList.innerHTML += `<a href="${pathUrl}"><li class="second__sidebarLi">${key}</li></a>`
         secondSidebar.append(secondList)
     }
     sidebar.append(secondSidebar)
