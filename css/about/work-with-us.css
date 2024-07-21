@@ -19,7 +19,7 @@ ul {
     --first-color: rgb(204, 169, 159);
     --second-color: rgb(41, 26, 22);
     --light-color: rgb(97, 75, 69);
-  
+
     --primary-sizing: 0.5rem;
     --secondry-sizing: 1rem;
     --upper-sizing: 1.5rem;
@@ -51,7 +51,7 @@ header {
     left: 0;
     width: 100%;
     background-color: var(--second-color);
-z-index: 9;
+    z-index: 9;
 }
 
 .nav-bar {
@@ -77,7 +77,7 @@ nav {
 
 .nav-item {
     width: calc(100%/7);
-    
+
 }
 
 .nav-item a {
@@ -96,12 +96,13 @@ nav {
     text-decoration: none;
     transition: 0.3s;
 }
-.sample-block{
+
+.sample-block {
     display: flex;
     gap: 5px;
 }
 
-.sample-block span{
+.sample-block span {
     padding: 0px 3px;
     border: 0.6px solid var(--first-color);
     border-radius: 50%;
@@ -329,19 +330,21 @@ nav {
     font-size: 4rem;
     font-weight: normal;
 }
+
 .desktopSteps-0-3-1602 {
     order: 1;
-    overflow-y:scroll;
+    overflow-y: scroll;
     height: 80%;
     scroll-snap-type: x mandatory;
     width: 100%;
     grid-column: 4/span 3;
-  }
-  .desktopSteps-0-3-1602::-webkit-scrollbar {
+}
+
+.desktopSteps-0-3-1602::-webkit-scrollbar {
     display: none;
-  }
-  
-  .step-0-3-1603 {
+}
+
+.step-0-3-1603 {
     flex: 0 0 33%;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0.5;
@@ -350,59 +353,73 @@ nav {
     margin: 5rem 20px;
     padding: 3rem 0;
     border-bottom: solid 1px var(--first-color);
-  }
-  
-  .step-0-3-1603.selected {
+}
+
+.step-0-3-1603.selected {
     opacity: 1;
     transform: scale(1);
-  }
-  .container
-  .svgContainer {
+}
+
+.container .svgContainer {
     margin-top: 20px;
     grid-column: span 2;
-  }
-  
-  .graph-0-3-1599 {
+}
+
+.graph-0-3-1599 {
     width: 300px;
     height: 300px;
     stroke-width: 200;
-    
-  }
-  
-  .point-0-3-1610 {
+
+}
+
+.point-0-3-1610 {
     stroke-width: 2;
     fill: var(--second-color);
-  
+
     transition: .5s;
-  
-  }
-  .step-0-3-1603 h4{
+
+}
+
+.step-0-3-1603 h4 {
     font-size: 1.5rem;
     font-weight: lighter;
     margin-bottom: 1rem;
-  }
-  .step-0-3-1603 p{
-    line-height: 1.5;
-  }
+}
 
-  .point-0-3-1610.selected {
+.step-0-3-1603 p {
+    line-height: 1.5;
+}
+
+.point-0-3-1610.selected {
     fill: var(--first-color);
-    stroke-width: 3;
-  }
+    stroke-width: 5;
+    r: 25;
+
+}
+
+.text-0-3-586.selected {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    opacity: 1;
+}
 
 
 
 @keyframes scrollAnimation {
-    0%{
+    0% {
         opacity: 0.6;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0.6;
     }
 }
+
 .title__graph {
     grid-column: 4/span 2;
     overflow-y: scroll;
@@ -830,7 +847,7 @@ nav {
 .footer-content {
     height: 45px;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     align-items: center;
     gap: 20px;
     padding: 0px 20px;
@@ -876,6 +893,7 @@ nav {
     position: relative;
     cursor: pointer;
 }
+
 .custom-dropdown:hover {
     color: var(--second-color);
 }
@@ -903,7 +921,7 @@ nav {
     margin-bottom: 1.4rem;
 }
 
-.dropdown-menu a{
+.dropdown-menu a {
     display: block;
     padding: 10px 10px;
     color: var(--first-color);
@@ -911,11 +929,13 @@ nav {
     border-bottom: solid 1px var(--first-color);
 
 }
+
 .dropdown-menu li a:hover {
     background-color: var(--first-color);
     color: var(--second-color);
 
 }
+
 .chat-online {
     display: flex;
     align-items: center;
@@ -927,6 +947,7 @@ nav {
     border-left: solid 1px var(--first-color);
 
 }
+
 .chat-online:hover {
     background-color: var(--first-color);
     color: var(--second-color);
@@ -1162,18 +1183,22 @@ nav {
     .contact__platform img {
         width: 40%;
     }
+
     /* ========footer============ */
     .footer-content {
         padding: 0px 0px;
     }
-    .page-info{
+
+    .page-info {
         display: none;
     }
+
     .jump-to {
         grid-column: 1/span 3;
         border-left: none;
         margin-left: 0;
     }
+
     .chat-online {
         padding: 16px 10px;
         grid-column: 5/span 2;
