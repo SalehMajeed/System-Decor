@@ -1,3 +1,4 @@
+const originDirectory = window.location.origin;
 const headerHTML = `<div class="nav-bar">
 <nav>
     <div class="nav-list">
@@ -59,8 +60,8 @@ const headerHTML = `<div class="nav-bar">
         <h3 class="nav-item nav-item-hidden"><a class="sidebar__links" id="Products" href="#">PRODUCTS</a></h3>
         <h3 class="nav-item nav-item-hidden"><a class="sidebar__links" id="Resources" href="#">RESOURCES</a></h3>
         <h3 class="nav-item nav-item-hidden"><a class="sidebar__links" id="About" href="#">ABOUT</a></h3>
-        <h3 class="nav-item nav-item-hidden"><a href="">CONTACT</a></h3>
-        <h3 class="nav-item nav-item-hidden"><a href="" class="sample-block">SAMPLE <span>0</span></a>
+        <h3 class="nav-item nav-item-hidden"><a href="${originDirectory}/html/contact.html">CONTACT</a></h3>
+        <h3 class="nav-item nav-item-hidden"><a class="sample-block">SAMPLE <span>0</span></a>
         </h3>
         <button id="mobileMenuButton">
             <div class="mobileMenu">
