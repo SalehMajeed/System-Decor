@@ -156,6 +156,14 @@ thirdSidebar.classList.add("third__sidebar");
 const fourthSidebar = document.createElement("div");
 fourthSidebar.classList.add("fourth__sidebar");
 
+let closeBtn1 = document.createElement("div");
+closeBtn1.classList.add("sidebar__close","close__btn");
+
+let closeBtn2 = document.createElement("div");
+closeBtn2.classList.add("sidebar__close","close__btn");
+
+let closeBtn3 = document.createElement("div");
+closeBtn3.classList.add("sidebar__close","close__btn");
 
 
 navHeader.addEventListener("click", eventFn)
@@ -178,7 +186,7 @@ function eventFn(e) {
             return 
         }
         const btnClose = document.getElementById("close-btn");
-        btnClose.style.left = "67%";
+        // btnClose.style.left = "67%";
 
         pre1Value = e.target;
         navData().then((data) => {
@@ -192,7 +200,7 @@ function eventFn(e) {
         }
 
         const btnClose = document.getElementById("close-btn");
-        btnClose.style.left = "97%";
+        // btnClose.style.left = "97%";
 
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
@@ -234,6 +242,17 @@ function eventFn(e) {
 
 function fourthFn(data) {
     fourthSidebar.innerHTML = "";
+    closeBtn3.id = "close-btn3";
+    let btn = ` <span style="fontSize:"10px"; cursor: pointer;">x</span>`;
+    closeBtn3.innerHTML = btn;
+    fourthSidebar.append(closeBtn3);
+    closeBtn2.remove()
+    closeBtn3.addEventListener("click",closeFn);
+    function closeFn(e){
+        sidebar.classList.remove("sidebar");
+        sidebar.innerHTML = "";
+    }
+
     const fourthList = document.createElement("ul");
     for (key in data) {
         fourthList.innerHTML += `<li class="fourth__sidebarLi">${key}</li>`;
@@ -245,6 +264,17 @@ function fourthFn(data) {
 function thirdFn(data, headingText) {
     thirdSidebar.innerHTML = "";
     fourthSidebar.remove();
+    closeBtn2.id = "close-btn2";
+    let btn = ` <span style="fontSize:"10px"; cursor: pointer;">x</span>`;
+    closeBtn2.innerHTML = btn;
+    thirdSidebar.append(closeBtn2);
+    closeBtn1.remove()
+    closeBtn2.addEventListener("click",closeFn);
+    function closeFn(e){
+        sidebar.classList.remove("sidebar");
+        sidebar.innerHTML = "";
+    }
+
     
     const thirdSidebarHeading = document.createElement("h2");
     thirdSidebarHeading.textContent = `All ${headingText}`;
@@ -262,6 +292,16 @@ function secondFn(data) {
     secondSidebar.innerHTML = "";
     let secondSidebarHeading = document.createElement("h2");
     let headingText = `See All`
+  closeBtn1.id = "close-btn1";
+    let btn = ` <span style="fontSize:"10px"; cursor: pointer;">x</span>`;
+    closeBtn1.innerHTML = btn;
+    secondSidebar.append(closeBtn1);
+    closeBtn1.addEventListener("click",closeFn);
+    function closeFn(e){
+        sidebar.classList.remove("sidebar");
+        sidebar.innerHTML = "";
+    }
+
     fourthSidebar.remove();
     thirdSidebar.remove();
 
@@ -281,12 +321,7 @@ function secondFn(data) {
 function createElements(data) {
     sidebar.innerHTML = "";
     firstSidebar.innerHTML = "";
-    let closeBtn = document.createElement("div");
-    closeBtn.classList.add("sidebar__close","close__btn");
-    closeBtn.id = "close-btn";
-    let btn = ` <span style="fontSize:"10px"; cursor: pointer;">X</span>`;
-    closeBtn.innerHTML = btn;
-    sidebar.append(closeBtn);
+ 
     
 
 
@@ -353,16 +388,12 @@ function createElements(data) {
         firstSidebar.append(firstList);
     }
     
-    closeBtn.addEventListener("click",closeFn);
-    function closeFn(e){
-        sidebar.classList.remove("sidebar");
-        sidebar.innerHTML = "";
-    }
+   
     
     sidebar.append(firstSidebar);
 }
 
-console.log(btnClose)
+// console.log(btnClose)
 
 // async function navData() {
 //     return (await fetch("../../json/nav-data.json")).json()
