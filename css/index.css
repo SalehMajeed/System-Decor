@@ -748,6 +748,10 @@ width: 100%;
     color: white;
 }
 
+.bottom-line{
+    border-top: 1px solid var(--first-color);
+}
+
 @media screen and (max-width:1024px) {
   
     .content1 {
