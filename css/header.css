@@ -8,7 +8,7 @@ header {
     top: 0;
     left: 0;
     background-color: var( --second-color) ;
-    z-index: 9;
+    z-index: 99;
 }
 
 .nav-bar {
@@ -19,8 +19,6 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-    color: white;
 }
 
 .nav-list {
@@ -62,7 +60,7 @@ nav {
 
 .sample-block span {
     padding: 0px 3px;
-    border: 0.6px solid #A7B6C4;
+    border: 0.6px solid var(--first-color);
     border-radius: 50%;
 }
 
@@ -89,7 +87,7 @@ nav {
     left: 0;
     height: 2px;
     opacity: 0.6;
-    background-color: #CFCFB0;
+    background-color: var(--first-color);
     transition: 0.3s;
 }
 
