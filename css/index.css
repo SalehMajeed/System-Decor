@@ -27,10 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-.gridSec{
-    grid-column: span 7;
-    grid-row: auto;
-}
+
 
 section img{
     transform: translate(0,-100%);

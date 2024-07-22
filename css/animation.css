@@ -5,8 +5,11 @@
 
 section {
     overflow: hidden;
-    grid-column: span 7;
 
+}
+.gridSec{
+    grid-column: span 7;
+    grid-row: auto;
 }
 
 .showAnime .inp, .showAnime .para1{
