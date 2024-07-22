@@ -28,6 +28,7 @@ document.querySelector('.custom-dropdown').addEventListener('click', function() 
     const $steps = $('.step-0-3-1603');
     const $points = $('.point-0-3-1610');
     const $container = $('.desktopSteps-0-3-1602');
+    const $text = $(".text-0-3-586")
     
     function updateSteps() {
       const containerScrollTop = $container.scrollTop();
