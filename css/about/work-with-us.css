@@ -187,6 +187,7 @@ body {
 
 .point-0-3-1610.selected {
     fill: var(--first-color);
+
     stroke-width: 5;
     r: 25;
 
@@ -198,7 +199,6 @@ body {
     text-align: center;
     opacity: 1;
 }
-
 
 
 @keyframes scrollAnimation {
