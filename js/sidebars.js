@@ -284,7 +284,7 @@ function createElements(data) {
     let closeBtn = document.createElement("div");
     closeBtn.classList.add("sidebar__close","close__btn");
     closeBtn.id = "close-btn";
-    let btn = ` <i class="ri-close-large-line"></i>`;
+    let btn = ` <span style="fontSize:"10px"; cursor: pointer;">X</span>`;
     closeBtn.innerHTML = btn;
     sidebar.append(closeBtn);
     
