@@ -1,16 +1,16 @@
-const header = $("#header");
+const headerNav = $("#header");
 
 function eventFn(e) {
   if ($(e.target).text() == "MENU") {
-    header.children().eq(1).css("right", "0");
+    headerNav.children().eq(1).css("right", "0");
     $(e.target).text("CLOSE");
   } else if ($(e.target).text() == "CLOSE") {
-    header.children().eq(1).css("right", "-100%");
+    headerNav.children().eq(1).css("right", "-100%");
     $(e.target).text("MENU");
   }
 }
 
-header.on("click", eventFn);
+headerNav.on("click", eventFn);
 
 
 document.querySelector('.custom-dropdown').addEventListener('click', function() {
