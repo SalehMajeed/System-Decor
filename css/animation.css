@@ -5,6 +5,7 @@
 
 section {
     overflow: hidden;
+    grid-column: span 7;
 
 }
 
