@@ -32,7 +32,7 @@ document.querySelector('.custom-dropdown').addEventListener('click', function() 
     function updateSteps() {
       const containerScrollTop = $container.scrollTop();
       const containerHeight = $container[0].scrollHeight;
-      console.log(containerScrollTop);
+      
       
       const currentIndex = Math.round(containerScrollTop / (containerHeight / 9));
       
