@@ -5,6 +5,14 @@
 }
 
 /* #sidebar {} */
+.sidebar__close{
+    position: absolute;
+    z-index: 999;
+    text-align: end;
+    left: 39%;
+    /* left: 68%; */
+    /* left: 97%; */
+}
 
 
 .sidebar {
