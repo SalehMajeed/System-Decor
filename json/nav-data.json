@@ -35,7 +35,8 @@
                 "application": "external",
                 "heading": "Catholic Regional College Caroline Springs",
                 "img": "#"
-            }
+            },
+            "link": "/html/project/project-education.html"
         },
         "Health": {
             "Logan": {
@@ -100,8 +101,8 @@
                 "application": "internal",
                 "heading": "Berlasco Residential Aged Care",
                 "img": "#"
-            }
-
+            },
+            "link": "/html/project/project-education.html"
         },
         "Retail": {
             "Belvedere": {
@@ -152,8 +153,8 @@
                 "application": "internal",
                 "heading": "Belvedere Hotel",
                 "img": "#"
-            }
-
+            },
+            "link": "/html/project/project-education.html"
         },
         "Arts": {
             "Cairns": {
@@ -204,7 +205,8 @@
                 "application": "internal",
                 "heading": "Cairns Convention Centre",
                 "img": "#"
-            }
+            },
+            "link": "/html/project/project-education.html"
         },
         "Commercial": {
             "Perth": {
@@ -213,7 +215,8 @@
                 "application": "internal",
                 "heading": "Perth Airport",
                 "img": "#"
-            }
+            },
+            "link": "/html/project/project-education.html"
         },
         "Sport": {
             "Heffron": {
@@ -231,7 +234,8 @@
                 "application": "external",
                 "heading": "Brindabella Business Park",
                 "img": "#"
-            }
+            },
+            "link": "/html/project/project-education.html"
         }
     },
     "Products": {
@@ -324,7 +328,8 @@
             "News": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
                 "category": "Design"
-            }
+            },
+            "link": "/html/resources/articles-resources.html"
         },
         "Product Resources": {
             "Ali": {
@@ -346,7 +351,8 @@
             "DecorMount": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
                 "category": "Design"
-            }
+            },
+            "link": "/html/resources/product-resources.html"
         },
         "Fire": {
             "Group": {
@@ -356,7 +362,8 @@
             "Fire Pack": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
                 "category": "Design"
-            }
+            },
+            "link": "/html/resources/fire-resources.html"
         },
         "Acoustic": {
             "pack": {
@@ -366,7 +373,8 @@
             "Data Sheet": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
                 "category": "Design"
-            }
+            },
+            "link": "/html/resources/acoustic-resources.html"
         },
         "Green": {
             "Declare": {
@@ -376,7 +384,8 @@
             "Handbook": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
                 "category": "Design"
-            }
+            },
+            "link": "/html/resources/green-resources.html"
         },
         "Brochures": {
             "Booklet": {
@@ -393,7 +402,7 @@
             },
             "Certificate": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
-                "category": "Design"    
+                "category": "Design"
             },
             "Smartlook": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
@@ -401,12 +410,13 @@
             },
             "Decor360": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
-                "category": "Design"    
+                "category": "Design"
             },
             "Sports Hall": {
                 "heading": "Flexible and High-Performing Acoustic Panel",
                 "category": "Design"
-            }
+            },
+            "link": "/html/resources/brochures.html"
         }
     },
     "About": {
@@ -422,5 +432,8 @@
         "Work With Us": {
             "link": "/html/about/work-with-us.html"
         }
+    },
+    "contact":{
+        "link":"/html/contact.html"
     }
 }
