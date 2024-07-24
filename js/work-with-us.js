@@ -1,16 +1,16 @@
-const header = $("#header");
+const headerNav = $("#header");
 
 function eventFn(e) {
   if ($(e.target).text() == "MENU") {
-    header.children().eq(1).css("right", "0");
+    headerNav.children().eq(1).css("right", "0");
     $(e.target).text("CLOSE");
   } else if ($(e.target).text() == "CLOSE") {
-    header.children().eq(1).css("right", "-100%");
+    headerNav.children().eq(1).css("right", "-100%");
     $(e.target).text("MENU");
   }
 }
 
-header.on("click", eventFn);
+headerNav.on("click", eventFn);
 
 
 document.querySelector('.custom-dropdown').addEventListener('click', function() {
@@ -28,11 +28,12 @@ document.querySelector('.custom-dropdown').addEventListener('click', function() 
     const $steps = $('.step-0-3-1603');
     const $points = $('.point-0-3-1610');
     const $container = $('.desktopSteps-0-3-1602');
+    const $text = $(".text-0-3-586")
     
     function updateSteps() {
       const containerScrollTop = $container.scrollTop();
       const containerHeight = $container[0].scrollHeight;
-      console.log(containerScrollTop);
+      
       
       const currentIndex = Math.round(containerScrollTop / (containerHeight / 9));
       

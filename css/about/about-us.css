@@ -97,7 +97,7 @@ body::-webkit-scrollbar {
 }
 
 .people-text h1 {
-  font-size: 3rem;
+
   margin-left: 20px;
   grid-column: 1 / span 2;
 }
@@ -119,7 +119,6 @@ body::-webkit-scrollbar {
 }
 
 .gurantee-text h1 {
-  font-size: 3rem;
   margin-left: 20px;
   grid-column: 1 / span 2;
 }
@@ -139,9 +138,7 @@ body::-webkit-scrollbar {
   padding-bottom: 50px;
 }
 
-.nation-text h1 {
-  grid-column: 1 / span 3;
-  font-size: 3rem;
+
   margin-left: 20px;
 }
 
@@ -153,8 +150,6 @@ body::-webkit-scrollbar {
 }
 
 .sustainability {
-  gap: 15px;
-  padding-top: 90px;
   font-size: 20px;
   padding-bottom: 50px;
 }
@@ -168,28 +163,25 @@ body::-webkit-scrollbar {
   border-bottom: 1px solid white;
 }
 .sustainability-heading {
-  font-weight: 350;
-  font-size: 3rem;
-  margin-left: 20px;
+
   margin-top: 1rem;
 }
 
 .sustainability p {
-  font-size: 0.9375rem;
-  line-height: 22px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.5; 
+  overflow: hidden;
 }
 
 .textContent h4 {
-  margin-bottom: 2rem;
-  margin-top: 1.5rem;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .textContent {
   border-bottom: solid 2px gray;
-  padding-bottom: 5rem;
-  /* margin-left: 2rem; */
+
 }
 
 .exceeding-text {
@@ -202,7 +194,6 @@ body::-webkit-scrollbar {
 
 .exceeding-text h1 {
   grid-column: 1 / span 3;
-  font-size: 3rem;
   margin-left: 20px;
 }
 
@@ -223,7 +214,7 @@ body::-webkit-scrollbar {
 
 .complimentary-text h1 {
   grid-column: 1 / span 3;
-  font-size: 3rem;
+
   margin-left: 20px;
 }
 
@@ -243,7 +234,6 @@ body::-webkit-scrollbar {
 
 .specialList h4 {
   grid-column: 1 / span 3;
-  font-size: 3rem;
   margin-left: 20px;
 }
 
