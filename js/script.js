@@ -5,4 +5,4 @@ document.addEventListener('DOMContentLoaded', () => {
             letter.classList.add('show');
         }, index * 100);
     });
-});
+})

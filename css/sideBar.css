@@ -12,13 +12,13 @@
     text-align: end;
     top: 5%;
     right: 10%;
-    padding:0 8px;
+    padding: 0 8px;
     /* transition: 0.8s all ease-in-out; */
     cursor: pointer;
 }
 
 
-.sidebar__close:hover{
+.sidebar__close:hover {
     background-color: var(--light-color);
     border-radius: 50%;
 }
@@ -138,7 +138,7 @@
 @keyframes bordAnime {
     to {
         width: 100%;
-        }
+    }
 
     from {
         width: 0;
@@ -171,7 +171,7 @@
 }
 
 .third__sidebarLi {
-    position:relative;
+    position: relative;
     width: 100%;
     font-size: 15px;
     opacity: 0.8;
@@ -222,7 +222,7 @@
 }
 
 .fourth__sidebarLi {
-    position:relative;
+    position: relative;
     width: 100%;
     font-size: 15px;
     opacity: 0.8;

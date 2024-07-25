@@ -164,7 +164,6 @@ table {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 20px;
-    /* padding: 25px; */
     padding-left: 25px;
     padding-right: 25px;
     border-bottom: 1px solid white;

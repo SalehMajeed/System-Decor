@@ -29,8 +29,6 @@
     --light-color: #a7b6c4b9;
 }
 
-
-
 * {
     font-family: 'NHaasGroteskTXPro', "Lucida-Sans", Tahoma, sans-serif;
     margin: 0;
@@ -163,7 +161,6 @@ nav {
 .section-1-content .text {
     display: grid;
     grid-row: 1;
-    /* max-width: 800px; */
     margin-top: 230px;
     line-height: 1;
     grid-column: 1 / span 4;
@@ -646,7 +643,6 @@ input {
         margin-left: 0;
     }
 
-
     .resourcesContainer {
         grid-row: 3;
         grid-column: 3/span 2;
@@ -684,7 +680,6 @@ input {
         grid-column: 3/span 2;
         margin-left: 0;
     }
-
 
     .acknowledgeContainer {
 

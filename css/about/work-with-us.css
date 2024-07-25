@@ -18,7 +18,6 @@ ul {
     list-style-type: none;
 }
 
-
 :root {
     --first-color: rgb(204, 169, 159);
     --second-color: rgb(41, 26, 22);
@@ -43,7 +42,6 @@ body {
     overflow-x: hidden;
 
 }
-
 
 /* ======first section =====*/
 .decor__tribe {
@@ -386,7 +384,6 @@ body {
     margin-top: var(--secondry-sizing);
 }
 
-
 /* =============nineth section=========== */
 .decor__opportunity {
     width: 100%;
@@ -450,8 +447,6 @@ body {
     font-weight: bold;
     padding-bottom: var(--secondry-sizing);
 }
-
-
 
 /* =======tenth section=========== */
 .decor__touch {
@@ -1002,7 +997,6 @@ body {
     }
 
 }
-
 
 /* .sidebar{
     width: 100%;
