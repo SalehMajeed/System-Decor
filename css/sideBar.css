@@ -4,9 +4,20 @@
   box-sizing: border-box;
 }
 
-/* #sidebar {} */
 .sidebar__close {
+  font-size: 20px;
+  position: absolute;
+  z-index: 999;
+  text-align: end;
+  top: 5%;
+  right: 10%;
+  padding: 0 8px;
+  cursor: pointer;
+}
 
+.sidebar__close:hover {
+  background-color: var(--light-color);
+  border-radius: 50%;
 }
 
 .sidebar {
@@ -58,7 +69,6 @@
 .first__sidebar ul {
   display: flex;
   flex-direction: column;
-  /* gap: 25px; */
   align-items: center;
 }
 
@@ -105,8 +115,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  /* border-bottom: 1px solid var(--light-color);
-    border-top: 1px solid var(--light-color); */
   position: relative;
 }
 
@@ -124,16 +132,6 @@
 }
 
 
-/* .animated-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-} */
-
-.animated-list li {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .animated-list li.show {
@@ -163,13 +161,18 @@
 .third__sidebar ul {
   display: flex;
   flex-direction: column;
-  /* align-items:center ; */
-  /* margin: 0 25px; */
   margin-top: 25px;
 }
 
 .third__sidebarLi {
-
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  opacity: 0.8;
+  font-weight: 400;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 .third__sidebarLi::after {
@@ -205,13 +208,19 @@
 .fourth__sidebar ul {
   display: flex;
   flex-direction: column;
-  /* align-items:center ; */
-  /* margin: 0 25px; */
   margin-top: 25px;
 }
 
 .fourth__sidebarLi {
-    border-top: 1px solid var(--light-color); */
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  opacity: 0.8;
+  font-weight: 400;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .fourth__sidebarLi::after {
@@ -265,7 +274,6 @@
     grid-row: 1 / span 2;
     display: flex;
     flex-direction: column;
-    /* padding-top: 50px; */
     animation-name: rightAnime;
     animation-timing-function: linear;
     animation-duration: 1s;
@@ -283,28 +291,4 @@
     border-bottom: 1px solid var(--first-color);
     padding: 20px 25px;
   }
-
-  /* .second__sidebar{
-        grid-column: 1/span 4;
-        grid-row: 1/span 2;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        animation-name: rightAnime;
-        animation-timing-function: linear;
-        animation-duration: 1s;
-        z-index: 2;
-    }
-
-    .second__sidebar ul{
-        margin-top: 100px;
-        width: 100%;
-        padding: 0;
-        margin-left: 0;
-    }
-
-    .second__sidebarLi{
-        border-bottom: 1px solid var(--first-color);
-        padding:20px 25px;
-    } */
 }
