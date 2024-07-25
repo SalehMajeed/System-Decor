@@ -27,20 +27,9 @@ body {
     overflow-x: hidden;
 }
 
-
-.lazyload {
-    opacity: 0;
-    transition: all 1s ease-in-out;
-    transform: translate(0, -100%);
+body::-webkit-scrollbar {
+    width: 5px;
 }
-
-.loaded {
-    opacity: 1;
-    transform: translate(0, 0%);
-}
-
-
-
 
 
 .right-line,
@@ -51,28 +40,32 @@ body {
 
 
 
-section {
-    overflow: hidden;
-}
-
-.arc {
-    grid-column: 1/span 7;
-    margin: 0 25px;
-    margin-bottom: 25px;
-}
-
-.arc h1 {
-    font-size: 8vw;
-    text-transform: uppercase;
-    line-height: 0.9;
-}
-
 .content1 {
     padding-top: 280px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 25px;
     margin-bottom: 50px;
+}
+
+.text-container {
+    font-size: 9.2rem;
+    grid-column: 1/8;
+    padding-left: 25px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.letter {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.letter.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .para1 {
@@ -140,7 +133,6 @@ section {
 
 }
 
-
 .c2l2 {
     display: flex;
     flex-direction: column;
@@ -160,7 +152,6 @@ section {
     box-sizing: border-box;
     transition: 0.5s;
 }
-
 
 .c2l3 {
     font-size: 12px;
@@ -191,7 +182,6 @@ grey {
     grid-template-columns: repeat(7, 1fr);
     gap: 25px;
     margin-bottom: 50px;
-    /* background-color: #1a2941; */
     margin: 0;
 }
 
@@ -213,7 +203,6 @@ grey {
     background-color: #32411a;
 }
 
-
 .c3b {
     display: flex;
     flex-direction: column;
@@ -223,8 +212,6 @@ grey {
     font-size: 10px;
     color: grey;
 }
-
-
 
 .c3h2.nav-item {
     width: 100%;
@@ -243,24 +230,15 @@ grey {
     padding: 25px;
 }
 
-.c3imgs section,
-.c3imgs div {
-    /* width: 1000px; */
-    height: 450px;
+
     overflow: hidden;
     display: flex;
     align-items: center;
     gap: 25px;
-    /* margin-left: 15px; */
-}
-
-.c3imgs img {
-    width: auto;
-    object-fit: cover;
-    height: 100%;
 }
 
 
+}
 
 .c3bp {
     display: flex;
@@ -283,15 +261,10 @@ grey {
 
 .c3h3 p {
     font-size: 12px;
-
 }
-
-
 
 .c3h5 {
     display: flex;
-    /* position: absolute; */
-    /* margin: 40px 0 0 20px; */
     font-size: 10px;
     gap: 80px;
     color: grey;
@@ -299,11 +272,7 @@ grey {
 
 .c3p4 {
     display: flex;
-    /* gap: 120px; */
 }
-
-
-
 
 .btn {
     display: flex;
@@ -414,8 +383,6 @@ grey {
     width: 100%;
     object-fit: cover;
 }
-
-
 
 .content5 {
     width: 100%;
@@ -549,7 +516,6 @@ grey {
 }
 
 .content8 {
-    /* margin-top: 100px; */
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 25px;
@@ -617,8 +583,6 @@ grey {
 
 }
 
-
-
 .c9l3 {
     grid-column: 5/span 2;
     font-size: 15px;
@@ -630,8 +594,6 @@ grey {
     border-bottom: 1px solid var(--first-color);
     transition: 2s all ease-in-out;
 }
-
-
 
 .button {
     width: fit-content;
@@ -645,8 +607,6 @@ grey {
     font-size: 10px;
 }
 
-
-
 .button a {
     text-decoration: none;
     z-index: 9;
@@ -659,7 +619,6 @@ grey {
 .button a span {
     opacity: 0.7;
 }
-
 
 .button::after {
     content: '';
@@ -687,14 +646,12 @@ grey {
     color: white;
 }
 
-
 .content13 {
     position: fixed;
     bottom: 0;
     left: 0;
     background: white fixed;
     width: 100%;
-    /* height: auto; */
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--first-color);
@@ -717,8 +674,6 @@ grey {
 
 .c13l2 {
     display: flex;
-    /* height: 100%; */
-
 }
 
 .c13l2j1 {
@@ -771,19 +726,16 @@ grey {
         grid-template: auto/repeat(4, 1fr);
         margin: 0 15px;
         position: relative;
-
     }
 
-    .arc {
-        line-height: 0.9;
-        margin-top: 50px;
-        grid-column: 1/span 4;
-        max-width: 600px;
-        margin-left: 0;
+    .text-container {
+        line-height: 0.1;
+        grid-column: 1 / span 4;
+        padding-bottom: 25px;
     }
 
-    .arc h1 {
-        font-size: 42px;
+    .text-container span {
+        font-size: 2.3rem;
     }
 
     .l1 {
@@ -840,7 +792,6 @@ grey {
     .content3 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        /* gap: 15px; */
     }
 
     .c3l1 {
@@ -855,7 +806,6 @@ grey {
         border-right: none;
         padding: 5px 15px;
     }
-
 
 
     .c3b {
@@ -892,11 +842,10 @@ grey {
         width: 100%;
     }
 
+
     .c3imgs div img {
         width: 100%;
     }
-
-
 
     .hide-c3b {
         display: none;
@@ -906,7 +855,6 @@ grey {
         font-size: 15px;
         display: block;
     }
-
 
     .contact-section {
         margin-left: 15px;

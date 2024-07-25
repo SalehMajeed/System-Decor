@@ -3,7 +3,6 @@ const accesskey = 'HQWpX8bAShdDrcnzLxeomlUlKYlAXRuOnUjMU1mWszo'
 const imageGallery = document.getElementById("imageGallery")
 const loadButton = document.querySelector(".loadButton")
 
-
 let page = 1;
 var open = true;
 item.forEach(i => {
@@ -53,7 +52,5 @@ async function imageGen() {
 imageGen()
 
 loadButton.addEventListener('click', () => {
-
     imageGen()
 })
-

@@ -166,5 +166,4 @@ const footerHTMl = ` <section>
             </div>
         </section>
 `
-
 $('#footer').html(footerHTMl)

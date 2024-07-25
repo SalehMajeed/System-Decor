@@ -11,11 +11,10 @@
 
 body {
   background-color: #3a3a1f;
-  /* font-family: sans-serif; */
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  width: 5px;
 }
 
 :root {
@@ -138,10 +137,6 @@ body::-webkit-scrollbar {
   padding-bottom: 50px;
 }
 
-
-  margin-left: 20px;
-}
-
 .nation-text p {
   font-size: 18px;
   line-height: 1.4;
@@ -153,15 +148,18 @@ body::-webkit-scrollbar {
   font-size: 20px;
   padding-bottom: 50px;
 }
+
 #sustainability-inner-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
 }
+
 .inner1 {
   grid-column: 2 / span 3;
   border-bottom: 1px solid white;
 }
+
 .sustainability-heading {
 
   margin-top: 1rem;
@@ -170,7 +168,7 @@ body::-webkit-scrollbar {
 .sustainability p {
   width: 100%;
   font-size: 15px;
-  line-height: 1.5; 
+  line-height: 1.5;
   overflow: hidden;
 }
 
@@ -291,10 +289,11 @@ body::-webkit-scrollbar {
   font-size: 3rem;
   font-weight: normal;
 }
+
 .heading__graph h1 span {
   font-size: 1.5rem;
-  /* font-weight: normal; */
 }
+
 .desktopSteps-0-3-1602 {
   order: 1;
   overflow-y: scroll;
@@ -303,6 +302,7 @@ body::-webkit-scrollbar {
   width: 100%;
   grid-column: 4 / span 3;
 }
+
 .desktopSteps-0-3-1602::-webkit-scrollbar {
   display: none;
 }
@@ -322,6 +322,7 @@ body::-webkit-scrollbar {
   opacity: 1;
   transform: scale(1);
 }
+
 .container .svgContainer {
   margin-top: 20px;
   grid-column: span 2;
@@ -339,11 +340,13 @@ body::-webkit-scrollbar {
 
   transition: 0.5s;
 }
+
 .step-0-3-1603 h4 {
   font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 1rem;
 }
+
 .step-0-3-1603 p {
   line-height: 1.5;
 }
@@ -352,6 +355,7 @@ body::-webkit-scrollbar {
   fill: var(--first-color);
   stroke-width: 45;
 }
+
 /* ================= */
 /* ================= */
 .geca-text img {
@@ -359,16 +363,19 @@ body::-webkit-scrollbar {
   width: 15%;
   /* position: absolute; */
 }
+
 .fsc-text img {
   position: absolute;
   /* left: 35%; */
   padding: 0px;
   margin: 0px;
 }
+
 .geca-text h4 {
   /* grid-column: 1 / 4; */
   margin-left: 50px;
 }
+
 /* ================= */
 @font-face {
   font-family: "NHaasGroteskTXPro";
@@ -405,8 +412,6 @@ footer {
 
 .footer-section {
   display: grid;
-  /* border: 1px solid #333; */
-  /* border-collapse: ; */
   gap: 25px;
   grid-template-columns: repeat(7, 1fr);
   margin-left: 25px;
@@ -598,7 +603,6 @@ footer {
   .container1 {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* gap: 15px; */
   }
 
   .headingH1 {
@@ -606,8 +610,6 @@ footer {
     grid-column: 4 / span 3;
     grid-row: 1;
     font-weight: 10;
-    /* margin-top: 180px; */
-    /* margin-left: 20px; */
     padding-bottom: 15px;
   }
 
@@ -634,7 +636,6 @@ footer {
   }
 
   .sustainability h1 {
-    /* grid-column: 1; */
     font-size: 2.1rem;
     margin-left: 20px;
   }

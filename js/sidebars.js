@@ -25,7 +25,6 @@ closeBtn2.classList.add("sidebar__close","close__btn");
 let closeBtn3 = document.createElement("div");
 closeBtn3.classList.add("sidebar__close","close__btn");
 
-
 navHeader.addEventListener("click", eventFn)
 function eventFn(e) {
     let preValue = null;
@@ -60,7 +59,6 @@ function eventFn(e) {
         }
 
         const btnClose = document.getElementById("close-btn");
-
 
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
@@ -142,8 +140,7 @@ function thirdFn(data, headingText) {
         sidebar.classList.remove("sidebar");
         sidebar.innerHTML = "";
     }
-
-    
+ 
     const thirdSidebarHeading = document.createElement("h2");
     thirdSidebarHeading.textContent = `All ${headingText}`;
     thirdSidebar.prepend(thirdSidebarHeading);
@@ -201,16 +198,9 @@ function secondFn(data) {
      });
 }
 
-
-
-
 function createElements(data) {
     sidebar.innerHTML = "";
     firstSidebar.innerHTML = "";
- 
-    
-
-
     let imgDiv = document.createElement("div");
     let sidebarImg = `<svg width="105" height="26" viewBox="0 0 105 26" fill="none"
                 style="translate: none; rotate: none; scale: none; transform: translate(0px);">
@@ -266,19 +256,14 @@ function createElements(data) {
     imgDiv.innerHTML = sidebarImg
     firstSidebar.prepend(imgDiv)
 
-
     const firstList = document.createElement("ul")
     for (const category in data) {
         firstList.innerHTML += `<li class="first__sidebarLi" id="${category}">${category}</li>`;
 
         firstSidebar.append(firstList);
     }
-    
-   
-    
     sidebar.append(firstSidebar);
 }
-
 
 // console.log(btnClose)
 
@@ -519,4 +504,3 @@ function createElements(data) {
 //         sidebar.append(firstSidebar)
 //     }
 // }
-
