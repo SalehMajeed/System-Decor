@@ -38,6 +38,14 @@ body::-webkit-scrollbar {
     transition: 2s all ease-in-out;
 }
 
+.lazyload {
+    transform: translate(0,-100%);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .lazyload.loaded {
+    transform: translate(0,0%);
+  }
 
 
 .content1 {
@@ -48,7 +56,46 @@ body::-webkit-scrollbar {
     margin-bottom: 50px;
 }
 
+.arc {
+    grid-column: 1/span 7;
+    margin: 0 25px;
+    margin-bottom: 25px;
+    padding: 0 25px;
+}
+
 .text-container {
+    max-width: 100%;
+    font-size: 5vw;
+    overflow: hidden;
+    color: #364f2b; /* Set your desired color */
+    text-align: start;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    line-height: 0.9;
+}
+
+.letter {
+    font-size: 6vw;
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    /* width: auto; */
+}
+
+.letter.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+/* .text-container {
     font-size: 9.2rem;
     grid-column: 1/8;
     padding-left: 25px;
@@ -66,7 +113,7 @@ body::-webkit-scrollbar {
 .letter.show {
     transform: translateY(0);
     opacity: 1;
-}
+} */
 
 .para1 {
     grid-column: span 7;
@@ -231,13 +278,20 @@ grey {
 }
 
 
+.c3imgs div {
+    /* width: 1000px; */
+    height: 450px;
     overflow: hidden;
     display: flex;
     align-items: center;
     gap: 25px;
+    /* margin-left: 15px; */
 }
 
-
+.c3imgs img {
+    width: auto;
+    object-fit: cover;
+    height: 100%;
 }
 
 .c3bp {
@@ -728,14 +782,17 @@ grey {
         position: relative;
     }
 
-    .text-container {
-        line-height: 0.1;
-        grid-column: 1 / span 4;
-        padding-bottom: 25px;
-    }
+   .arc{
+    grid-column: span 4;
+    padding: 0px;
+   }
+   .text-container{
+    font-size: 40px;
+    width: 100%;
+   }
 
     .text-container span {
-        font-size: 2.3rem;
+        font-size: 45px;
     }
 
     .l1 {

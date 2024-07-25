@@ -4,21 +4,26 @@
   box-sizing: border-box;
 }
 
+
 .sidebar__close {
   font-size: 20px;
   position: absolute;
   z-index: 999;
   text-align: end;
-  top: 3%;
+  top: 5%;
   right: 10%;
-  padding: 0 8px;
+  padding:0 8px;
+  /* transition: 0.8s all ease-in-out; */
   cursor: pointer;
 }
 
-.sidebar__close:hover {
+
+.sidebar__close:hover{
+
   background-color: var(--light-color);
   border-radius: 50%;
 }
+
 
 .sidebar {
   color: var(--first-color);
@@ -163,7 +168,7 @@
 }
 
 .third__sidebarLi {
-  position: relative;
+
   width: 100%;
   font-size: 15px;
   opacity: 0.8;
@@ -171,6 +176,8 @@
   min-height: 48px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  position: relative;
 }
 
 .third__sidebarLi::after {
@@ -209,7 +216,6 @@
 }
 
 .fourth__sidebarLi {
-  position: relative;
   width: 100%;
   font-size: 15px;
   opacity: 0.8;
@@ -218,6 +224,8 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
+
 }
 
 .fourth__sidebarLi::after {
