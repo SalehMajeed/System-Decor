@@ -5,23 +5,25 @@ document.addEventListener('DOMContentLoaded', function() {
       let observer = new IntersectionObserver(onIntersection, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // Adjust the threshold as needed
+        threshold: 0.1 
       });
   
       function onIntersection(entries) {
         if (entries[0].isIntersecting) {
-          loadImagesSequentially(parent);
-          observer.disconnect(); // Stop observing once images start loading
+          revealCurtainsSequentially(parent);
+          observer.disconnect();
         }
       }
   
-      function loadImagesSequentially(parent) {
-        let images = parent.querySelectorAll('.lazyload');
+      function revealCurtainsSequentially(parent) {
+        let wrappers = parent.querySelectorAll('.image-wrapper');
         let index = 0;
   
-        function loadNextImage() {
-          if (index < images.length) {
-            let image = images[index];
+        function revealNextCurtain() {
+          if (index < wrappers.length) {
+            let wrapper = wrappers[index];
+            let image = wrapper.querySelector('.lazyload');
+            let curtain = wrapper.querySelector('.curtain');
             let src = image.getAttribute('data-src');
             
             let img = new Image();
@@ -29,13 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
             img.onload = function() {
               image.src = src;
               image.classList.add('loaded');
+              curtain.classList.add('reveal');
               index++;
-              setTimeout(loadNextImage, 300); // Delay between loading images
+              setTimeout(revealNextCurtain, 500); 
             };
           }
         }
   
-        loadNextImage(); // Start loading the first image
+        revealNextCurtain();
       }
   
       observer.observe(parent);

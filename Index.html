@@ -18,77 +18,10 @@
     <div id="sidebar"></div>
     <section class="content1">
         <div class="arc">
-            <!-- <div class="topHeading">
-                <div class="text-container">
-                    <div class="letter">a</div>
-                    <div class="letter">r</div>
-                    <div class="letter">c</div>
-                    <div class="letter">h</div>
-                    <div class="letter">i</div>
-                    <div class="letter">t</div>
-                    <div class="letter">e</div>
-                    <div class="letter">c</div>
-                    <div class="letter">t</div>
-                    <div class="letter">u</div>
-                    <div class="letter">r</div>
-                    <div class="letter">a</div>
-                    <div class="letter">l</div>
-                </div>
-                <div class="text-container">
-                    <span class="letter">a</span>
-                    <span class="letter">c</span>
-                    <span class="letter">o</span>
-                    <span class="letter">u</span>
-                    <span class="letter">s</span>
-                    <span class="letter">t</span>
-                    <span class="letter">i</span>
-                    <span class="letter">c</span>
-                </div>
-                <div class="text-container">
-                    <span class="letter">s</span>
-                    <span class="letter">o</span>
-                    <span class="letter">l</span>
-                    <span class="letter">u</span>
-                    <span class="letter">t</span>
-                    <span class="letter">i</span>
-                    <span class="letter">o</span>
-                    <span class="letter">n</span>
-                </div>
-            </div> -->
-            <div class="text-container">
-                <span class="letter">A</span>
-                <span class="letter">R</span>
-                <span class="letter">C</span>
-                <span class="letter">H</span>
-                <span class="letter">I</span>
-                <span class="letter">T</span>
-                <span class="letter">E</span>
-                <span class="letter">C</span>
-                <span class="letter">T</span>
-                <span class="letter">U</span>
-                <span class="letter">R</span>
-                <span class="letter">A</span>
-                <span class="letter">L</span>
-                <span class="letter"> </span><br>
-                <span class="letter">A</span>
-                <span class="letter">C</span>
-                <span class="letter">O</span>
-                <span class="letter">U</span>
-                <span class="letter">S</span>
-                <span class="letter">T</span>
-                <span class="letter">I</span>
-                <span class="letter">C</span>
-                <span class="letter"> </span>
-                <span class="letter">S</span>
-                <span class="letter">O</span>
-                <span class="letter">L</span>
-                <span class="letter">U</span>
-                <span class="letter">T</span>
-                <span class="letter">I</span>
-                <span class="letter">O</span>
-                <span class="letter">N</span>
-                <span class="letter">S</span>
-            </div>
+            <div class="text-container" id="text1"></div>
+            <div class="text-container" id="text2"></div>
+            <div class="text-container" id="text3"></div>
+        </div>
         </div>
         <div class="para1">
             <p class="smg"> &nbsp &nbsp &nbsp We help architects sculpt sound out of space, with bespoke, acoustic
@@ -165,15 +98,24 @@
             </section>
             <div class="c3imgs">
                 <div class="image-container">
-                    <img class=" lazyload" data-src="./img/acf684d5ca55867027097834fa9bb82dc86c79dd-5520x3680.webp"
-                        alt="">
+                    <div class="image-wrapper">
+                        <img class=" lazyload" data-src="./img/acf684d5ca55867027097834fa9bb82dc86c79dd-5520x3680.webp"
+                            alt="">
+                        <div class="curtain"></div>
+                    </div>
 
-                    <img class="hideImg lazyload"
-                        data-src="https://cdn.sanity.io/images/lbvt8rt8/production/ef8aca612e6cd6137beae2ba45d247a2a726e639-5520x3680.jpg?rect=334,0,4851,3680&w=1280&h=971&fit=min&auto=format"
-                        alt="" width="1000px" height="484px">
-                    <img class="hideImg lazyload"
-                        data-src="https://cdn.sanity.io/images/lbvt8rt8/production/b979137e0a5709a937beb3975ee7e19ad43690d3-3684x5520.jpg?rect=0,918,3684,3684&w=960&h=960&fit=min&auto=format"
-                        alt="" width="1000px" height="484px">
+                    <div class="image-wrapper">
+                        <img class="hideImg lazyload"
+                            data-src="https://cdn.sanity.io/images/lbvt8rt8/production/ef8aca612e6cd6137beae2ba45d247a2a726e639-5520x3680.jpg?rect=334,0,4851,3680&w=1280&h=971&fit=min&auto=format"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hideImg lazyload"
+                            data-src="https://cdn.sanity.io/images/lbvt8rt8/production/b979137e0a5709a937beb3975ee7e19ad43690d3-3684x5520.jpg?rect=0,918,3684,3684&w=960&h=960&fit=min&auto=format"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,10 +157,16 @@
             </section>
             <div class="c3imgs">
                 <div class="image-container">
-                    <img class="lazyload" data-src="./img/132b28d863cf5e07ab869a77dcac84e360f6ff5a-5792x8688.webp"
-                        alt="" width="1000px" height="484px">
-                    <img class="lazyload" data-src="./img/a45987b6683f5b99ad5341bbce4e3122ebe49aad-8688x5792.webp"
-                        alt="" width="1000px" height="484px">
+                    <div class="image-wrapper">
+                        <img class="lazyload" data-src="./img/132b28d863cf5e07ab869a77dcac84e360f6ff5a-5792x8688.webp"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="lazyload" data-src="./img/a45987b6683f5b99ad5341bbce4e3122ebe49aad-8688x5792.webp"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
                 </div>
 
             </div>
@@ -261,15 +209,23 @@
             </section>
             <div class="c3imgs">
                 <div class="image-container">
-                    <img class=" lazyload" data-src="./img/acf684d5ca55867027097834fa9bb82dc86c79dd-5520x3680.webp"
-                        alt="" width="1000px" height="484px">
-
-                    <img class=" lazyload"
-                        data-src="https://cdn.sanity.io/images/lbvt8rt8/production/ef8aca612e6cd6137beae2ba45d247a2a726e639-5520x3680.jpg?rect=334,0,4851,3680&w=1280&h=971&fit=min&auto=format"
-                        alt="" width="1000px" height="484px">
-                    <img class=" lazyload"
-                        data-src="https://cdn.sanity.io/images/lbvt8rt8/production/b979137e0a5709a937beb3975ee7e19ad43690d3-3684x5520.jpg?rect=0,918,3684,3684&w=960&h=960&fit=min&auto=format"
-                        alt="" width="1000px" height="484px">
+                    <div class="image-wrapper">
+                        <img class=" lazyload" data-src="./img/acf684d5ca55867027097834fa9bb82dc86c79dd-5520x3680.webp"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img class=" lazyload"
+                            data-src="https://cdn.sanity.io/images/lbvt8rt8/production/ef8aca612e6cd6137beae2ba45d247a2a726e639-5520x3680.jpg?rect=334,0,4851,3680&w=1280&h=971&fit=min&auto=format"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img class=" lazyload"
+                            data-src="https://cdn.sanity.io/images/lbvt8rt8/production/b979137e0a5709a937beb3975ee7e19ad43690d3-3684x5520.jpg?rect=0,918,3684,3684&w=960&h=960&fit=min&auto=format"
+                            alt="" width="1000px" height="484px">
+                        <div class="curtain"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,10 +286,11 @@
     <div>
         <div class="layout-container image-container">
             <section class="layout-content">
-                <div class="imgcontent ">
+                <div class="imgcontent image-wrapper">
                     <img class="lazyload"
                         data-src="https://cdn.sanity.io/images/lbvt8rt8/production/2351ba7bc1a7e3287b5580caa8f769da650fafa6-1255x1255.jpg?rect=0,120,1255,1014&w=960&h=776&fit=min&auto=format"
                         alt="">
+                    <div class="curtain"></div>
                 </div>
                 <h4 class="layout-styler">Style</h4>
                 <div class="category-content-container">
@@ -352,10 +309,11 @@
                 </div>
             </section>
             <section class="layout-content">
-                <div class="imgcontent ">
+                <div class="imgcontent image-wrapper">
                     <img class="lazyload"
                         data-src="https://cdn.sanity.io/images/lbvt8rt8/production/54294163026b1c635edbb19a611ff7617b16af5a-762x1000.jpg?rect=0,26,762,947&w=640&h=795&fit=min&auto=format"
                         alt="">
+                    <div class="curtain"></div>
                 </div>
                 <h4 class="layout-styler">Style</h4>
                 <div class="category-content-container">
@@ -374,10 +332,11 @@
                 </div>
             </section>
             <section class="layout-content">
-                <div class="imgcontent ">
+                <div class="imgcontent image-wrapper">
                     <img class="lazyload"
                         data-src="https://cdn.sanity.io/images/lbvt8rt8/production/1c0ed788be805b3af7a3c404d4d7c5c23cdf72e6-2444x3280.jpg?rect=0,122,2444,3036&w=640&h=795&fit=min&auto=format"
                         alt="">
+                    <div class="curtain"></div>
                 </div>
                 <h4 class="layout-styler">Style</h4>
                 <div class="category-content-container">
@@ -397,10 +356,11 @@
             </section>
 
             <section class="layout-content">
-                <div class="imgcontent ">
+                <div class="imgcontent image-wrapper">
                     <img class="lazyload"
                         data-src="https://cdn.sanity.io/images/lbvt8rt8/production/cc973dde058c24492002f3ed90cc31e1d6e13151-1169x947.jpg?rect=0,1,1169,945&w=960&h=776&fit=min&auto=format"
                         alt="">
+                    <div class="curtain"></div>
                 </div>
                 <h4 class="layout-styler">Style</h4>
                 <div class="category-content-container">
@@ -419,10 +379,11 @@
                 </div>
             </section>
             <section class="layout-content">
-                <div class="imgcontent ">
+                <div class="imgcontent image-wrapper">
                     <img class="lazyload"
                         data-src="https://cdn.sanity.io/images/lbvt8rt8/production/d8e79afcb61e2a52c2807f7df5ed01723f62bfa0-8677x6597.jpg?rect=1683,0,5311,6597&w=640&h=795&fit=min&auto=format"
                         alt="">
+                    <div class="curtain"></div>
                 </div>
                 <h4 class="layout-styler">Style</h4>
                 <div class="category-content-container">
@@ -441,10 +402,11 @@
                 </div>
             </section>
             <section class="layout-content">
-                <div class="imgcontent ">
+                <div class="imgcontent image-wrapper">
                     <img class="lazyload"
                         data-src="https://cdn.sanity.io/images/lbvt8rt8/production/ba39f7ad64ee048da69933c55bb7e84c42818130-1600x1067.webp?rect=371,0,859,1067&w=640&h=795&fit=min&auto=format"
                         alt="">
+                    <div class="curtain"></div>
                 </div>
                 <h4 class="layout-styler">Style</h4>
                 <div class="category-content-container">
@@ -482,8 +444,13 @@
     </div>
     <div class="content9 image-container">
         <section class="c9u1">
-            <div class="c9l1"><img class="lazyload"
-                    data-src="./img/226fa72dd66a27bf3d21baedd7048ebc7ed436e2-1536x1024.webp" alt=""></div>
+            <div class="c9l1 image-wrapper">
+                <img class="lazyload"
+                    data-src="https://cdn.sanity.io/images/lbvt8rt8/production/a8c9bba93c297dbe2cf2da28a4e9d18050c46047-2000x1288.jpg?rect=0,91,2000,1105&w=420&h=232&fit=min&auto=format"
+                    alt="">
+                <div class="curtain"></div>
+            </div>
+
             <div class="c9l2">
                 <h6>Sound Solutions: Enhancing Acoustics for Aged Care Comfort</h6>
                 <div class="c9u2">
@@ -503,8 +470,13 @@
         </section>
 
         <section class="c9u1">
-            <div class="c9l1"><img class="lazyload"
-                    data-src="./img/226fa72dd66a27bf3d21baedd7048ebc7ed436e2-1536x1024.webp" alt=""></div>
+            <div class="c9l1 image-wrapper">
+                <img class="lazyload"
+                    data-src="https://cdn.sanity.io/images/lbvt8rt8/production/a8c9bba93c297dbe2cf2da28a4e9d18050c46047-2000x1288.jpg?rect=0,91,2000,1105&w=420&h=232&fit=min&auto=format"
+                    alt="">
+                <div class="curtain"></div>
+            </div>
+
             <div class="c9l2">
                 <h6>Sound Solutions: Enhancing Acoustics for Aged Care Comfort</h6>
                 <div class="c9u2">
@@ -524,8 +496,11 @@
         </section>
 
         <section class="c9u1">
-            <div class="c9l1"><img class="lazyload"
-                    data-src="./img/226fa72dd66a27bf3d21baedd7048ebc7ed436e2-1536x1024.webp" alt=""></div>
+            <div class="c9l1 image-wrapper">
+                <img class="lazyload" data-src="./img/226fa72dd66a27bf3d21baedd7048ebc7ed436e2-1536x1024.webp" alt="">
+                <div class="curtain"></div>
+            </div>
+
             <div class="c9l2">
                 <h6>Sound Solutions: Enhancing Acoustics for Aged Care Comfort</h6>
                 <div class="c9u2">
