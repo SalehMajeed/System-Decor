@@ -33,10 +33,10 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   transition: 0.8s all ease-in-out;
-  animation-name: transit;
+  /* animation-name: transit;
   animation-duration: 2s;
   animation-timing-function: linear;
-  animation-direction: normal;
+  animation-direction: normal; */
 }
 
 @keyframes transit {
@@ -96,6 +96,7 @@
   grid-column: 2 / span 2;
   margin-left: -25px;
   padding-top: 60px;
+  transform: translate(0,0);
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
@@ -134,17 +135,34 @@
   animation-duration: 0.7s;
 }
 
+
+/* .animated-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+} */
+
+.animated-list li {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animated-list li.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* 
 @keyframes bordAnime {
   to {
     width: 100%;
-    /* transition: 0.2s all ease-in; */
   }
 
   from {
-    /* transition: 0.1s all ease-in; */
     width: 0;
   }
-}
+} */
 
 .third__sidebar {
   position: relative;
@@ -157,6 +175,7 @@
   border-right: 1px solid var(--first-color);
   grid-column: 4 / span 2;
   margin-left: -25px;
+  transform: translate(0,0);
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
@@ -189,9 +208,9 @@
   bottom: 0;
   left: 0;
   border-top: 1px solid var(--light-color);
-  animation-name: bordAnime;
+  /* animation-name: bordAnime;
   animation-timing-function: linear;
-  animation-duration: 1.5s;
+  animation-duration: 1.5s; */
 }
 
 .fourth__sidebar {
@@ -205,6 +224,7 @@
   border-right: 1px solid var(--first-color);
   grid-column: 6 / span 2;
   margin-left: -25px;
+  transform: translate(0,0);
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
@@ -251,12 +271,11 @@
 }
 
 @keyframes sideCome {
-  to {
+  100% {
     transform: translate(0%, 0);
-    transition: all 2s ease-in;
   }
-  from {
-    transition: 3s all ease-in-out;
+  0%{
+    transform: translate(-100%, 0);
   }
 }
 
