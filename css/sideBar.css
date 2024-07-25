@@ -9,7 +9,7 @@
   position: absolute;
   z-index: 999;
   text-align: end;
-  top: 5%;
+  top: 3%;
   right: 10%;
   padding: 0 8px;
   cursor: pointer;
@@ -32,10 +32,10 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   transition: 0.8s all ease-in-out;
-  /* animation-name: transit;
+  animation-name: transit;
   animation-duration: 2s;
   animation-timing-function: linear;
-  animation-direction: normal; */
+  animation-direction: normal;
 }
 
 @keyframes transit {
@@ -94,7 +94,6 @@
   grid-column: 2 / span 2;
   margin-left: -25px;
   padding-top: 60px;
-  transform: translate(0,0);
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
@@ -131,15 +130,15 @@
   animation-duration: 0.7s;
 }
 
+@keyframes bordAnime {
+  to {
+    width: 100%;
+  }
 
+  from {
+    width: 0;
+  }
 }
-
-.animated-list li.show {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-
 
 .third__sidebar {
   position: relative;
@@ -152,7 +151,6 @@
   border-right: 1px solid var(--first-color);
   grid-column: 4 / span 2;
   margin-left: -25px;
-  transform: translate(0,0);
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
@@ -183,9 +181,9 @@
   bottom: 0;
   left: 0;
   border-top: 1px solid var(--light-color);
-  /* animation-name: bordAnime;
+  animation-name: bordAnime;
   animation-timing-function: linear;
-  animation-duration: 1.5s; */
+  animation-duration: 1.5s;
 }
 
 .fourth__sidebar {
@@ -199,7 +197,6 @@
   border-right: 1px solid var(--first-color);
   grid-column: 6 / span 2;
   margin-left: -25px;
-  transform: translate(0,0);
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
@@ -242,11 +239,12 @@
 }
 
 @keyframes sideCome {
-  100% {
+  to {
     transform: translate(0%, 0);
+    transition: all 2s ease-in;
   }
-  0%{
-    transform: translate(-100%, 0);
+  from {
+    transition: 3s all ease-in-out;
   }
 }
 
