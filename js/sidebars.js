@@ -112,10 +112,18 @@ function fourthFn(data) {
     }
 
     const fourthList = document.createElement("ul");
+    fourthList.classList.add("animated-list")
     for (key in data) {
         fourthList.innerHTML += `<li class="fourth__sidebarLi">${key}</li>`;
         fourthSidebar.append(fourthList)
     }
+    document.querySelectorAll(".fourth__sidebarLi").forEach((item, index) => {
+         
+        setTimeout(() => {
+               item.classList.add('show');
+           }, index * 200); // Adjust the delay as needed
+       });
+
     sidebar.append(fourthSidebar);
 }
 
@@ -138,10 +146,19 @@ function thirdFn(data, headingText) {
     thirdSidebar.prepend(thirdSidebarHeading);
 
     const thirdList = document.createElement("ul");
+    thirdList.classList.add("animated-list")
     for (key in data) {
         thirdList.innerHTML += `<li class="third__sidebarLi">${key}</li>`;
         thirdSidebar.append(thirdList);
     }
+
+    document.querySelectorAll(".third__sidebarLi").forEach((item, index) => {
+         
+        setTimeout(() => {
+               item.classList.add('show');
+           }, index * 200); // Adjust the delay as needed
+       });
+
     sidebar.append(thirdSidebar);
 }
 
@@ -163,14 +180,22 @@ function secondFn(data) {
     thirdSidebar.remove();
 
     const secondList = document.createElement("ul");
+    secondList.classList.add("animated-list")
     for (key in data) {
         const pathUrl = originDirectory+data[key].link;
         secondList.innerHTML += `<a href="${pathUrl}"><li class="second__sidebarLi">${key}</li></a>`
         secondSidebar.append(secondList)
+    
     }
     secondSidebarHeading.innerHTML = headingText;
     secondSidebar.prepend(secondSidebarHeading)
     sidebar.append(secondSidebar)
+    document.querySelectorAll(".second__sidebarLi").forEach((item, index) => {
+         
+      setTimeout(() => {
+             item.classList.add('show');
+         }, index * 200); // Adjust the delay as needed
+     });
 }
 
 function createElements(data) {
