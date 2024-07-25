@@ -1,5 +1,3 @@
-
-
 footer {
     position: relative;
     font-size: 12px;
@@ -41,8 +39,8 @@ input {
     outline: none;
     padding: 10px 30px 10px 0;
     font-size: 12px;
-    border-top: 1px solid  var(--first-color);
-    border-bottom: 1px solid  var(--first-color);
+    border-top: 1px solid var(--first-color);
+    border-bottom: 1px solid var(--first-color);
     background-color: transparent;
 }
 
@@ -190,15 +188,15 @@ input {
 
 }
 
-.top-line{
+.top-line {
     grid-row: 1;
     grid-column: 1/span 7;
-    border-top: 1px solid  var(--first-color);
+    border-top: 1px solid var(--first-color);
 }
 
 
 @media screen and (max-width:1024px) {
-    
+
     .footer-section {
         display: grid;
         gap: 15px;
@@ -220,7 +218,7 @@ input {
         grid-row: 2;
         grid-column: 1/span 2;
         text-align: left;
-        
+
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -231,7 +229,7 @@ input {
         text-align: right;
         margin-bottom: 50px;
         margin-left: 0;
-        
+
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -240,7 +238,7 @@ input {
         grid-row: 3;
         grid-column: 1/span 2;
         margin-left: 0;
-        
+
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -249,7 +247,7 @@ input {
     .resourcesContainer {
         grid-row: 3;
         grid-column: 3/span 2;
-        
+
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -279,7 +277,7 @@ input {
         grid-row: 5;
         grid-column: 1/span 2;
         margin-left: 0;
-        
+
         padding-left: 15px;
         padding-right: 15px;
     }

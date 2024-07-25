@@ -73,14 +73,11 @@ const headerHTML = `<div class="nav-bar">
 </nav>
 </div>`;
 
-
-
 $('#header').html(headerHTML)
 
 const header = document.getElementById("header")
 const menu = document.getElementById("menu")
 const close = document.getElementById("close")
-
 
 menu.addEventListener('click', () => {
     menu.style.transform = "translate(0,-100%)"
@@ -96,9 +93,6 @@ close.addEventListener('click', () => {
     header.style.padding = "5px 0"
 })
 
-
-
 $(document).ready(function () {
     $('#header').on('click', eventFn);
 });
-

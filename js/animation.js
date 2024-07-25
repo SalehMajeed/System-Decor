@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('showAnime');
-            } 
-            else{
+            }
+            else {
                 entry.target.classList.remove('showAnime')
             }
         });
     });
-    
     observedDiv.forEach((di) => observer.observe(di))
 });
-

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('#header').on('click', eventFn);
 });
 
@@ -10,5 +10,4 @@ function eventFn(e) {
     } else {
         return;
     }
-}
-
+};

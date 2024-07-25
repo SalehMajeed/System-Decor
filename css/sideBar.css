@@ -6,19 +6,7 @@
 
 /* #sidebar {} */
 .sidebar__close {
-  font-size: 20px;
-  position: absolute;
-  z-index: 999;
-  text-align: end;
-  top: 5%;
-  right: 10%;
-  padding: 0 8px;
-  cursor: pointer;
-}
 
-.sidebar__close:hover {
-  background-color: var(--light-color);
-  border-radius: 50%;
 }
 
 .sidebar {
@@ -135,10 +123,7 @@
 }
 
 @keyframes bordAnime {
-  to {
-    width: 100%;
-    /* transition: 0.2s all ease-in; */
-  }
+
 
   from {
     /* transition: 0.1s all ease-in; */
@@ -171,14 +156,7 @@
 }
 
 .third__sidebarLi {
-  position: relative;
-  width: 100%;
-  font-size: 15px;
-  opacity: 0.8;
-  font-weight: 400;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
+
 }
 
 .third__sidebarLi::after {
@@ -219,16 +197,6 @@
 }
 
 .fourth__sidebarLi {
-  position: relative;
-  width: 100%;
-  font-size: 15px;
-  opacity: 0.8;
-  font-weight: 400;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  /* border-bottom: 1px solid var(--light-color);
     border-top: 1px solid var(--light-color); */
 }
 

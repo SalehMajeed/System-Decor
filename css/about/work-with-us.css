@@ -5,6 +5,10 @@
 
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
 a {
     text-decoration: none;
     color: var(--first-color);
@@ -13,7 +17,6 @@ a {
 ul {
     list-style-type: none;
 }
-
 
 :root {
     --first-color: rgb(204, 169, 159);
@@ -39,7 +42,6 @@ body {
     overflow-x: hidden;
 
 }
-
 
 /* ======first section =====*/
 .decor__tribe {
@@ -125,19 +127,21 @@ body {
     font-size: 4rem;
     font-weight: normal;
 }
+
 .desktopSteps-0-3-1602 {
     order: 1;
-    overflow-y:scroll;
+    overflow-y: scroll;
     height: 80%;
     scroll-snap-type: x mandatory;
     width: 100%;
     grid-column: 4/span 3;
-  }
-  .desktopSteps-0-3-1602::-webkit-scrollbar {
+}
+
+.desktopSteps-0-3-1602::-webkit-scrollbar {
     display: none;
-  }
-  
-  .step-0-3-1603 {
+}
+
+.step-0-3-1603 {
     flex: 0 0 33%;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0.5;
@@ -146,45 +150,47 @@ body {
     margin: 5rem 20px;
     padding: 3rem 0;
     border-bottom: solid 1px var(--first-color);
-  }
-  
-  .step-0-3-1603.selected {
+}
+
+.step-0-3-1603.selected {
     opacity: 1;
     transform: scale(1);
-  }
-  .container
-  .svgContainer {
+}
+
+.container .svgContainer {
     margin-top: 20px;
     grid-column: span 2;
-  }
-  
-  .graph-0-3-1599 {
+}
+
+.graph-0-3-1599 {
     width: 300px;
     height: 300px;
     stroke-width: 200;
-    
-  }
-  
-  .point-0-3-1610 {
+
+}
+
+.point-0-3-1610 {
     stroke-width: 2;
     fill: var(--second-color);
-  
+
     transition: .5s;
-  
-  }
-  .step-0-3-1603 h4{
+
+}
+
+.step-0-3-1603 h4 {
     font-size: 1.5rem;
     font-weight: lighter;
     margin-bottom: 1rem;
-  }
-  .step-0-3-1603 p{
-    line-height: 1.5;
-  }
+}
 
-  .point-0-3-1610.selected {
+.step-0-3-1603 p {
+    line-height: 1.5;
+}
+
+.point-0-3-1610.selected {
     fill: var(--first-color);
     stroke-width: 45;
-  }
+}
 
 .text-0-3-586.selected {
     color: black;
@@ -378,7 +384,6 @@ body {
     margin-top: var(--secondry-sizing);
 }
 
-
 /* =============nineth section=========== */
 .decor__opportunity {
     width: 100%;
@@ -442,8 +447,6 @@ body {
     font-weight: bold;
     padding-bottom: var(--secondry-sizing);
 }
-
-
 
 /* =======tenth section=========== */
 .decor__touch {
@@ -994,7 +997,6 @@ body {
     }
 
 }
-
 
 /* .sidebar{
     width: 100%;

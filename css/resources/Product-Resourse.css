@@ -15,6 +15,10 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
 header {
     height: auto;
     padding: 5px 5px;
@@ -29,7 +33,6 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     color: white;
 }
 
@@ -180,7 +183,8 @@ select option {
 .sec4l1 {
     grid-column: 5/7;
 }
-.sec4h1{
+
+.sec4h1 {
     display: flex;
     gap: 25px;
 }
@@ -207,7 +211,8 @@ select option {
     margin-top: 3px;
     grid-column: 1;
 }
-.sec4k2{
+
+.sec4k2 {
     grid-column: 2/8;
 }
 
@@ -557,36 +562,45 @@ input {
     .sec4l1 {
         grid-column: 1/span 4;
     }
-    .sec4h1{
+
+    .sec4h1 {
         display: flex;
         gap: 25px;
     }
-    .sec4p1{
+
+    .sec4p1 {
         display: flex;
         /* grid-template-columns: repeat(4, 1fr); */
         gap: 25px;
         align-items: center;
         justify-content: space-between;
     }
-    .sec4k4{
+
+    .sec4k4 {
         grid-column: 5;
     }
-    .sec4k5{
+
+    .sec4k5 {
         grid-column: 5;
     }
-    .sec4k6{
+
+    .sec4k6 {
         grid-column: 5;
     }
-    .sec4k7{
+
+    .sec4k7 {
         grid-column: 5;
     }
-    .sec4k8{
+
+    .sec4k8 {
         grid-column: 5;
     }
-    .sec4k9{
+
+    .sec4k9 {
         grid-column: 5;
     }
-    .sec4k10{
+
+    .sec4k10 {
         grid-column: 5;
     }
 
@@ -610,7 +624,8 @@ input {
         grid-column: 1/span 2;
         text-align: left;
     }
-    input{
+
+    input {
         width: 100%;
     }
 
