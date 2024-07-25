@@ -22,11 +22,10 @@
     font-style: normal;
 }
 
-:root{
-    --first-color:#CCA99F;
-    --second-color:#291A16;
+:root {
+    --first-color: #CCA99F;
+    --second-color: #291A16;
 }
-
 
 * {
     font-family: 'NHaasGroteskTXPro', "Lucida-Sans", Tahoma, sans-serif;
@@ -37,6 +36,10 @@
     line-height: 1.5;
     font-weight: 400;
     -webkit-tap-highlight-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
 }
 
 body,
@@ -266,7 +269,7 @@ html {
 
 @media screen and (max-width:1024px) {
 
-   
+
     .section-1 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
