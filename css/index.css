@@ -28,22 +28,33 @@ body {
 }
 
 
-
-section img{
-    transform: translate(0,-100%);
-    /* height: 0; */
-    transition: 0.4s all ease-in-out ;
+.lazyload {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transform: translate(0, -100%);
 }
 
-.right-line, .firstLine ,.secondLine{
+.loaded {
+    opacity: 1;
+    transform: translate(0, 0%);
+}
+
+
+
+
+
+.right-line,
+.firstLine,
+.secondLine {
     transition: 2s all ease-in-out;
 }
 
 
 
-section{
+section {
     overflow: hidden;
 }
+
 .arc {
     grid-column: 1/span 7;
     margin: 0 25px;
@@ -193,7 +204,7 @@ grey {
     position: relative;
 }
 
-.right-line{
+.right-line {
     position: absolute;
     width: 0.8px;
     height: 100%;
@@ -215,9 +226,10 @@ grey {
 
 
 
-.c3h2.nav-item{
-width: 100%;
+.c3h2.nav-item {
+    width: 100%;
 }
+
 .c3h2.nav-item a {
     padding-bottom: 10px;
     font-size: 25px;
@@ -231,8 +243,10 @@ width: 100%;
     padding: 25px;
 }
 
-.c3imgs section {
+.c3imgs section,
+.c3imgs div {
     /* width: 1000px; */
+    height: 450px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -240,9 +254,10 @@ width: 100%;
     /* margin-left: 15px; */
 }
 
-.c3imgs section img{
-    width: 100%;
-    /* height: 70%; */
+.c3imgs img {
+    width: auto;
+    object-fit: cover;
+    height: 100%;
 }
 
 
@@ -610,7 +625,7 @@ width: 100%;
 }
 
 
-.bottom-lineOp{
+.bottom-lineOp {
     grid-column: span 7;
     border-bottom: 1px solid var(--first-color);
     transition: 2s all ease-in-out;
@@ -745,12 +760,12 @@ width: 100%;
     color: white;
 }
 
-.bottom-line{
+.bottom-line {
     border-top: 1px solid var(--first-color);
 }
 
 @media screen and (max-width:1024px) {
-  
+
     .content1 {
         display: grid;
         grid-template: auto/repeat(4, 1fr);
@@ -837,10 +852,11 @@ width: 100%;
 
     .c3info {
         width: 100%;
-        border-right: none;padding: 5px 15px;
+        border-right: none;
+        padding: 5px 15px;
     }
 
- 
+
 
     .c3b {
         display: flex;
@@ -852,9 +868,10 @@ width: 100%;
         font-size: 10px;
     }
 
-   .c3b .nav-item{
-    padding: 0;
-   }
+    .c3b .nav-item {
+        padding: 0;
+    }
+
     .c3b .nav-item a {
         font-size: 12px;
         width: fit-content;
@@ -866,18 +883,18 @@ width: 100%;
     }
 
     .c3imgs {
-       width: 100vw;
-       padding: 0 15px;
-       padding-bottom: 15px;
+        width: 100vw;
+        padding: 0 15px;
+        padding-bottom: 15px;
     }
 
-   .c3imgs div{
-    width: 100%;
-   }
+    .c3imgs div {
+        width: 100%;
+    }
 
-   .c3imgs div img{
-    width: 100%;
-   }
+    .c3imgs div img {
+        width: 100%;
+    }
 
 
 
@@ -898,7 +915,7 @@ width: 100%;
         gap: 15px;
     }
 
-    
+
     .contact-section {
         margin-bottom: 50px;
     }
@@ -916,7 +933,7 @@ width: 100%;
     }
 
 
-    .content5{
+    .content5 {
         margin-left: 15px;
         margin-right: 15px;
         display: grid;
@@ -924,20 +941,21 @@ width: 100%;
         gap: 15px;
     }
 
-    .c5l1{
+    .c5l1 {
         grid-column: span 4;
         font-size: 35px;
     }
-    .c5l2{
+
+    .c5l2 {
         grid-column: span 4;
         margin-bottom: 50px;
     }
 
-    .c5l2 p{
+    .c5l2 p {
         font-size: 12px;
     }
 
-    .layout-container{
+    .layout-container {
         margin-left: 15px;
         margin-right: 15px;
         display: grid;
@@ -948,21 +966,21 @@ width: 100%;
 
     }
 
-    .layout-content{
+    .layout-content {
         grid-column: span 4;
     }
 
-    .imgcontent{
+    .imgcontent {
         width: 100%;
         height: 100%;
     }
 
-    .imgcontent img{
+    .imgcontent img {
         width: 100%;
         height: 100%;
     }
 
-    .content8{
+    .content8 {
         margin-left: 15px;
         margin-right: 15px;
         display: grid;
@@ -972,40 +990,40 @@ width: 100%;
         margin-top: 50px;
     }
 
-    .c8l1{
+    .c8l1 {
         grid-column: span 4;
         font-size: 35px;
     }
 
-    .c8l2{
+    .c8l2 {
         grid-column: span 4;
     }
 
-    .content9{
+    .content9 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
         margin-top: 50px;
     }
 
-    .c9u1{
+    .c9u1 {
         grid-column: span 4;
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
 
-    .c9l2 h6{
+    .c9l2 h6 {
         font-size: 18px;
     }
 
-    .c9l2{
+    .c9l2 {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
 
-    .c9l3{
+    .c9l3 {
         font-size: 12px;
         opacity: 0.8;
     }
