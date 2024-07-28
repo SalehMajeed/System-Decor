@@ -36,6 +36,7 @@ nav {
 }
 
 .nav-item a {
+    color: var(--light-color);
     font-size: 10px;
     font-weight: 400;
     color: currentColor;
@@ -93,6 +94,11 @@ nav {
 .nav-item a:hover::after {
     width: 100%;
 }
+
+.activated {opacity: 2;
+}
+
+
 
 
 @media screen and (max-width:1024px) {

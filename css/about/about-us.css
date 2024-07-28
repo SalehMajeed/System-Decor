@@ -147,28 +147,50 @@ body::-webkit-scrollbar {
 .sustainability {
   font-size: 20px;
   padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 25px;
 }
+
 
 #sustainability-inner-container {
+  grid-column: 4/span 4;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
+gap: 25px;
 }
 
-.inner1 {
-  grid-column: 2 / span 3;
+.sustainability {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+padding: 0 25px;
+  gap: 25px;
+  margin-top: 90px;
+  font-size: 20px;
   border-bottom: 1px solid white;
+  padding-bottom: 50px;
 }
 
 .sustainability-heading {
-
+  grid-column: 1/span 3;
+  grid-row: span 2;
+  font-weight: 350;
+  font-size: 3.5vw;
   margin-top: 1rem;
+}
+
+
+
+.imageContainer{
+display: flex;
+align-items: center;
+gap: 15px;
 }
 
 .sustainability p {
   width: 100%;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.5; 
   overflow: hidden;
 }
 
@@ -179,7 +201,14 @@ body::-webkit-scrollbar {
 
 .textContent {
   border-bottom: solid 2px gray;
-
+  display: flex;
+  flex-direction: column;
+  padding:  0 25px 75px 0;
+  gap: 25px;
+  justify-content: space-around;
+  grid-column: span 2;
+  grid-row: auto;
+  margin: 0 0 25px;
 }
 
 .exceeding-text {
