@@ -119,7 +119,7 @@ function fourthFn(data) {
          
         setTimeout(() => {
                item.classList.add('show');
-           }, index * 200); 
+           }, index * 100); 
        });
 
     sidebar.append(fourthSidebar);
@@ -154,7 +154,7 @@ function thirdFn(data, headingText) {
          
         setTimeout(() => {
                item.classList.add('show');
-           }, index * 200); 
+           }, index * 100); 
        });
 
     sidebar.append(thirdSidebar);
@@ -192,7 +192,7 @@ function secondFn(data) {
          
       setTimeout(() => {
              item.classList.add('show');
-         }, index * 200); 
+         }, index * 100); 
      });
 }
 

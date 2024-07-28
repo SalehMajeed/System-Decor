@@ -17,7 +17,9 @@
   cursor: pointer;
 }
 
-
+li{
+  overflow: hidden;
+}
 .sidebar__close:hover{
   background-color: var(--light-color);
   border-radius: 50%;
@@ -35,7 +37,7 @@
   grid-template-columns: repeat(7, 1fr);
   transition: 0.8s all ease-in-out;
   animation-name: transit;
-  animation-duration: 2s;
+  /* animation-duration: 1s; */
   animation-timing-function: linear;
   animation-direction: normal;
 }
@@ -43,12 +45,11 @@
 @keyframes transit {
   to {
     opacity: 10;
-    transition: 1s all ease-out;
+    transform: translate(0%, 0);
   }
 
   from {
     color: transparent;
-    transition: all ease-in-out 1s;
     transform: translate(-100%, 0);
   }
 }
@@ -66,6 +67,9 @@
   z-index: 4;
   border-right: 1px solid var(--first-color);
   grid-column: 1;
+  animation-name: sideCome;
+  animation-timing-function: linear;
+  animation-duration: 0.8s;
 }
 
 .first__sidebar ul {
@@ -101,6 +105,7 @@
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
+  /* animation-delay: 0.5s; */
 }
 
 .second__sidebar ul {
@@ -129,9 +134,7 @@
   bottom: 0;
   left: 0;
   border-top: 1px solid var(--light-color);
-  animation-name: bordAnime;
-  animation-timing-function: linear;
-  animation-duration: 0.7s;
+ transition-delay:0.5s ;
 }
 
 
@@ -141,14 +144,23 @@
   margin: 20px 0;
 } */
 
-.animated-list li {
+.animated-list li::after {
   opacity: 0;
   transform: translateX(-100%);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 1.5s ease, opacity 1s ease;
+}
+
+.animated-list li.show::after {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.animated-list li {
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 
 .animated-list li.show {
-  transform: translateX(0);
   opacity: 1;
 }
 
@@ -310,28 +322,4 @@
     border-bottom: 1px solid var(--first-color);
     padding: 20px 25px;
   }
-
-  /* .second__sidebar{
-        grid-column: 1/span 4;
-        grid-row: 1/span 2;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        animation-name: rightAnime;
-        animation-timing-function: linear;
-        animation-duration: 1s;
-        z-index: 2;
-    }
-
-    .second__sidebar ul{
-        margin-top: 100px;
-        width: 100%;
-        padding: 0;
-        margin-left: 0;
-    }
-
-    .second__sidebarLi{
-        border-bottom: 1px solid var(--first-color);
-        padding:20px 25px;
-    } */
 }
