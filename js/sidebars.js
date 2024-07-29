@@ -140,9 +140,11 @@ function fourthFn(data) {
     document.querySelectorAll(".fourth__sidebarLi").forEach((item, index) => {
 
         setTimeout(() => {
-            item.classList.add('show');
-        }, index * 200);
-    });
+
+               item.classList.add('show');
+           }, index * 100); 
+       });
+
 
     sidebar.append(fourthSidebar);
 }
@@ -177,9 +179,11 @@ function thirdFn(data, headingText) {
     document.querySelectorAll(".third__sidebarLi").forEach((item, index) => {
 
         setTimeout(() => {
-            item.classList.add('show');
-        }, index * 200);
-    });
+
+               item.classList.add('show');
+           }, index * 100); 
+       });
+
 
     sidebar.append(thirdSidebar);
 }
@@ -226,10 +230,12 @@ function secondFn(data) {
 
     document.querySelectorAll(".second__sidebarLi").forEach((item, index) => {
 
-        setTimeout(() => {
-            item.classList.add('show');
-        }, index * 200);
-    });
+         
+      setTimeout(() => {
+             item.classList.add('show');
+         }, index * 100); 
+     });
+
 }
 
 function createElements(data) {

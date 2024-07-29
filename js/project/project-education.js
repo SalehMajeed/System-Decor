@@ -27,7 +27,7 @@ async function imageGen() {
     const response = await fetch(`https://api.unsplash.com/search/photos?page=${page}&query=interior&client_id=${accesskey}`)
     const data = await response.json();
     const images = data.results
-    console.log(images)
+    // console.log(images)
 
     images.map(res => {
         let imageContainer = document.createElement('div')
@@ -42,7 +42,7 @@ async function imageGen() {
         imageContainer.appendChild(imageLink)
         imageGallery.appendChild(imageContainer)
 
-        console.log(imageGallery.innerHTML)
+        // console.log(imageGallery.innerHTML)
 
     });
 
