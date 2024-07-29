@@ -17,32 +17,53 @@ const fourthSidebar = document.createElement("div");
 fourthSidebar.classList.add("fourth__sidebar");
 
 let closeBtn1 = document.createElement("div");
-closeBtn1.classList.add("sidebar__close","close__btn");
+closeBtn1.classList.add("sidebar__close", "close__btn");
 
 let closeBtn2 = document.createElement("div");
-closeBtn2.classList.add("sidebar__close","close__btn");
+closeBtn2.classList.add("sidebar__close", "close__btn");
 
 let closeBtn3 = document.createElement("div");
-closeBtn3.classList.add("sidebar__close","close__btn");
+closeBtn3.classList.add("sidebar__close", "close__btn");
+
+let preValue = null;
+let pre1Value = null;
+let targetId = null;
+
+function updateSelectedLi(selectedLi) {
+    const allLis = firstSidebar.querySelectorAll('li');
+    allLis.forEach(li => li.classList.remove('selected__li'));
+    selectedLi.classList.add('selected__li');
+}
+
 
 navHeader.addEventListener("click", eventFn)
 function eventFn(e) {
-    let preValue = null;
-    let pre1Value = null;
+    targetId = e.target.id;
+
 
     if (e.target.classList.contains("sidebar__links")) {
         preValue = e.target;
-        
+        updateSelectedLi(e.target);
+
         navData().then((data) => {
             createElements(data);
             secondFn(data[e.target.id]);
+            let item = firstSidebar.querySelectorAll("li")
+            item.forEach((li) => {
+                if (targetId == li.id) {
+                    li.classList.add("selected__li")
+                } else {
+                    li.classList.remove("selected__li")
+                }
+            })
             sidebar.classList.add("sidebar")
         });
+
     }
     secondSidebar.addEventListener("mouseover", hoverEvent);
     function hoverEvent(e) {
-        if(e.target.tagName !== "LI"){
-            return 
+        if (e.target.tagName !== "LI") {
+            return
         }
 
         pre1Value = e.target;
@@ -52,8 +73,8 @@ function eventFn(e) {
     }
     thirdSidebar.addEventListener("mouseover", hover1Event);
     function hover1Event(e) {
-        if(e.target.tagName !== "LI"){
-            return 
+        if (e.target.tagName !== "LI") {
+            return
         }
 
 
@@ -63,33 +84,34 @@ function eventFn(e) {
     }
     firstSidebar.addEventListener("click", sidebarEvent)
     function sidebarEvent(e) {
-        if(e.target.tagName !== "LI"){
-            return 
+        if (e.target.tagName !== "LI") {
+            return
         }
         preValue = e.target
+        updateSelectedLi(e.target);
 
         navData().then((data) => {
             secondFn(data[e.target.textContent]);
         })
         secondSidebar.addEventListener("mouseover", hoverEvent);
         function hoverEvent(e) {
-            if(e.target.tagName !== "LI"){
-                return 
+            if (e.target.tagName !== "LI") {
+                return
             }
 
             pre1Value = e.target;
             navData().then((data) => {
-                thirdFn(data[preValue.textContent][e.target.textContent], e.target.textContent)
+                thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
             })
         }
         thirdSidebar.addEventListener("mouseover", hover1Event);
         function hover1Event(e) {
 
-            if(e.target.tagName !== "LI"){
-                return 
+            if (e.target.tagName !== "LI") {
+                return
             }
             navData().then((data) => {
-                fourthFn(data[preValue.textContent][pre1Value.textContent][e.target.textContent])
+                fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
             })
         }
 
@@ -103,8 +125,8 @@ function fourthFn(data) {
     closeBtn3.innerHTML = btn;
     fourthSidebar.append(closeBtn3);
     closeBtn2.remove()
-    closeBtn3.addEventListener("click",closeFn);
-    function closeFn(e){
+    closeBtn3.addEventListener("click", closeFn);
+    function closeFn(e) {
         sidebar.classList.remove("sidebar");
         sidebar.innerHTML = "";
     }
@@ -116,11 +138,11 @@ function fourthFn(data) {
         fourthSidebar.append(fourthList)
     }
     document.querySelectorAll(".fourth__sidebarLi").forEach((item, index) => {
-         
+
         setTimeout(() => {
-               item.classList.add('show');
-           }, index * 200); 
-       });
+            item.classList.add('show');
+        }, index * 200);
+    });
 
     sidebar.append(fourthSidebar);
 }
@@ -133,12 +155,12 @@ function thirdFn(data, headingText) {
     closeBtn2.innerHTML = btn;
     thirdSidebar.append(closeBtn2);
     closeBtn1.remove()
-    closeBtn2.addEventListener("click",closeFn);
-    function closeFn(e){
+    closeBtn2.addEventListener("click", closeFn);
+    function closeFn(e) {
         sidebar.classList.remove("sidebar");
         sidebar.innerHTML = "";
     }
- 
+
     const thirdSidebarHeading = document.createElement("h2");
     thirdSidebarHeading.textContent = `All ${headingText}`;
     thirdSidebar.prepend(thirdSidebarHeading);
@@ -150,12 +172,14 @@ function thirdFn(data, headingText) {
         thirdSidebar.append(thirdList);
     }
 
+
+
     document.querySelectorAll(".third__sidebarLi").forEach((item, index) => {
-         
+
         setTimeout(() => {
-               item.classList.add('show');
-           }, index * 200); 
-       });
+            item.classList.add('show');
+        }, index * 200);
+    });
 
     sidebar.append(thirdSidebar);
 }
@@ -164,12 +188,12 @@ function secondFn(data) {
     secondSidebar.innerHTML = "";
     let secondSidebarHeading = document.createElement("h2");
     let headingText = `See All`
-  closeBtn1.id = "close-btn1";
+    closeBtn1.id = "close-btn1";
     let btn = ` <span style="fontSize:"10px"; cursor: pointer;">x</span>`;
     closeBtn1.innerHTML = btn;
     secondSidebar.append(closeBtn1);
-    closeBtn1.addEventListener("click",closeFn);
-    function closeFn(e){
+    closeBtn1.addEventListener("click", closeFn);
+    function closeFn(e) {
         sidebar.classList.remove("sidebar");
         sidebar.innerHTML = "";
     }
@@ -180,20 +204,32 @@ function secondFn(data) {
     const secondList = document.createElement("ul");
     secondList.classList.add("animated-list")
     for (key in data) {
-        const pathUrl = originDirectory+data[key].link;
+        const pathUrl = originDirectory + data[key].link;
         secondList.innerHTML += `<a href="${pathUrl}"><li class="second__sidebarLi">${key}</li></a>`
         secondSidebar.append(secondList)
-    
+
     }
     secondSidebarHeading.innerHTML = headingText;
     secondSidebar.prepend(secondSidebarHeading)
     sidebar.append(secondSidebar)
+
+
+    // let item = firstSidebar.querySelectorAll("li")
+    // item.forEach((li)=>{
+    //     if(targetId == li.id){
+    //         li.classList.add("selected__li")
+    //     }else{
+    //         li.classList.remove("selected__li")
+    //     }
+    // })
+
+
     document.querySelectorAll(".second__sidebarLi").forEach((item, index) => {
-         
-      setTimeout(() => {
-             item.classList.add('show');
-         }, index * 200); 
-     });
+
+        setTimeout(() => {
+            item.classList.add('show');
+        }, index * 200);
+    });
 }
 
 function createElements(data) {
@@ -260,5 +296,17 @@ function createElements(data) {
 
         firstSidebar.append(firstList);
     }
+
+  
+    let item = firstSidebar.querySelectorAll("li");
+    item.forEach((li) => {
+        if (targetId == li.id) {
+            li.classList.add("selected__li");
+        } else {
+            li.classList.remove("selected__li");
+        }
+    });
+
+
     sidebar.append(firstSidebar);
 }
