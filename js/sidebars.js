@@ -70,7 +70,9 @@ function eventFn(e) {
         pre1Value = e.target;
         document.querySelectorAll(".second__sidebarLi").forEach(li => {
             li.classList.remove("selected__li")
+            li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
+            e.target.classList.remove("unSelected__li")
         })
         navData().then((data) => {
             thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
@@ -85,7 +87,9 @@ function eventFn(e) {
 
         document.querySelectorAll(".third__sidebarLi").forEach(li => {
             li.classList.remove("selected__li")
+            li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
+            e.target.classList.remove("unSelected__li")
         })
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
@@ -242,7 +246,7 @@ function secondFn(data) {
 
         setTimeout(() => {
             item.classList.add('show');
-        }, index * 100);
+        }, index * 200);
     });
 
 }
