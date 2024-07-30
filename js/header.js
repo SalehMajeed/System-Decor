@@ -2,7 +2,7 @@ const originDirectory = window.location.origin;
 const headerHTML = `<div class="nav-bar">
 <nav>
     <div class="nav-list">
-        <a class="nav-item" href="/about">
+        <a class="nav-item" href="${originDirectory}">
             <svg width="105" height="26" viewBox="0 0 105 26" fill="none"
                 style="translate: none; rotate: none; scale: none; transform: translate(0px);">
                 <path
