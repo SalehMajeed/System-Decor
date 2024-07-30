@@ -62,14 +62,20 @@ function eventFn(e) {
     }
     secondSidebar.addEventListener("mouseover", hoverEvent);
     function hoverEvent(e) {
+
         if (e.target.tagName !== "LI") {
             return
         }
 
         pre1Value = e.target;
+        document.querySelectorAll(".second__sidebarLi").forEach(li => {
+            li.classList.remove("selected__li")
+            e.target.classList.add("selected__li")
+        })
         navData().then((data) => {
             thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
         })
+
     }
     thirdSidebar.addEventListener("mouseover", hover1Event);
     function hover1Event(e) {
@@ -77,7 +83,10 @@ function eventFn(e) {
             return
         }
 
-
+        document.querySelectorAll(".third__sidebarLi").forEach(li => {
+            li.classList.remove("selected__li")
+            e.target.classList.add("selected__li")
+        })
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
         })
@@ -118,51 +127,6 @@ function eventFn(e) {
     }
 }
 
-
-
-function handleSecondSidebarHover(e) {
-    if (e.target.tagName === 'LI') {
-        const allLis = secondSidebar.querySelectorAll('li');
-        allLis.forEach(li => {
-            if (li !== e.target) {
-                li.style.opacity = '0.4';
-            }
-        });
-    }
-}
-
-function handleSecondSidebarHoverOut(e) {
-    if (e.target.tagName === 'LI') {
-        const allLis = secondSidebar.querySelectorAll('li');
-        allLis.forEach(li => {
-            li.style.opacity = '1';
-        });
-    }
-}
-
-function handleThirdSidebarHover(e) {
-    if (e.target.tagName === 'LI') {
-        const allLis = thirdSidebar.querySelectorAll('li');
-        allLis.forEach(li => {
-            if (li !== e.target) {
-                li.style.opacity = '0.4';
-            }
-        });
-    }
-}
-
-function handleThirdSidebarHoverOut(e) {
-    if (e.target.tagName === 'LI') {
-        const allLis = thirdSidebar.querySelectorAll('li');
-        allLis.forEach(li => {
-            li.style.opacity = '1';
-        });
-    }
-}
-
-
-
-
 function fourthFn(data) {
     fourthSidebar.innerHTML = "";
     closeBtn3.id = "close-btn3";
@@ -186,9 +150,9 @@ function fourthFn(data) {
 
         setTimeout(() => {
 
-               item.classList.add('show');
-           }, index * 100); 
-       });
+            item.classList.add('show');
+        }, index * 100);
+    });
 
 
     sidebar.append(fourthSidebar);
@@ -225,15 +189,12 @@ function thirdFn(data, headingText) {
 
         setTimeout(() => {
 
-               item.classList.add('show');
-           }, index * 100); 
-       });
+            item.classList.add('show');
+        }, index * 100);
+    });
 
 
     sidebar.append(thirdSidebar);
-
-    thirdSidebar.addEventListener('mouseover', handleThirdSidebarHover);
-    thirdSidebar.addEventListener('mouseout', handleThirdSidebarHoverOut);
 }
 
 function secondFn(data) {
@@ -265,19 +226,24 @@ function secondFn(data) {
     secondSidebar.prepend(secondSidebarHeading)
     sidebar.append(secondSidebar)
 
-    secondSidebar.addEventListener('mouseover', handleSecondSidebarHover);
-    secondSidebar.addEventListener('mouseout', handleSecondSidebarHoverOut);
 
-
+    let item = secondSidebar.querySelectorAll("li")
+    item.forEach((li) => {
+        if (targetId == li.id) {
+            li.classList.add("selected__li")
+        } else {
+            li.classList.remove("selected__li")
+        }
+    })
 
 
     document.querySelectorAll(".second__sidebarLi").forEach((item, index) => {
 
-         
-      setTimeout(() => {
-             item.classList.add('show');
-         }, index * 100); 
-     });
+
+        setTimeout(() => {
+            item.classList.add('show');
+        }, index * 100);
+    });
 
 }
 
@@ -346,7 +312,7 @@ function createElements(data) {
         firstSidebar.append(firstList);
     }
 
-  
+
     let item = firstSidebar.querySelectorAll("li");
     item.forEach((li) => {
         if (targetId == li.id) {
