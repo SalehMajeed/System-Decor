@@ -97,24 +97,21 @@ body::-webkit-scrollbar {
     font-size: 7vw;
     display: inline-block;
     line-height: 1.2;
-    /* Adjust line-height to match the image's text alignment */
     white-space: nowrap;
     letter-spacing: 0.1em;
-    /* Adjust letter spacing as per the image */
     text-transform: uppercase;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .letter {
     display: inline-block;
     transform: translateY(100%);
-    opacity: 0;
     transition: transform 0.9s ease, opacity 0.9s ease;
 }
 
 .letter.animate {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0%);
 }
 
 
@@ -185,39 +182,41 @@ body::-webkit-scrollbar {
 
 .verticalLine:nth-child(4) {
     animation-delay: 0s;
-  }
-  
-  .verticalLine:nth-child(3) {
+}
+
+.verticalLine:nth-child(3) {
     animation-delay: 0.3s;
-  }
-  
-  .verticalLine:nth-child(5) {
+}
+
+.verticalLine:nth-child(5) {
     animation-delay: 0.3s;
-  }
-  
-  .verticalLine:nth-child(2) {
+}
+
+.verticalLine:nth-child(2) {
     animation-delay: 0.5s;
-  }
-  
-  .verticalLine:nth-child(6) {
+}
+
+.verticalLine:nth-child(6) {
     animation-delay: 0.5s;
-  }
-  
-  .verticalLine:nth-child(1) {
+}
+
+.verticalLine:nth-child(1) {
     animation-delay: 0.6s;
-  }
-  
+}
+
 
 @keyframes bordAnimeTitle {
     0% {
         opacity: 0;
         transform: scaleY(0);
     }
-    50%{
+
+    50% {
         opacity: 0.15;
         transform: scaleY(1);
     }
-    100%{
+
+    100% {
         opacity: 0;
         /* transform: scaleY(0); */
     }
@@ -778,12 +777,13 @@ grey {
     position: fixed;
     bottom: 0;
     left: 0;
+    right: 0;
     background: white fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--first-color);
-    z-index: 1;
+    z-index: 99;
 }
 
 .c13l1 {
@@ -859,15 +859,16 @@ grey {
     .arc {
         grid-column: span 4;
         padding: 0px;
+
     }
 
     .text-container {
+       
         font-size: 40px;
-        width: 100%;
     }
 
-    .text-container span {
-        font-size: 45px;
+    .text-container .letter {
+        font-size: 42px;
     }
 
     .l1 {
@@ -900,6 +901,30 @@ grey {
         grid-column: 1;
         position: relative;
         margin-bottom: 25px;
+    }
+
+    .lines {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 15px;
+    }
+
+    .verticalLine {
+        border-right: 1px solid black;
+        opacity: 0;
+        justify-self: end;
+        grid-row: span 4;
+        animation-name: bordAnimeTitle;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+    }
+
+    .verticalLine:nth-child(6) {
+        display: none;
+    }
+
+    .verticalLine:nth-child(2) {
+        display: none;
     }
 
     .content2 {
@@ -1107,5 +1132,17 @@ grey {
         font-size: 12px;
         opacity: 0.8;
     }
+
+    .content13 {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .c13l1 {
+        display: none;
+    }
+
+
 
 }
