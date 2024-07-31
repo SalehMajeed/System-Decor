@@ -9,10 +9,6 @@ body::-webkit-scrollbar {
     width: 5px;
 }
 
-#About::after{
-    /* border-bottom: 2px solid var(--first-color); */
-    width: 100%;
-}
 
 a {
     text-decoration: none;
