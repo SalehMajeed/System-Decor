@@ -12,18 +12,20 @@
   text-align: end;
   top: 5%;
   right: 10%;
-  padding:0 8px;
+  padding: 0 8px;
   /* transition: 0.8s all ease-in-out; */
   cursor: pointer;
 }
 
-li{
+li {
   overflow: hidden;
 }
-.sidebar__close:hover{
+
+.sidebar__close:hover {
   background-color: var(--light-color);
   border-radius: 50%;
 }
+
 .sidebar {
   width: 100vw;
   top: 0%;
@@ -79,6 +81,7 @@ li{
 }
 
 .first__sidebarLi {
+  position: relative;
   color: var(--light-color);
   width: 100%;
   font-size: 15px;
@@ -87,6 +90,25 @@ li{
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.first__sidebarLi::after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  width: 0;
+  left: 0;
+  height: 1px;
+  opacity: 0.6;
+  background-color: var(--first-color);
+  transition: 0.3s;
+}
+
+.first__sidebarLi:hover::after {
+  width: 100%;
+}
+.first__sidebarLi:hover{
+  color: var(--first-color);
 }
 
 .second__sidebar {
@@ -100,10 +122,12 @@ li{
   grid-column: 2 / span 2;
   margin-left: -25px;
   padding-top: 60px;
-  transform: translate(0,0);
+  /* transform: translate(0, 0); */
   animation-name: sideCome;
   animation-timing-function: linear;
   animation-duration: 0.8s;
+  transition: transform 0.8s ease-in-out;
+  /* animation-iteration-count: 1; */
   /* animation-delay: 0.5s; */
 }
 
@@ -132,19 +156,11 @@ li{
   bottom: 0;
   left: 0;
   border-top: 1px solid var(--first-color);
-
 }
 
-
-.animated-list li::after {
-  /* opacity: 0; */
-  transform: translateX(-100%);
-  transition: transform 0.8s ease, opacity 0.8s ease;
-}
 
 .animated-list li.show::after {
-  transform: translateX(0);
-  /* opacity: 1; */
+  animation: bordAnime 0.5s linear;
 }
 
 .animated-list li {
@@ -156,6 +172,15 @@ li{
   opacity: 1;
 }
 
+@keyframes bordAnime {
+  to {
+    width: 100%;
+  }
+
+  from {
+    width: 0;
+  }
+}
 
 
 .third__sidebar {
@@ -169,10 +194,9 @@ li{
   border-right: 1px solid var(--first-color);
   grid-column: 4 / span 2;
   margin-left: -25px;
-  transform: translate(0,0);
-  animation-name: sideCome;
-  animation-timing-function: linear;
-  animation-duration: 0.8s;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease-in;
+  /* Ensure the transition is set correctly */
 }
 
 .third__sidebar ul {
@@ -204,6 +228,11 @@ li{
   border-top: 1px solid var(--first-color);
 }
 
+
+.third__sidebar.transform {
+  transform: translateX(0);
+}
+
 .fourth__sidebar {
   position: relative;
   background-color: var(--second-color);
@@ -215,10 +244,8 @@ li{
   border-right: 1px solid var(--first-color);
   grid-column: 6 / span 2;
   margin-left: -25px;
-  transform: translate(0,0);
-  animation-name: sideCome;
-  animation-timing-function: linear;
-  animation-duration: 0.8s;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease-in;
 }
 
 .fourth__sidebar ul {
@@ -251,13 +278,18 @@ li{
   border-top: 1px solid var(--first-color);
 }
 
+.fourth__sidebar.transform {
+  transform: translateX(0);
+}
+
 
 
 @keyframes sideCome {
   100% {
     transform: translate(0%, 0);
   }
-  0%{
+
+  0% {
     transform: translate(-100%, 0);
   }
 }
@@ -336,15 +368,17 @@ li{
   border-bottom: 1px solid var(--first-color);
 }
 
-.second__sidebarLi.selected__li, .third__sidebarLi.selected__li{
+.second__sidebarLi.selected__li,
+.third__sidebarLi.selected__li {
   border-top: 1px solid var(--first-color);
   border-bottom: 1px solid var(--first-color);
 }
 
-.unSelected__li{
+.unSelected__li {
   color: var(--light-color);
 }
 
-.unSelected__li::after{
-  background-color: var(--light-color);
+.unSelected__li::after {
+  border-top: 1px solid var(--light-color);
+
 }
