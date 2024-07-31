@@ -100,7 +100,7 @@ function eventFn(e) {
             thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
         })
 
-        setTimeout(showThirdSidebar, 100)
+
     }
     thirdSidebar.addEventListener("mouseover", hover1Event);
     function hover1Event(e) {
@@ -118,7 +118,6 @@ function eventFn(e) {
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
         })
-        setTimeout(showFourthSidebar, 100)
     }
     firstSidebar.addEventListener("click", sidebarEvent)
     function sidebarEvent(e) {
@@ -137,7 +136,6 @@ function eventFn(e) {
             if (e.target.tagName !== "LI") {
                 return
             }
-            setTimeout(showThirdSidebar, 100)
             fourthSidebar.classList.remove("transform")
             pre1Value = e.target;
             navData().then((data) => {
@@ -153,7 +151,6 @@ function eventFn(e) {
             navData().then((data) => {
                 fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
             })
-            setTimeout(showFourthSidebar, 100)
         }
 
     }
@@ -186,7 +183,7 @@ function fourthFn(data) {
         }, index * 100);
     });
 
-
+    setTimeout(showFourthSidebar, 100)
     sidebar.append(fourthSidebar);
 }
 
@@ -225,7 +222,7 @@ function thirdFn(data, headingText) {
         }, index * 100);
     });
 
-
+    setTimeout(showThirdSidebar, 100)
     sidebar.append(thirdSidebar);
 }
 
