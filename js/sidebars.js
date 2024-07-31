@@ -25,6 +25,9 @@ closeBtn2.classList.add("sidebar__close", "close__btn");
 let closeBtn3 = document.createElement("div");
 closeBtn3.classList.add("sidebar__close", "close__btn");
 
+
+let isShown = false
+
 let preValue = null;
 let pre1Value = null;
 let targetId = null;
@@ -36,11 +39,23 @@ function updateSelectedLi(selectedLi) {
 }
 
 
+const showThirdSidebar = () => {
+    if (!thirdSidebar.classList.contains('transform')) {
+        thirdSidebar.classList.add('transform');
+    }
+};
+
+const showFourthSidebar = () => {
+    if (!fourthSidebar.classList.contains('transform')) {
+        fourthSidebar.classList.add('transform');
+    }
+}
+
 navHeader.addEventListener("click", eventFn)
 function eventFn(e) {
     targetId = e.target.id;
 
-
+    thirdSidebar.classList.remove("transform")
     if (e.target.classList.contains("sidebar__links")) {
         preValue = e.target;
         updateSelectedLi(e.target);
@@ -66,21 +81,30 @@ function eventFn(e) {
         if (e.target.tagName !== "LI") {
             return
         }
+        fourthSidebar.classList.remove("transform")
 
+        console.log(isShown, "one")
         pre1Value = e.target;
         document.querySelectorAll(".second__sidebarLi").forEach(li => {
+
+
+
             li.classList.remove("selected__li")
             li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
             e.target.classList.remove("unSelected__li")
+
+
         })
         navData().then((data) => {
             thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
         })
 
+        setTimeout(showThirdSidebar, 100)
     }
     thirdSidebar.addEventListener("mouseover", hover1Event);
     function hover1Event(e) {
+        // thirdSidebar.style.animationPlayState = "puased"
         if (e.target.tagName !== "LI") {
             return
         }
@@ -94,12 +118,14 @@ function eventFn(e) {
         navData().then((data) => {
             fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
         })
+        setTimeout(showFourthSidebar, 100)
     }
     firstSidebar.addEventListener("click", sidebarEvent)
     function sidebarEvent(e) {
         if (e.target.tagName !== "LI") {
             return
         }
+        thirdSidebar.classList.remove("transform")
         preValue = e.target
         updateSelectedLi(e.target);
 
@@ -111,7 +137,8 @@ function eventFn(e) {
             if (e.target.tagName !== "LI") {
                 return
             }
-
+            setTimeout(showThirdSidebar, 100)
+            fourthSidebar.classList.remove("transform")
             pre1Value = e.target;
             navData().then((data) => {
                 thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
@@ -126,6 +153,7 @@ function eventFn(e) {
             navData().then((data) => {
                 fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
             })
+            setTimeout(showFourthSidebar, 100)
         }
 
     }
