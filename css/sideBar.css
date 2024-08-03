@@ -280,23 +280,23 @@ li {
 
 .product__img {
   width: 100%;
-  /* opacity: 0;
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  transition-delay: 0.1s; */
+  transition-delay: 0.1s;
+  position: relative;
+  overflow: hidden;
 }
 
-.product__img img{
-  position: relative;
-}
+
 
 .product__info {
-  /* opacity: 0; */
+  opacity: 0;
   padding: 25px 50px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  /* transition: opacity 0.5s ease-in-out;
-  transition-delay: 0.3s; */
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.3s;
 }
 
 .product__info .product-detail {
@@ -379,8 +379,21 @@ li {
   color: white;
 }
 
+.side__curtain{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--second-color);
+  transform: translate(0,0);
+  transition: transform 0.8s ease-in;
+  transition-delay:0.1s ;
+}
 
-
+.side__curtain.side__curtain__down{
+  transform: translate(0,100%);
+}
 
 
 @keyframes sideCome {

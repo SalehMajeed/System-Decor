@@ -176,7 +176,7 @@ function fourthFn(data) {
     fourthList.innerHTML += `<div class="fourth__sidebarLi">
                                  <div class="product__img "> 
                                     <img  src=${data['detail'].img}  alt="" width="100%"/>
-                                    
+                                    <div class="side__curtain"></div>
                                  </div>
                                  <div class='product__info'>
                                     <h4>${data['detail']['name']}</h4>
@@ -205,11 +205,13 @@ function fourthFn(data) {
                              </div>`;
     fourthSidebar.append(fourthList)
     setTimeout(showFourthSidebar, 100)
-    // setTimeout( () => {
-    //    document.querySelector(".product__img").style.opacity = 1
-    //    document.querySelector(".product__info").style.opacity = 1
-    // //    document.querySelector("product__img").classList.add("image-wrapper")
-    // }, 200)
+    setTimeout(() => {
+        document.querySelector(".product__img").style.opacity = 1
+        document.querySelector(".product__info").style.opacity = 1
+        if (!document.querySelector(".side__curtain").classList.contains("side__curtain__down")) {
+            document.querySelector(".side__curtain").classList.add("side__curtain__down")
+        }
+    }, 200)
     sidebar.append(fourthSidebar);
 }
 
@@ -263,7 +265,9 @@ function thirdFn(data, headingText) {
             item.classList.add('show');
         }, index * 100);
     });
-
+    setTimeout(() => {
+        document.querySelector(".side__curtain").style.transform = "translate(0,0%)"
+    }, 200)
     setTimeout(showThirdSidebar, 100)
     sidebar.append(thirdSidebar);
 }
