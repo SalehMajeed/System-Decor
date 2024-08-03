@@ -1,35 +1,39 @@
 {
     "Projects": {
         "Education": {
-            "Brisbane": {
+            "Wirltu Yarlu School": {
                 "products": "olympia metl",
-                "location": "Gregory Terrace Brisbane, QLD 4000",
-                "application": "external",
-                "heading": "Brisbane Grammar School STEAM Precinct",
-                "img": "#"
+                "location": ", QLD 4000",
+                "detail":{
+                    "img":"https://cdn.sanity.io/images/lbvt8rt8/production/4ca364bee40eeb69ad8482adc100b777741fe488-2048x3072.jpg?rect=0,219,2048,2633&w=960&h=1234&fit=min&auto=format",
+                    "name":"Wirltu Yarlu School",
+                    "location":"The University of Adelaide, 122 Kintore Ave, Adelaide, SA 5000",
+                    "products":"Contours of Country Arti®",
+                    "application":"Internal"
+                }
             },
-            "flinder": {
+            "Brisbane Grammar School STEAM Precinct": {
                 "products": "Create",
                 "location": "Station Rd, Adelaide SA 5000",
                 "application": "internal",
                 "heading": "Flinders University Fit Out - Festival One Tower",
                 "img": "#"
             },
-            "macarthur": {
+            "Flinders University Fit Out - Festival One Tower": {
                 "products": "Vogl Lux ® Zen",
                 "location": "605 Cobbitty Rd, Cobbitty NSW 2570",
                 "application": "external",
                 "heading": "Macarthur Anglican Junior School",
                 "img": "#"
             },
-            "damascus": {
+            "Macarthur Anglican Junior School": {
                 "products": "Slat Zen",
                 "location": "1412 Geelong Rd, Mount Clear VIC 3350",
                 "application": "external",
                 "heading": "Damascus Event Center",
                 "img": "#"
             },
-            "Catholic": {
+            "Damascus Event Centre": {
                 "products": "Slat Tresnd",
                 "location": "10-28 College St, Caroline Springs VIC 3023",
                 "application": "external",

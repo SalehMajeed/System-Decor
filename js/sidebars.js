@@ -16,6 +16,8 @@ thirdSidebar.classList.add("third__sidebar");
 const fourthSidebar = document.createElement("div");
 fourthSidebar.classList.add("fourth__sidebar");
 
+const fourthLi = document.querySelector(".fourth__sidebarLi")
+
 let closeBtn1 = document.createElement("div");
 closeBtn1.classList.add("sidebar__close", "close__btn");
 
@@ -25,7 +27,7 @@ closeBtn2.classList.add("sidebar__close", "close__btn");
 let closeBtn3 = document.createElement("div");
 closeBtn3.classList.add("sidebar__close", "close__btn");
 
-
+console.log(document.querySelector("fourth__sidebarLi"))
 let isShown = false
 
 let preValue = null;
@@ -144,12 +146,12 @@ function eventFn(e) {
         }
         thirdSidebar.addEventListener("mouseover", hover1Event);
         function hover1Event(e) {
-
             if (e.target.tagName !== "LI") {
                 return
             }
+            console.log(e.target.tagName)
             navData().then((data) => {
-                fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
+                fourthFn(data[preValue.id][pre1Value.textContent])
             })
         }
 
@@ -171,25 +173,50 @@ function fourthFn(data) {
 
     const fourthList = document.createElement("ul");
     fourthList.classList.add("animated-list")
-    for (key in data) {
-        fourthList.innerHTML += `<li class="fourth__sidebarLi">${key}</li>`;
-        fourthSidebar.append(fourthList)
-    }
-    document.querySelectorAll(".fourth__sidebarLi").forEach((item, index) => {
-
-        setTimeout(() => {
-
-            item.classList.add('show');
-        }, index * 100);
-    });
-
+    fourthList.innerHTML += `<div class="fourth__sidebarLi">
+                                 <div class="product__img "> 
+                                    <img  src=${data['detail'].img}  alt="" width="100%"/>
+                                    
+                                 </div>
+                                 <div class='product__info'>
+                                    <h4>${data['detail']['name']}</h4>
+                                    <div class="product-detail">
+                                    <div class="lo__pro__app">
+                                      <h6>Location</h6>
+                                      <p>${data["detail"]["location"]}</p>
+                                    </div>
+                                    <div class="pro__app">
+                                       <div class="lo__pro__app">
+                                          <h6>Product</h6>
+                                          <p>${data["detail"]["products"]}</p>
+                                        </div>
+                                        <div class="lo__pro__app">
+                                           <h6>Application</h6>
+                                           <p>${data["detail"]["application"]}</p>
+                                         </div>
+                                     </div>
+                                     <div class="side__button">
+                                          <a href="">
+                                              VIEW PPROJECT
+                                          </a>
+                                     </div>
+                                    </div>
+                                 </div>
+                             </div>`;
+    fourthSidebar.append(fourthList)
     setTimeout(showFourthSidebar, 100)
+    // setTimeout( () => {
+    //    document.querySelector(".product__img").style.opacity = 1
+    //    document.querySelector(".product__info").style.opacity = 1
+    // //    document.querySelector("product__img").classList.add("image-wrapper")
+    // }, 200)
     sidebar.append(fourthSidebar);
 }
 
 function thirdFn(data, headingText) {
     thirdSidebar.innerHTML = "";
     fourthSidebar.remove();
+    // document.querySelector("product__img").classList.remove("image-wrapper")
     closeBtn2.id = "close-btn2";
     let btn = ` <span style="fontSize:"10px"; cursor: pointer;">x</span>`;
     closeBtn2.innerHTML = btn;
@@ -208,7 +235,22 @@ function thirdFn(data, headingText) {
     const thirdList = document.createElement("ul");
     thirdList.classList.add("animated-list")
     for (key in data) {
+        // thirdList.innerHTML += `<li class="third__sidebarLi">
+        //                             <h5>${key}</h5>
+        //                             <div class="li-info">
+        //                                 <div>
+        //                                 <h7>product</h7>
+        //                                 <p>${data[key]['products']}</p>
+        //                                 </div>  
+        //                                  <div>
+        //                                  <h7>location</h7>
+        //                                  <p>${data[key]['location']}</p>
+        //                                  </div>  
+        //                             </div>
+        //                         </li>`;
         thirdList.innerHTML += `<li class="third__sidebarLi">${key}</li>`;
+
+
         thirdSidebar.append(thirdList);
     }
 
