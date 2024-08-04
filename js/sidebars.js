@@ -118,7 +118,7 @@ function eventFn(e) {
             e.target.classList.remove("unSelected__li")
         })
         navData().then((data) => {
-            fourthFn(data[preValue.id][pre1Value.textContent][e.target.textContent])
+            fourthFn(data[preValue.id][pre1Value.textContent][e.target.children[0].textContent])
         })
     }
     firstSidebar.addEventListener("click", sidebarEvent)
@@ -151,7 +151,7 @@ function eventFn(e) {
             }
             console.log(e.target.tagName)
             navData().then((data) => {
-                fourthFn(data[preValue.id][pre1Value.textContent])
+                fourthFn(data[preValue.id][pre1Value.textContent][e.target.children[0].textContent])
             })
         }
 
@@ -235,20 +235,20 @@ function thirdFn(data, headingText) {
     const thirdList = document.createElement("ul");
     thirdList.classList.add("animated-list")
     for (key in data) {
-        // thirdList.innerHTML += `<li class="third__sidebarLi">
-        //                             <h5>${key}</h5>
-        //                             <div class="li-info">
-        //                                 <div>
-        //                                 <h7>product</h7>
-        //                                 <p>${data[key]['products']}</p>
-        //                                 </div>  
-        //                                  <div>
-        //                                  <h7>location</h7>
-        //                                  <p>${data[key]['location']}</p>
-        //                                  </div>  
-        //                             </div>
-        //                         </li>`;
-        thirdList.innerHTML += `<li class="third__sidebarLi">${key}</li>`;
+        thirdList.innerHTML += `<li class="third__sidebarLi">
+                                    <h5>${key}</h5>
+                                    <div class="li-info">
+                                        <div>
+                                        <h6>product</h6>
+                                        <p>${data[key]['products']}</p>
+                                        </div>  
+                                         <div>
+                                         <h6>location</h6>
+                                         <p>${data[key]['location']}</p>
+                                         </div>  
+                                    </div>
+                                </li>`;
+        // thirdList.innerHTML += `<li class="third__sidebarLi">${key}</li>`;
 
 
         thirdSidebar.append(thirdList);
