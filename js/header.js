@@ -91,8 +91,12 @@ close.addEventListener('click', () => {
     close.style.transform = "translate(0,0%)"
     header.style.height = "73px"
     header.style.padding = "5px 0"
+
+    document.querySelector("#sidebar").classList.remove("sidebar")
+    document.querySelector("#sidebar").innerHTML = ''
 })
 
 $(document).ready(function () {
     $('#header').on('click', eventFn);
 });
+
