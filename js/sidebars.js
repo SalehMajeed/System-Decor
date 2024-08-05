@@ -97,10 +97,10 @@ function eventFn(e) {
             e.target.classList.remove("unSelected__li")
 
 
+        })
             navData().then((data) => {
                 thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
             })
-        })
 
 
     }
