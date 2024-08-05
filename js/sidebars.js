@@ -97,9 +97,9 @@ function eventFn(e) {
             e.target.classList.remove("unSelected__li")
 
 
-        })
-        navData().then((data) => {
-            thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
+            navData().then((data) => {
+                thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
+            })
         })
 
 
@@ -208,9 +208,6 @@ function fourthFn(data) {
     setTimeout(() => {
         document.querySelector(".product__img").style.opacity = 1
         document.querySelector(".product__info").style.opacity = 1
-        if (!document.querySelector(".side__curtain").classList.contains("side__curtain__down")) {
-            document.querySelector(".side__curtain").classList.add("side__curtain__down")
-        }
     }, 200)
     sidebar.append(fourthSidebar);
 }
