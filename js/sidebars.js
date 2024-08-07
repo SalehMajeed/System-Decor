@@ -89,25 +89,23 @@ function eventFn(e) {
 
 
 
-        document.querySelectorAll(".second__sidebarLi").forEach(li => {
-
-
+        document.querySelectorAll(".second__sidebarLi").forEach((li, index) => {
 
             li.classList.remove("selected__li")
             li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
             e.target.classList.remove("unSelected__li")
-
+            // e.target.classList.contains('selected__li')?console.log(e.target.previousElementSibling):''
 
         })
 
-        if (pre1Value !== e.target) {
+        if (pre1Value !== e.target.children[0]) {
             navData().then((data) => {
-                thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
+                thirdFn(data[preValue.id][e.target.children[0].textContent], e.target.children[0].textContent)
             })
         }
 
-        pre1Value = e.target;
+        pre1Value = e.target.children[0];
 
 
 
@@ -129,7 +127,7 @@ function eventFn(e) {
 
         if (pre2Value !== e.target) {
             navData().then((data) => {
-                fourthFn(data[preValue.id][pre1Value.textContent][e.target.children[0].textContent])
+                fourthFn(data[preValue.id][pre1Value.textContent][e.target.children[0].children[0].textContent])
             })
         }
 
@@ -153,12 +151,12 @@ function eventFn(e) {
                 return
             }
             fourthSidebar.classList.remove("transform")
-            if (pre1Value !== e.target) {
+            if (pre1Value !== e.target.children[0]) {
                 navData().then((data) => {
-                    thirdFn(data[preValue.id][e.target.textContent], e.target.textContent)
+                    thirdFn(data[preValue.id][e.target.children[0].textContent], e.target.children[0].textContent)
                 })
             }
-            pre1Value = e.target;
+            pre1Value = e.target.children[0];
         }
         thirdSidebar.addEventListener("mouseover", hover1Event);
         function hover1Event(e) {
@@ -172,7 +170,7 @@ function eventFn(e) {
 
             if (pre2Value !== target) {
                 navData().then((data) => {
-                    fourthFn(data[preValue.id][pre1Value.textContent][e.target.children[0].textContent])
+                    fourthFn(data[preValue.id][pre1Value.textContent][e.target.children[0].children[0].textContent])
                 })
             }
 
@@ -270,6 +268,7 @@ function thirdFn(data, headingText) {
     thirdList.classList.add("animated-list")
     for (key in data) {
         thirdList.innerHTML += `<li class="third__sidebarLi">
+                                  <div class='thirdLi__data'>
                                     <h5>${key}</h5>
                                     <div class="li-info">
                                         <div>
@@ -281,6 +280,16 @@ function thirdFn(data, headingText) {
                                          <p>${data[key]['location']}</p>
                                          </div>  
                                     </div>
+                                  </div>  
+                                  <button class="paginationButton">
+                                          <span class="iconContainer">
+                                              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8">
+                                                  <polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3"  fill="transparent"></polyline>
+                                                  <line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" ></line>
+                                              </svg>
+                                          </span>
+                                          
+                                      </button>
                                 </li>`;
         // thirdList.innerHTML += `<li class="third__sidebarLi">${key}</li>`;
 
@@ -295,14 +304,14 @@ function thirdFn(data, headingText) {
                 item.classList.add('show');
             }, index * 100);
         });
-    }, 400); 
+    }, 400);
 
 
     setTimeout(() => {
         document.querySelector(".side__curtain").style.transform = "translate(0,0%)"
     }, 200)
     setTimeout(showThirdSidebar, 100)
-    
+
 }
 
 function secondFn(data) {
@@ -326,7 +335,11 @@ function secondFn(data) {
     secondList.classList.add("animated-list")
     for (key in data) {
         const pathUrl = originDirectory + data[key].link;
-        secondList.innerHTML += `<a href="${pathUrl}"><li class="second__sidebarLi">${key}</li></a>`
+        const objLength = Object.keys(data[key]).length;
+        secondList.innerHTML += `<a href="${pathUrl}"><li class="second__sidebarLi">
+                                                        <span>${key}</span>
+                                                        <span class='li__obj__length'>${objLength < 9 ? '0' + objLength : objLength}</span>
+                                                  </li></a>`
         secondSidebar.append(secondList)
 
     }
@@ -334,15 +347,6 @@ function secondFn(data) {
     secondSidebar.prepend(secondSidebarHeading)
     sidebar.append(secondSidebar)
 
-
-    let item = secondSidebar.querySelectorAll("li")
-    item.forEach((li) => {
-        if (targetId == li.id) {
-            li.classList.add("selected__li")
-        } else {
-            li.classList.remove("selected__li")
-        }
-    })
 
 
     document.querySelectorAll(".second__sidebarLi").forEach((item, index) => {
@@ -421,14 +425,6 @@ function createElements(data) {
     }
 
 
-    let item = firstSidebar.querySelectorAll("li");
-    item.forEach((li) => {
-        if (targetId == li.id) {
-            li.classList.add("selected__li");
-        } else {
-            li.classList.remove("selected__li");
-        }
-    });
 
 
     sidebar.append(firstSidebar);
