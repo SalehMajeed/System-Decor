@@ -53,15 +53,21 @@ const showFourthSidebar = () => {
         fourthSidebar.classList.add('transform');
     }
 }
+const closeSidebar = () => {
+    document.querySelector(".sidebar").style.visibility = "hidden"
+    document.querySelector('.overlay').style.visibility = "hidden";
+}
+
+document.querySelector('.overlay').addEventListener('click', closeSidebar)
 
 navHeader.addEventListener("click", eventFn)
 function eventFn(e) {
     targetId = e.target.id;
-
     thirdSidebar.classList.remove("transform")
     if (e.target.classList.contains("sidebar__links")) {
         preValue = e.target;
         updateSelectedLi(e.target);
+        document.querySelector('.overlay').style.visibility = "visible";
 
         navData().then((data) => {
             createElements(data);
@@ -74,7 +80,8 @@ function eventFn(e) {
                     li.classList.remove("selected__li")
                 }
             })
-            sidebar.classList.add("sidebar")
+            // sidebar.classList.add("sidebar")
+            document.querySelector(".sidebar").style.visibility = "visible"
         });
 
     }
@@ -85,17 +92,23 @@ function eventFn(e) {
             return
         }
         fourthSidebar.classList.remove("transform")
-
-
-
-
-        document.querySelectorAll(".second__sidebarLi").forEach((li, index) => {
+        const items = document.querySelectorAll(".second__sidebarLi")
+        items.forEach((li, index) => {
 
             li.classList.remove("selected__li")
             li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
             e.target.classList.remove("unSelected__li")
-            // e.target.classList.contains('selected__li')?console.log(e.target.previousElementSibling):''
+            const itemList = Array.from(items)
+            const itemIndex = itemList.indexOf(e.target)
+
+            if (index >= 0) {
+                if (li === items[itemIndex - 1]) {
+                    li.classList.add('hide-border-bottom');
+                } else {
+                    li.classList.remove('hide-border-bottom');
+                }
+            }
 
         })
 
@@ -117,12 +130,23 @@ function eventFn(e) {
         if (e.target.tagName !== "LI") {
             return
         }
-
-        document.querySelectorAll(".third__sidebarLi").forEach(li => {
+        const items = document.querySelectorAll(".third__sidebarLi")
+        items.forEach((li,index) => {
             li.classList.remove("selected__li")
             li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
             e.target.classList.remove("unSelected__li")
+
+            const itemList = Array.from(items)
+            const itemIndex = itemList.indexOf(e.target)
+
+            if (index >= 0) {
+                if (li === items[itemIndex - 1]) {
+                    li.classList.add('hide-border-bottom');
+                } else {
+                    li.classList.remove('hide-border-bottom');
+                }
+            }
         })
 
         if (pre2Value !== e.target) {
@@ -180,10 +204,22 @@ function eventFn(e) {
     }
 }
 
+items.forEach(item => {
+
+    li.addEventListener('mouseleave', () => {
+        // Remove all classes when the mouse leaves the item
+        items.forEach(li => li.classList.remove('hide-border-bottom'));
+    });
+
+})
 secondSidebar.addEventListener("mouseleave", (e) => {
+    if (e.target.tagName !== 'LI') {
+        return
+    }
     if (e.target.tagName === "LI") {
         pre1Value = null
     }
+
 })
 
 thirdSidebar.addEventListener("mouseleave", (e) => {
@@ -199,11 +235,7 @@ function fourthFn(data) {
     closeBtn3.innerHTML = btn;
     fourthSidebar.append(closeBtn3);
     closeBtn2.remove()
-    closeBtn3.addEventListener("click", closeFn);
-    function closeFn(e) {
-        sidebar.classList.remove("sidebar");
-        sidebar.innerHTML = "";
-    }
+    closeBtn3.addEventListener("click", closeSidebar);
 
     const fourthList = document.createElement("ul");
     fourthList.classList.add("animated-list")
@@ -255,11 +287,7 @@ function thirdFn(data, headingText) {
     closeBtn2.innerHTML = btn;
     thirdSidebar.append(closeBtn2);
     closeBtn1.remove()
-    closeBtn2.addEventListener("click", closeFn);
-    function closeFn(e) {
-        sidebar.classList.remove("sidebar");
-        sidebar.innerHTML = "";
-    }
+    closeBtn2.addEventListener("click", closeSidebar);
     const thirdSidebarHeading = document.createElement("h2");
     thirdSidebarHeading.textContent = `All ${headingText}`;
     thirdSidebar.prepend(thirdSidebarHeading);
@@ -322,11 +350,7 @@ function secondFn(data) {
     let btn = ` <span style="fontSize:"10px"; cursor: pointer;">x</span>`;
     closeBtn1.innerHTML = btn;
     secondSidebar.append(closeBtn1);
-    closeBtn1.addEventListener("click", closeFn);
-    function closeFn(e) {
-        sidebar.classList.remove("sidebar");
-        sidebar.innerHTML = "";
-    }
+    closeBtn1.addEventListener("click", closeSidebar);
 
     fourthSidebar.remove();
     thirdSidebar.remove();
@@ -360,7 +384,7 @@ function secondFn(data) {
 }
 
 function createElements(data) {
-    sidebar.innerHTML = "";
+    // sidebar.innerHTML = "";
     firstSidebar.innerHTML = "";
     let imgDiv = document.createElement("div");
     let sidebarImg = `<svg width="105" height="26" viewBox="0 0 105 26" fill="none"
