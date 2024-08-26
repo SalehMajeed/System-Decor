@@ -22,7 +22,7 @@ ul {
 :root {
     --first-color: rgb(204, 169, 159);
     --second-color: rgb(41, 26, 22);
-    --light-color: rgb(97, 75, 69);
+    --light-color: rgba(97, 75, 69, 0.7);
 
     --primary-sizing: 0.5rem;
     --secondry-sizing: 1rem;

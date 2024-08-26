@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 :root {
     --first-color: #CFCFB0;
     --second-color: #3a3a1f;
-    --light-color: #cfcfb0c0;
+    --light-color: rgba(218, 218, 193, 0.4);
 }
 
 .container {

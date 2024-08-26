@@ -17,7 +17,7 @@
 :root {
     --first-color: #32411a;
     --second-color: white;
-    --light-color: #32411a7d;
+    --light-color: rgba(50, 65, 26, 0.4);
 }
 
 html,

@@ -206,7 +206,21 @@ li {
   margin-left: -25px;
   transform: translateX(-100%);
   transition: transform 0.8s ease-in;
+  overflow-y: scroll;
   /* Ensure the transition is set correctly */
+}
+
+.third__sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.third__sidebar::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--first-color);
+}
+
+.third__sidebar::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .third__sidebar ul {
@@ -645,6 +659,7 @@ li {
 .second__sidebarLi.hide-border-bottom::after {
   border-bottom: none;
 }
+
 .third__sidebarLi.hide-border-bottom::after {
   border-bottom: none;
 }
