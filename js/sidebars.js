@@ -1,6 +1,7 @@
 async function navData() {
     const pathUrl = originDirectory + "/json/nav-data.json"
     return (await fetch(pathUrl)).json()
+
 }
 
 console.log(navData())
