@@ -101,6 +101,13 @@ li {
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.first__sidebar ul  a {
+  text-decoration: none;
+  width: 100%;
+  text-transform: none;
 }
 
 .first__sidebarLi::after {
@@ -594,11 +601,13 @@ li {
     /* transform: translateX(100%); */
   }
 
-  .first__sidebar ul {
-    margin-top: 100px;
+  .first__sidebar__mobile ul {
     width: 100%;
     padding: 0;
     margin-left: 0;
+  }
+  .first__sidebar__mobile ul a{
+    color: var(--first-color);
   }
 
   .first__sidebarLi {
@@ -610,6 +619,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
   }
 
   .first__sidebarLi::after {

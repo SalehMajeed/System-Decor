@@ -123,6 +123,7 @@ nav {
         display: block;
         min-height: 42px;
         right: 0;
+        color: var(--first-color);
     }
 
 
