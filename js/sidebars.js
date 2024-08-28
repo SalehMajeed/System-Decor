@@ -327,30 +327,33 @@ function thirdFn(data, headingText) {
     const thirdList = document.createElement("ul");
     thirdList.classList.add("animated-list")
     for (key in data) {
-        thirdList.innerHTML += `<li class="third__sidebarLi">
-                                  <div class='thirdLi__data'>
-                                    <h5>${key}</h5>
-                                    <div class="li-info">
-                                        <div>
-                                        <h6>product</h6>
-                                        <p>${data[key]['products']}</p>
-                                        </div>  
-                                         <div>
-                                         <h6>location</h6>
-                                         <p>${data[key]['location']}</p>
-                                         </div>  
-                                    </div>
-                                  </div>  
-                                  <button class="paginationButton">
-                                          <span class="iconContainer">
-                                              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8">
-                                                  <polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3"  fill="transparent"></polyline>
-                                                  <line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" ></line>
-                                              </svg>
-                                          </span>
-                                          
-                                      </button>
-                                </li>`;
+        if (key !== "link") {
+
+            thirdList.innerHTML += `<li class="third__sidebarLi">
+                                      <div class='thirdLi__data'>
+                                        <h5>${key}</h5>
+                                        <div class="li-info">
+                                            <div>
+                                            <h6>product</h6>
+                                            <p>${data[key]['products']}</p>
+                                            </div>  
+                                             <div>
+                                             <h6>location</h6>
+                                             <p>${data[key]['location']}</p>
+                                             </div>  
+                                        </div>
+                                      </div>  
+                                      <button class="paginationButton">
+                                              <span class="iconContainer">
+                                                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8">
+                                                      <polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3"  fill="transparent"></polyline>
+                                                      <line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" ></line>
+                                                  </svg>
+                                              </span>
+                                              
+                                          </button>
+                                    </li>`;
+        }
         // thirdList.innerHTML += `<li class="third__sidebarLi">${key}</li>`;
 
 
@@ -532,7 +535,12 @@ function createElements(data) {
 
     const firstList = document.createElement("ul")
     for (const category in data) {
-        firstList.innerHTML += `<li class="first__sidebarLi" id="${category}">${category}</li>`;
+        const pathUrl = originDirectory + data[category].link
+        if (category === "contact") {
+            firstList.innerHTML += ` <a href=${pathUrl}><li class="first__sidebarLi" id="${category}">${category}</li></a>`;
+        } else {
+            firstList.innerHTML += `<li class="first__sidebarLi" id="${category}">${category}</li>`;
+        }
 
         firstSidebar.append(firstList);
     }
@@ -552,10 +560,18 @@ function firstMenuFn(data) {
     const firstList = document.createElement("ul")
     for (const category in data) {
         const objLength = Object.keys(data[category]).length;
-        firstList.innerHTML += `<li class="first__sidebarLi" id="${category}">
-        <span>${category}</span>
-        <span class='li__obj__length'>${objLength < 9 ? '0' + objLength : objLength}</span>
-        </li>`;
+        const pathUrl = originDirectory + data[category].link
+        if (category === "contact") {
+            firstList.innerHTML += ` <a href=${pathUrl}><li class="first__sidebarLi" id="${category}">
+                                        <span>${category}</span>
+                                         <span class='li__obj__length'>${objLength < 9 ? '0' + objLength : objLength}</span>
+                                     </li></a>`;
+        } else {
+            firstList.innerHTML += `<li class="first__sidebarLi" id="${category}">
+                                        <span>${category}</span>
+                                        <span class='li__obj__length'>${objLength < 9 ? '0' + objLength : objLength}</span>
+                                    </li>`;
+        }
 
 
         firstSidebarMobile.append(firstList)
