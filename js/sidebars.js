@@ -1,18 +1,25 @@
 async function navData() {
     const pathUrl = originDirectory + "/json/nav-data.json"
     return (await fetch(pathUrl)).json()
-
 }
 
 console.log(navData())
 
 const navHeader = document.getElementById("header");
 const sidebar = document.getElementById("sidebar");
+const firstMobileMenu = document.getElementById("firstMobileMenu")
+const secondMobileMenu = document.getElementById("secondMobileMenu")
 
 const firstSidebar = document.createElement("div");
 firstSidebar.classList.add("first__sidebar");
+
+const firstSidebarMobile = document.createElement("div");
+firstSidebarMobile.classList.add("first__sidebar__mobile");
+
 const secondSidebar = document.createElement("div");
 secondSidebar.classList.add("second__sidebar");
+const secondSidebar__mobile = document.createElement("div");
+secondSidebar__mobile.classList.add("second__sidebar__mobile");
 const thirdSidebar = document.createElement("div");
 thirdSidebar.classList.add("third__sidebar");
 const fourthSidebar = document.createElement("div");
@@ -60,6 +67,17 @@ const closeSidebar = () => {
     document.querySelector('.overlay').style.visibility = "hidden";
 }
 
+const menuCloseFn = () => {
+    console.log('hello')
+    document.querySelector('#menu').style.transform = "translate(0,0%)"
+    document.querySelector('#close').style.transform = "translate(0,0%)"
+    document.querySelector('.first__sidebar__mobile').style.transform = 'translateX(100%)'
+    document.querySelector('.second__sidebar__mobile').style.transform = 'translateX(100%)'
+    document.querySelectorAll('.mobileSideMenu').forEach(elem => {
+        elem.style.visibility = "hidden";
+    })
+}
+
 document.querySelector('.overlay').addEventListener('click', closeSidebar)
 
 navHeader.addEventListener("click", eventFn)
@@ -73,6 +91,7 @@ function eventFn(e) {
 
         navData().then((data) => {
             createElements(data);
+            firstMenuFn(data)
             secondFn(data[e.target.id]);
             let item = firstSidebar.querySelectorAll("li")
             item.forEach((li) => {
@@ -133,7 +152,7 @@ function eventFn(e) {
             return
         }
         const items = document.querySelectorAll(".third__sidebarLi")
-        items.forEach((li,index) => {
+        items.forEach((li, index) => {
             li.classList.remove("selected__li")
             li.classList.add("unSelected__li")
             e.target.classList.add("selected__li")
@@ -158,6 +177,17 @@ function eventFn(e) {
         }
 
         pre2Value = e.target;
+    }
+    firstMobileMenu.addEventListener("click", mobileMenuEvent)
+    function mobileMenuEvent(e) {
+        if (e.target.tagName !== "LI") {
+            return
+        }
+        navData().then((data) => {
+            secondMobileFn(data[e.target.children[0].textContent])
+        })
+        secondMobileMenu.style.visibility = 'visible'
+        document.querySelector('.second__sidebar__mobile').style.transform = 'translateX(0%)'
     }
     firstSidebar.addEventListener("click", sidebarEvent)
     function sidebarEvent(e) {
@@ -385,10 +415,67 @@ function secondFn(data) {
 
 }
 
+function secondMobileFn(data) {
+    secondSidebar__mobile.innerHTML = "";
+    const menuHeader = document.createElement('div')
+    menuHeader.classList.add('menuHeader')
+    let secondSidebarHeading = document.createElement("h2");
+    const closeheader = document.createElement("div")
+    closeheader.classList.add("close__header")
+    let headingText = `See All`
+    secondSidebarHeading.innerHTML = headingText;
+    const closeBtn = document.createElement('div')
+    closeBtn.classList.add("mobileMenuClose")
+    closeBtn.innerHTML = `<span style="fontSize:"10px"; cursor: pointer;">x</span>`
+
+    const backBtn = document.createElement('div')
+    backBtn.classList.add('back__btn')
+    backBtn.innerHTML = ` <svg class="backIcon" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 7.93718L12.0629 7.5L7.50004 12.0631L7.50019 12.0633L7.5 12.0635L11.9997 16.5635L12.4368 16.1263L8.37385 12.0633L12.5 7.93718Z" fill="currentColor"></path>
+                            <circle cx="10" cy="12" r="9.75" stroke="currentColor" stroke-width="0.5"></circle>
+                        </svg>
+                        <span>Menu</span> `
+    closeheader.append(backBtn, closeBtn)
+
+    menuHeader.append(secondSidebarHeading, closeheader)
+    secondSidebar__mobile.append(menuHeader)
+    const secondList = document.createElement("ul");
+    secondList.classList.add("animated-list")
+    for (key in data) {
+        const pathUrl = originDirectory + data[key].link;
+        const objLength = Object.keys(data[key]).length;
+        secondList.innerHTML += `<a href="${pathUrl}"><li class="second__sidebarLi">
+                                <span>${key}</span>
+                                <span class='li__obj__length'>${objLength < 9 ? '0' + objLength : objLength}</span>
+                                </li></a>`
+        secondSidebar__mobile.append(secondList)
+
+    }
+
+    closeBtn.addEventListener("click", menuCloseFn);
+    backBtn.addEventListener("click", () => {
+        secondMobileMenu.style.visibility = 'hidden'
+        document.querySelector(".second__sidebar__mobile").style.transform = "translateX(100%)"
+
+    })
+    secondMobileMenu.append(secondSidebar__mobile)
+
+
+
+    document.querySelectorAll(".second__sidebarLi").forEach((item, index) => {
+
+
+        setTimeout(() => {
+            item.classList.add('show');
+        }, index * 200);
+    });
+}
+
 function createElements(data) {
     // sidebar.innerHTML = "";
     firstSidebar.innerHTML = "";
     let imgDiv = document.createElement("div");
+    imgDiv.classList.add('title__logo')
     let sidebarImg = `<svg width="105" height="26" viewBox="0 0 105 26" fill="none"
                 style="translate: none; rotate: none; scale: none; transform: translate(0px);">
                 <path
@@ -450,8 +537,31 @@ function createElements(data) {
         firstSidebar.append(firstList);
     }
 
-
-
-
     sidebar.append(firstSidebar);
+}
+
+function firstMenuFn(data) {
+
+    firstSidebarMobile.innerHTML = ''
+    const menuLogo = document.createElement('h5')
+    menuLogo.classList.add('menuLogo')
+
+    menuLogo.innerText = 'Menu'
+    firstSidebarMobile.append(menuLogo)
+
+    const firstList = document.createElement("ul")
+    for (const category in data) {
+        const objLength = Object.keys(data[category]).length;
+        firstList.innerHTML += `<li class="first__sidebarLi" id="${category}">
+        <span>${category}</span>
+        <span class='li__obj__length'>${objLength < 9 ? '0' + objLength : objLength}</span>
+        </li>`;
+
+
+        firstSidebarMobile.append(firstList)
+    }
+
+
+
+    firstMobileMenu.append(firstSidebarMobile)
 }

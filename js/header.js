@@ -79,11 +79,17 @@ const header = document.getElementById("header")
 const menu = document.getElementById("menu")
 const close = document.getElementById("close")
 
+
 menu.addEventListener('click', () => {
     menu.style.transform = "translate(0,-100%)"
     close.style.transform = "translate(0,-100%)"
     header.style.height = "60px"
     header.style.padding = "10px 0"
+    
+    document.querySelector('.mobileSideMenu').style.visibility = 'visible'
+    document.querySelector(".first__sidebar__mobile").style.transform = "translateX(0)"
+
+    // document.querySelector('.overlay').style.visibility = "hidden";
 })
 close.addEventListener('click', () => {
     menu.style.transform = "translate(0,0%)"
@@ -92,8 +98,8 @@ close.addEventListener('click', () => {
     header.style.height = "73px"
     header.style.padding = "5px 0"
 
-    document.querySelector("#sidebar").classList.remove("sidebar")
-    document.querySelector("#sidebar").innerHTML = ''
+    document.querySelector(".first__sidebar__mobile").style.transform = "translateX(100%)"
+     document.querySelector('.mobileSideMenu').style.visibility = 'hidden'
 })
 
 $(document).ready(function () {
