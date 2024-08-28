@@ -140,6 +140,7 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   grid-column: 1 / span 2;
   margin-bottom: 150px;
+  font-size: 2.5em;
 }
 
 .people-text p {
@@ -160,6 +161,7 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   grid-column: 1 / span 2;
   margin-bottom: 150px;
+  font-size: 2.5em;
 }
 
 .gurantee-text p {
@@ -179,6 +181,7 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   grid-column: 1 / span 2;
   margin-bottom: 150px;
+  font-size: 2.5em;
 }
 
 .nation-text p {
@@ -202,7 +205,6 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(7, 1fr);
   padding: 0 25px;
   gap: 25px;
-  font-size: 20px;
   margin-bottom: 100px;
 }
 
@@ -210,7 +212,7 @@ body::-webkit-scrollbar {
   grid-column: 1/span 3;
   grid-row: span 2;
   font-weight: 350;
-  font-size: 3.5vw;
+  font-size: 2.5em;
   margin-bottom: 150x;
 }
 
@@ -255,6 +257,7 @@ body::-webkit-scrollbar {
   grid-column: 1 / span 3;
   margin-left: 20px;
   margin-bottom: 250px;
+  font-size: 2.5em;
 }
 
 .exceeding-text p {
@@ -274,6 +277,7 @@ body::-webkit-scrollbar {
   grid-column: 1 / span 3;
 margin-bottom: 250px;
   margin-left: 20px;
+  font-size: 2.5em;
 }
 
 .complimentary-text p {
@@ -293,6 +297,7 @@ margin-bottom: 250px;
   grid-column: 1 / span 3;
   margin-left: 20px;
   margin-bottom: 150px;
+  font-size: 2.5em;
 }
 
 .specialList p {
