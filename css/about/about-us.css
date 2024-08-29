@@ -414,14 +414,6 @@ margin-bottom: 250px;
   font-size: 1.5rem;
 }
 
-.desktopSteps-0-3-1602 {
-  order: 1;
-  overflow-y: scroll;
-  height: 80%;
-  scroll-snap-type: x mandatory;
-  width: 100%;
-  grid-column: 4 / span 3;
-}
 
 .desktopSteps-0-3-1602::-webkit-scrollbar {
   width: 5px;
@@ -436,6 +428,16 @@ margin-bottom: 250px;
 .desktopSteps-0-3-1602::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.desktopSteps-0-3-1602 {
+  order: 1;
+  overflow-y: scroll;
+  height: 80%;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  grid-column: 4/span 3;
+}
+
 
 .step-0-3-1603 {
   flex: 0 0 33%;
@@ -462,13 +464,15 @@ margin-bottom: 250px;
   width: 300px;
   height: 300px;
   stroke-width: 200;
+
 }
 
 .point-0-3-1610 {
   stroke-width: 2;
   fill: var(--second-color);
 
-  transition: 0.5s;
+  transition: .5s;
+
 }
 
 .step-0-3-1603 h4 {
@@ -486,6 +490,33 @@ margin-bottom: 250px;
   stroke-width: 45;
 }
 
+.text-0-3-586.selected {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  opacity: 1;
+}
+
+
+@keyframes scrollAnimation {
+  0% {
+      opacity: 0.6;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0.6;
+  }
+}
+
+.title__graph {
+  grid-column: 4/span 2;
+  overflow-y: scroll;
+  /* position: relative; */
+}
 /* ================= */
 /* ================= */
 .geca-text img {
