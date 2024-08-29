@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateSteps() {
     const containerScrollTop = container.scrollTop;
     const containerHeight = container.scrollHeight;
-    const currentIndex = Math.round(containerScrollTop / (containerHeight / 8));
+    const currentIndex = Math.round(containerScrollTop / (containerHeight / 10));
 
     steps.forEach(function (step, index) {
       if (index === currentIndex) {
