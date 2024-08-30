@@ -109,6 +109,7 @@ function eventFn(e) {
     secondSidebar.addEventListener("mouseover", hoverEvent);
     function hoverEvent(e) {
 
+
         if (e.target.tagName !== "LI") {
             return
         }
@@ -132,13 +133,15 @@ function eventFn(e) {
             }
 
         })
+        if (preValue.id !== 'About') {
 
-        if (pre1Value !== e.target.children[0]) {
-            navData().then((data) => {
-                thirdFn(data[preValue.id][e.target.children[0].textContent], e.target.children[0].textContent)
-            })
+            if (pre1Value !== e.target.children[0]) {
+                navData().then((data) => {
+                    thirdFn(data[preValue.id][e.target.children[0].textContent], e.target.children[0].textContent)
+                })
+            }
+
         }
-
         pre1Value = e.target.children[0];
 
 
@@ -203,16 +206,18 @@ function eventFn(e) {
         })
         secondSidebar.addEventListener("mouseover", hoverEvent);
         function hoverEvent(e) {
-            if (e.target.tagName !== "LI") {
-                return
+            if (preValue.id !== "About") {
+                if (e.target.tagName !== "LI") {
+                    return
+                }
+                fourthSidebar.classList.remove("transform")
+                if (pre1Value !== e.target.children[0]) {
+                    navData().then((data) => {
+                        thirdFn(data[preValue.id][e.target.children[0].textContent], e.target.children[0].textContent)
+                    })
+                }
+                pre1Value = e.target.children[0];
             }
-            fourthSidebar.classList.remove("transform")
-            if (pre1Value !== e.target.children[0]) {
-                navData().then((data) => {
-                    thirdFn(data[preValue.id][e.target.children[0].textContent], e.target.children[0].textContent)
-                })
-            }
-            pre1Value = e.target.children[0];
         }
         thirdSidebar.addEventListener("mouseover", hover1Event);
         function hover1Event(e) {
